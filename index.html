@@ -122,9 +122,11 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
   .leadrow{grid-template-columns:minmax(0,1.75fr) minmax(260px,1fr);align-items:start}
   .dates{position:sticky;top:12px}
   /* Kurzmeldungen nebeneinander statt 150 Zeichen langer Zeilen */
-  .briefs ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px}
+  .briefs ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
   .briefs li{border-bottom:0;padding:10px 0 0}
-  .briefs li+li{border-left:1px solid var(--line);margin-left:-14px;padding-left:14px}
+  /* Trennlinien je nach Position in der Dreierreihe, gilt für beliebig viele Meldungen */
+  .briefs li:not(:nth-child(3n+1)){border-left:1px solid var(--line);margin-left:-14px;padding-left:14px}
+  .briefs li:nth-child(n+4){margin-top:12px;border-top:1px solid var(--line)}
 }
 @media (min-width:1000px){
   .lead .copy{columns:2;column-gap:32px}
