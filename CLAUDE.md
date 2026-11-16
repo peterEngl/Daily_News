@@ -22,6 +22,7 @@ Der Name ist „Daily News".
   - C · Magazin: hell, Karten, eine Farbe je Ressort
 - Die Seite hat bereits eine Design-Umschaltung: Klassik, Boulevard, Terminal, Magazin. Es ist noch keine Variante als Standard gewählt.
 - Ordnerinhalt: `CLAUDE.md`, `index.html` (Momentaufnahme der Ausgabe Nr. 4 vom 16.11.2026, ein eigenständiges HTML-Dokument, lokal im Browser lauffähig) und `entwuerfe/` (die drei Designentwürfe als `.dc.html`, nur Referenz; sie lassen sich nur in Claude Design anzeigen, nicht lokal).
+- Der Ordner ist ein Git-Repository, Branch `main`, verbunden mit GitHub: https://github.com/peterEngl/Daily_News (Remote `origin`). Hochladen mit `git push`. Die GitHub-CLI (`gh`) ist installiert (`C:\Program Files\GitHub CLI\gh.exe`); Anmeldung mit `gh auth login`.
 - Die Online-Seite wird täglich von der geplanten Aufgabe überschrieben. Die lokale `index.html` ändert sich dadurch nicht und ist nur eine Kopie.
 
 ## Ziele
