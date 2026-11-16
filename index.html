@@ -49,20 +49,20 @@ p{margin:0 0 .75em}
 .src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
 
 /* Kopf */
-.masthead{background:var(--tile);margin:0 -16px;padding:16px 16px 0}
+.masthead{background:var(--tile);margin:0 -16px;padding:22px 16px 0}
 .brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
 .claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
 .issue{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
 .navrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 0}
-.pill{background:var(--ink);color:var(--tile);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:700;white-space:nowrap}
+.pill{background:var(--ink);color:var(--tile);border-radius:999px;display:inline-block;padding:10px 16px;line-height:1.2;font-size:14px;font-weight:700;white-space:nowrap}
 nav.res{display:flex;flex-wrap:wrap;gap:0 18px;font-size:16px}
 nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:none}
 .closing{margin:0 0 0 auto;font-size:13.5px;color:var(--ink-soft)}
 
 /* Kurstafel als Laufband */
 .ticker{margin-top:14px}
-.ticker h2{display:inline-block;margin-bottom:6px;padding:3px 9px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.ticker h2{display:inline-block;margin-bottom:6px;padding:10px 12px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
 .ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
 .ticker thead tr{display:flex;flex-wrap:wrap;gap:0 6px;margin-bottom:6px;font-size:12.5px;color:var(--ink-soft)}
 .ticker thead th{font-weight:600;text-align:left}
@@ -96,12 +96,13 @@ section.res{margin-top:30px}
 .reshead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
 .reshead h2{font-size:20px;letter-spacing:.04em;text-transform:uppercase}
 .reshead::after{content:"";flex:1;min-width:24px;border-top:2px solid var(--ink)}
-.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));font-size:16px}
-.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px}
-.grid>.top{grid-column:1/-1}
+/* Flex statt Grid: weitere Artikel teilen sich jede Reihe (1 = volle Breite, 2 = Hälften, 3 = Drittel) */
+.grid{display:flex;flex-wrap:wrap;gap:12px;font-size:16px}
+.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px;flex:1 1 280px;min-width:0}
+.grid>.top,.grid>.briefs{flex-basis:100%}
 article h3{font-size:19px;margin-bottom:8px}
 article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
-.briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:6px;border-bottom:2px solid var(--ink)}
+.briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .briefs ul{list-style:none;margin:0;padding:0}
 .briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45}
 .briefs li:last-child{border-bottom:0;padding-bottom:0}
