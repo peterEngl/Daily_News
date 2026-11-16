@@ -2,7 +2,7 @@
 // Bei jeder Änderung an Dateien der App-Hülle CACHE-Version erhöhen.
 // ausgabe.json und fremde Adressen (CoinGecko) laufen ungefiltert durch; die Ausgabe-Kopie verwaltet app.js.
 
-const CACHE = 'daily-news-v1';
+const CACHE = 'daily-news-v2';
 const HUELLE = [
   './', './index.html', './style.css', './app.js', './render.js', './format.js', './kurse.js',
   './manifest.webmanifest',
