@@ -1,0 +1,4 @@
+# Lokale Werkzeug-Einstellungen, nicht ins Repository
+.claude/
+.impeccable/
+.superpowers/
