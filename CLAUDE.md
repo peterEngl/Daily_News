@@ -14,20 +14,17 @@ Der Name ist „Daily News".
 ## Stand (16.11.2026)
 
 - Die Zeitung ist bisher eine einzelne HTML-Seite, veröffentlicht als Claude-Artifact: https://claude.ai/artifact/38Kd4T6QJQ9Ns1QDh3rjF4
-- Seitentitel, geplante Aufgabe und Speicherschlüssel der Design-Umschaltung (`daily-news-design`) heißen überall „Daily News".
-- Die tägliche Ausgabe wird von einer geplanten Aufgabe in claude.ai erzeugt („Daily News täglich", läuft täglich um 6:40 Uhr Wiener Zeit, damit sie um 7 Uhr fertig ist). Sie recherchiert per Websuche und ersetzt die Inhalte der Seite. Diese Aufgabe läuft nicht lokal.
-- Drei Designvarianten liegen als Claude-Design-Leinwand vor: https://claude.ai/artifact/QWtjUKo1EQibNzCEWkQbfh
-  - A · Boulevard: plakativ, roter Kopf, gelbe Hinweisbalken
-  - B · Terminal: dunkel, Monospace, Kurs-Kacheln
-  - C · Magazin: hell, Karten, eine Farbe je Ressort
-- Die Seite hat bereits eine Design-Umschaltung: Klassik, Boulevard, Terminal, Magazin. Es ist noch keine Variante als Standard gewählt.
-- Ordnerinhalt: `CLAUDE.md`, `index.html` (Momentaufnahme der Ausgabe Nr. 4 vom 16.11.2026, ein eigenständiges HTML-Dokument, lokal im Browser lauffähig) und `entwuerfe/` (die drei Designentwürfe als `.dc.html`, nur Referenz; sie lassen sich nur in Claude Design anzeigen, nicht lokal).
+- Der Seitentitel heißt „Daily News".
+- Die geplante Aufgabe „Daily News täglich" (claude.ai, täglich 6:40 Uhr Wiener Zeit) wurde am 16.11.2026 gelöscht und muss neu angelegt werden. Vorlage für Aufbau und Design ist die lokale `index.html`.
+- Design (seit 16.11.2026): ein einziges Design, orientiert am Stil von derstandard.at, aber ohne dessen Logo, Name, Hausschrift oder Markenfarbe. Hellgrauer Hintergrund, helle Kacheln, Schrift „Source Sans 3", Titel in „Source Serif 4", Akzentfarbe `#b3122b`, Dunkelmodus nach Systemeinstellung. Die Kurstafel steht als Laufband oben, die Termine als Seitenspalte neben dem Aufmacher. Die Design-Umschaltung und die Varianten Klassik, Boulevard, Terminal und Magazin sind entfernt; die alten Entwürfe liegen nur noch als Referenz in `entwuerfe/` und unter https://claude.ai/artifact/QWtjUKo1EQibNzCEWkQbfh.
+- Ordnerinhalt: `CLAUDE.md`, `index.html` (Momentaufnahme der Ausgabe Nr. 4 vom 16.11.2026, ein eigenständiges HTML-Dokument, lokal im Browser lauffähig), `entwuerfe/` (die drei Designentwürfe als `.dc.html`, nur Referenz; sie lassen sich nur in Claude Design anzeigen, nicht lokal), `tests/` (Inhaltstest `pruefe-index.ps1` mit der Linkliste der Ausgabe Nr. 4; gilt nur für diese Momentaufnahme und muss bei einer neuen Ausgabe angepasst werden) und `docs/superpowers/` (Design-Dokument und Umsetzungsplan zum neuen Design).
 - Der Ordner ist ein Git-Repository, Branch `main`, verbunden mit GitHub: https://github.com/peterEngl/Daily_News (Remote `origin`). Hochladen mit `git push`. Die GitHub-CLI (`gh`) ist installiert (`C:\Program Files\GitHub CLI\gh.exe`); Anmeldung mit `gh auth login`.
-- Die Online-Seite wird täglich von der geplanten Aufgabe überschrieben. Die lokale `index.html` ändert sich dadurch nicht und ist nur eine Kopie.
+- Die Online-Seite (Artifact) zeigt noch das alte Design, bis die neue `index.html` dort veröffentlicht wird.
+- Inhaltstest: `powershell -NoProfile -ExecutionPolicy Bypass -File tests\pruefe-index.ps1` (muss „OK" melden).
 
 ## Ziele
 
-1. Das Design überarbeiten (die Umschaltung zwischen den Varianten ist umgesetzt).
+1. Das Design überarbeiten (erledigt am 16.11.2026: neues Einzel-Design, siehe „Stand").
 2. Eine Web-App daraus machen.
 3. Den Umfang der News vergrößern.
 
