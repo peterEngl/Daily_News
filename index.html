@@ -6,215 +6,165 @@
 <title>Daily News</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Anton&family=Archivo:wght@400;600;800&family=JetBrains+Mono:wght@400;700;800&family=Space+Grotesk:wght@500;700&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
 <style>
-/* Layout: klassisches Zeitungsblatt. Kopf mit Frakturtitel, Aufmacher ueber volle Breite,
-   darunter drei Ressorts mit Spaltensatz; am Handy alles einspaltig. */
+/* Layout: Nachrichtenportal-Raster. Kopf mit Titel, Datum als Pille und Ressortzeile;
+   Kurstafel als Laufband mit vier Kacheln; Aufmacher mit schmaler Termin-Spalte;
+   Ressorts als Kachelreihen. Am Handy alles einspaltig, Laufband 2x2. */
 :root{
-  --paper:#eceee9;
-  --paper-2:#e1e4dd;
-  --ink:#15191d;
-  --ink-soft:#4a5158;
-  --rule:#15191d;
-  --hair:#b9beb6;
+  --bg:#e6e6e6;
+  --tile:#ffffff;
+  --ink:#212121;
+  --ink-soft:#5c5c5c;
+  --line:#d4d4d4;
   --accent:#b3122b;
-  --down:#a3172c;
-  --display:"Old Standard TT","Times New Roman",Georgia,serif;
-  --body:"Source Serif 4",Georgia,"Times New Roman",serif;
-  --mast:"UnifrakturCook","Old Standard TT",Georgia,serif;
+  --down:#b3122b;
+  --on-accent:#ffffff;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     color-scheme:dark;
-    --paper:#14171a;--paper-2:#1c2024;--ink:#e6e8e3;--ink-soft:#a3aaa6;
-    --rule:#e6e8e3;--hair:#3a4046;--accent:#ff6b7f;--down:#ff8493;
+    --bg:#121212;--tile:#1f1f1f;--ink:#ececec;--ink-soft:#a9a9a9;
+    --line:#3a3a3a;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
   }
 }
 :root[data-theme="dark"]{
   color-scheme:dark;
-  --paper:#14171a;--paper-2:#1c2024;--ink:#e6e8e3;--ink-soft:#a3aaa6;
-  --rule:#e6e8e3;--hair:#3a4046;--accent:#ff6b7f;--down:#ff8493;
+  --bg:#121212;--tile:#1f1f1f;--ink:#ececec;--ink-soft:#a9a9a9;
+  --line:#3a3a3a;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
 }
 *{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.55}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;hyphens:auto;overflow-wrap:anywhere}
 a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:2px}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.sheet{max-width:1120px;margin:0 auto;padding:20px 18px 48px}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.sheet{max-width:1120px;margin:0 auto;padding:0 16px 40px}
+h1,h2,h3{margin:0;font-weight:750;line-height:1.15;text-wrap:balance}
+p{margin:0 0 .75em}
+.tile{background:var(--tile);padding:16px 18px}
+.kicker{margin:0 0 4px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
 
 /* Kopf */
-.ears{display:flex;justify-content:space-between;gap:12px;font-size:12.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-soft)}
-.mast{text-align:center;padding:6px 0 4px}
-.mast h1{font-family:var(--mast);font-weight:700;font-size:clamp(46px,13vw,104px);line-height:1;margin:0;letter-spacing:.01em}
-.mast p{margin:6px 0 10px;font-style:italic;color:var(--ink-soft);font-size:15px}
-.dateline{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px;border-top:3px double var(--rule);border-bottom:1px solid var(--rule);padding:6px 0;font-size:13.5px;font-variant-numeric:tabular-nums}
-nav.res{display:flex;flex-wrap:wrap;gap:6px 18px;justify-content:center;padding:10px 0;border-bottom:1px solid var(--hair);font-size:14px;letter-spacing:.08em;text-transform:uppercase}
-nav.res a{text-decoration:none;font-weight:600}
-nav.res a:hover{color:var(--accent)}
+.masthead{background:var(--tile);margin:0 -16px;padding:16px 16px 0}
+.brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
+.claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
+.issue{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.navrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 0}
+.pill{background:var(--ink);color:var(--tile);border-radius:999px;padding:3px 12px;font-size:14px;font-weight:700;white-space:nowrap}
+nav.res{display:flex;flex-wrap:wrap;gap:0 18px;font-size:16px}
+nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:none}
+.closing{margin:0 0 0 auto;font-size:13.5px;color:var(--ink-soft)}
 
-/* Typo */
-h2,h3,h4{font-family:var(--display);font-weight:700;text-wrap:balance;margin:0}
-.kicker{font-size:12.5px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);font-weight:600;margin:0 0 6px}
-p{margin:0 0 .8em}
-.src{font-size:13.5px;color:var(--ink-soft);margin:0}
-.src a{text-decoration-thickness:1px}
+/* Kurstafel als Laufband */
+.ticker{margin-top:14px}
+.ticker h2{display:inline-block;margin-bottom:6px;padding:3px 9px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
+.ticker thead tr{display:flex;flex-wrap:wrap;gap:0 6px;margin-bottom:6px;font-size:12.5px;color:var(--ink-soft)}
+.ticker thead th{font-weight:600;text-align:left}
+.ticker thead th+th::before{content:"· "}
+.ticker tbody{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px}
+.ticker td:first-child{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.ticker td:nth-child(2){font-size:21px;font-weight:750;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ticker td:nth-child(3){font-size:14.5px;font-variant-numeric:tabular-nums}
+.dn{color:var(--down);font-weight:700;white-space:nowrap}
+.dn::before{content:"▼ ";font-size:.75em}
+.up{font-weight:700;white-space:nowrap}
+.up::before{content:"▲ ";font-size:.75em}
+.ticker .note{margin:8px 0 0;font-size:13px;line-height:1.45;color:var(--ink-soft)}
 
-/* Aufmacher */
-.lead{display:grid;gap:18px 32px;padding:22px 0 24px;border-bottom:3px double var(--rule)}
-.lead h2{font-size:clamp(32px,7.2vw,60px);line-height:1.03}
-.lead .deck{font-size:19px;font-style:italic;color:var(--ink-soft);margin:10px 0 0}
-.lead .copy p:first-child::first-letter{font-family:var(--display);font-weight:700;float:left;font-size:3.5em;line-height:.82;padding:6px 8px 0 0}
-.board{background:var(--paper-2);border-top:3px solid var(--rule);padding:12px 14px 12px}
-.board h3{font-size:19px;margin-bottom:6px}
-.board table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums;font-size:15.5px}
-.board th,.board td{padding:6px 0;border-bottom:1px solid var(--hair);text-align:right}
-.board th:first-child,.board td:first-child{text-align:left}
-.board thead th{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);font-weight:600}
-.dn{color:var(--down);font-weight:600;white-space:nowrap}
-.dn::before{content:"▼ ";font-size:.7em}
-.up{font-weight:600;white-space:nowrap}
-.up::before{content:"▲ ";font-size:.7em}
-.board .note{font-size:12.5px;color:var(--ink-soft);margin:8px 0 0;line-height:1.4}
+/* Aufmacher und Termine */
+.leadrow{display:grid;gap:12px;margin-top:16px}
+.lead{padding:20px 22px 22px}
+.lead .kicker{color:var(--accent)}
+.lead h2{font-size:clamp(28px,4.4vw,40px);line-height:1.08;margin-bottom:10px}
+.lead .deck{font-size:19px;line-height:1.45;font-weight:600;margin:0}
+.lead .copy{max-width:70ch}
+.dates h2{font-size:18px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.dates ol{list-style:none;margin:0;padding:0}
+.dates li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.4}
+.dates li:last-child{border-bottom:0;padding-bottom:0}
+.dates time{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums}
 
 /* Ressorts */
-section.res{padding:26px 0 6px;border-bottom:1px solid var(--rule)}
-.reshead{display:flex;align-items:baseline;gap:14px;margin-bottom:16px}
-.reshead h2{font-size:30px;font-style:italic;font-weight:400;white-space:nowrap}
-.reshead::after{content:"";flex:1;border-top:1px solid var(--rule);transform:translateY(-6px)}
-.grid{display:grid;gap:22px 30px}
-article h3{font-size:25px;line-height:1.12;margin-bottom:8px}
-article.top h3{font-size:clamp(27px,5vw,36px);line-height:1.08}
-article{padding-bottom:18px;border-bottom:1px solid var(--hair)}
-.grid>article:last-child,.grid>.briefs:last-child{border-bottom:0}
-.briefs{padding-bottom:18px}
-.briefs h3{font-size:14px;font-family:var(--body);letter-spacing:.1em;text-transform:uppercase;border-bottom:1px solid var(--rule);padding-bottom:5px;margin-bottom:8px}
+section.res{margin-top:30px}
+.reshead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.reshead h2{font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+.reshead::after{content:"";flex:1;min-width:24px;border-top:2px solid var(--ink)}
+.grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));font-size:16px}
+.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px}
+.grid>.top{grid-column:1/-1}
+article h3{font-size:19px;margin-bottom:8px}
+article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
+.briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:6px;border-bottom:2px solid var(--ink)}
 .briefs ul{list-style:none;margin:0;padding:0}
-.briefs li{padding:8px 0;border-bottom:1px solid var(--hair);font-size:16px;line-height:1.45}
-.briefs li:last-child{border-bottom:0}
-.briefs b{font-family:var(--display);font-size:17px}
+.briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45}
+.briefs li:last-child{border-bottom:0;padding-bottom:0}
+.briefs b{font-weight:750}
 
-/* Termine */
-.dates{padding:24px 0 8px}
-.dates h2{font-size:30px;font-style:italic;font-weight:400;margin-bottom:10px}
-.dates ol{list-style:none;margin:0;padding:0;display:grid;gap:0 30px}
-.dates li{display:grid;grid-template-columns:5.2em 1fr;gap:10px;padding:8px 0;border-bottom:1px solid var(--hair);font-size:16px}
-.dates time{font-family:var(--display);font-weight:700;font-variant-numeric:tabular-nums}
-footer{margin-top:22px;border-top:3px double var(--rule);padding-top:10px;font-size:13px;color:var(--ink-soft);line-height:1.5}
+footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
 
-/* Design-Auswahl */
-.designs{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px;padding:10px 0;border-bottom:1px solid var(--hair);font-size:14px}
-.designs span{letter-spacing:.08em;text-transform:uppercase;color:var(--ink-soft);margin-right:4px}
-.designs button{font:inherit;font-weight:600;min-height:44px;padding:8px 14px;border:1px solid var(--rule);background:transparent;color:var(--ink);cursor:pointer;border-radius:0}
-.designs button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
-.designs:not(.open) [data-design-pick]{display:none}
-.designs button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-
-/* Design: Boulevard */
-:root[data-design="boulevard"]{color-scheme:light;--paper:#ffffff;--paper-2:#ffffff;--ink:#111111;--ink-soft:#444444;--rule:#111111;--hair:#bbbbbb;--accent:#d10a1e;--down:#d10a1e;--display:"Anton",Impact,sans-serif;--body:"Archivo",Arial,sans-serif;--mast:"Anton",Impact,sans-serif}
-[data-design="boulevard"] .mast{background:var(--accent);color:#ffffff;margin:8px -18px 0;padding:16px 18px 12px}
-[data-design="boulevard"] .mast h1{text-transform:uppercase;font-weight:400}
-[data-design="boulevard"] .mast p{color:#ffffff;font-style:normal;font-weight:600;margin-bottom:0}
-[data-design="boulevard"] h2,[data-design="boulevard"] article h3,[data-design="boulevard"] .board h3{font-weight:400;text-transform:uppercase;line-height:1.05}
-[data-design="boulevard"] .reshead h2{font-style:normal;background:#111111;color:#ffffff;padding:4px 14px}
-[data-design="boulevard"] .dates h2{font-style:normal}
-[data-design="boulevard"] .kicker{display:inline-block;background:#ffd400;color:#111111;padding:2px 9px;font-weight:800}
-[data-design="boulevard"] .deck{font-style:normal;font-weight:600;color:var(--ink)}
-[data-design="boulevard"] .board{border:4px solid #111111}
-[data-design="boulevard"] .briefs b{font-family:var(--body);font-weight:800}
-[data-design="boulevard"] .dates time,[data-design="boulevard"] .lead .copy p:first-child::first-letter{font-weight:400}
-
-/* Design: Terminal */
-:root[data-design="terminal"]{color-scheme:dark;--paper:#0e1420;--paper-2:#141c2b;--ink:#d7dde8;--ink-soft:#9aa6ba;--rule:#33405a;--hair:#33405a;--accent:#ffb000;--down:#ff8a8a;--display:"JetBrains Mono",Menlo,Consolas,monospace;--body:"JetBrains Mono",Menlo,Consolas,monospace;--mast:"JetBrains Mono",Menlo,Consolas,monospace}
-[data-design="terminal"] body{font-size:15px}
-[data-design="terminal"] .mast{text-align:left}
-[data-design="terminal"] .mast h1{font-size:clamp(30px,9vw,60px);font-weight:800;color:var(--accent);text-transform:lowercase;letter-spacing:-1px}
-[data-design="terminal"] .mast h1::after{content:"/";color:var(--ink)}
-[data-design="terminal"] .mast p,[data-design="terminal"] .deck{font-style:normal}
-[data-design="terminal"] .dateline{border-top:1px solid var(--rule)}
-[data-design="terminal"] .lead{border-bottom:1px solid var(--rule)}
-[data-design="terminal"] .lead h2{font-size:clamp(26px,5.5vw,44px);letter-spacing:-1px;color:#ffffff}
-[data-design="terminal"] .lead .copy p:first-child::first-letter{float:none;font:inherit;padding:0}
-[data-design="terminal"] .kicker::before{content:"> "}
-[data-design="terminal"] .reshead h2,[data-design="terminal"] .dates h2{font-style:normal;font-weight:700;font-size:20px;color:var(--accent);text-transform:lowercase}
-[data-design="terminal"] .reshead h2::before{content:"["}
-[data-design="terminal"] .reshead h2::after{content:"]"}
-[data-design="terminal"] article h3{font-size:19px;line-height:1.3;color:#ffffff}
-[data-design="terminal"] article.top h3{font-size:23px}
-[data-design="terminal"] .board{border:1px solid var(--hair)}
-[data-design="terminal"] .briefs b{font-size:15px}
-
-/* Design: Magazin */
-:root[data-design="magazin"]{color-scheme:light;--paper:#f3f4f6;--paper-2:#ffffff;--ink:#10131a;--ink-soft:#4b5261;--rule:#10131a;--hair:#d9dce3;--accent:#1f4fd8;--down:#b3122b;--display:"Space Grotesk",Inter,sans-serif;--body:Inter,"Helvetica Neue",Arial,sans-serif;--mast:"Space Grotesk",Inter,sans-serif}
-[data-design="magazin"] .mast{text-align:left}
-[data-design="magazin"] .mast h1{font-size:clamp(40px,11vw,72px);text-transform:lowercase;letter-spacing:-2px}
-[data-design="magazin"] .mast p,[data-design="magazin"] .deck{font-style:normal}
-[data-design="magazin"] .dateline{border-top:1px solid var(--hair);border-bottom:1px solid var(--hair)}
-[data-design="magazin"] .designs button{border-radius:999px}
-[data-design="magazin"] .lead{background:#0b6b5e;color:#ffffff;border-radius:20px;border-bottom:0;padding:26px 22px;margin-top:18px}
-[data-design="magazin"] .lead h2{letter-spacing:-1px}
-[data-design="magazin"] .lead .kicker,[data-design="magazin"] .lead .deck,[data-design="magazin"] .lead .src{color:#ffffff}
-[data-design="magazin"] .lead .src a{text-decoration-color:#ffffff}
-[data-design="magazin"] .lead .copy p:first-child::first-letter{float:none;font:inherit;padding:0}
-[data-design="magazin"] .board{color:var(--ink);border-top:0;border-radius:14px}
-[data-design="magazin"] section.res{background:#ffffff;border-radius:20px;border-bottom:0;margin-top:22px;padding:0 22px 10px;overflow:hidden}
-[data-design="magazin"] .reshead{margin:0 -22px 18px;padding:12px 22px;color:#ffffff}
-[data-design="magazin"] .reshead::after{display:none}
-[data-design="magazin"] .reshead h2,[data-design="magazin"] .dates h2{font-style:normal;font-weight:700;font-size:22px}
-[data-design="magazin"] #ki .reshead{background:#1f4fd8}
-[data-design="magazin"] #games .reshead{background:#6b2fb3}
-[data-design="magazin"] #krypto .reshead{background:#0b6b5e}
-[data-design="magazin"] #ki .kicker{color:#1f4fd8}
-[data-design="magazin"] #games .kicker{color:#6b2fb3}
-[data-design="magazin"] #krypto .kicker{color:#0b6b5e}
-[data-design="magazin"] .dates{background:#10131a;color:#ffffff;border-radius:20px;padding:20px 22px;margin-top:22px}
-[data-design="magazin"] .dates li{border-bottom-color:#3a4050}
-[data-design="magazin"] footer{border-top:0}
-
+@media (max-width:639px){
+  .ticker tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tile,.grid>article,.grid>.briefs{padding:14px 16px}
+  .closing{margin-left:0}
+}
 @media (min-width:760px){
-  .lead{grid-template-columns:minmax(0,1.7fr) minmax(260px,1fr);align-items:start}
-  .lead .copy{columns:2;column-gap:28px;column-rule:1px solid var(--hair)}
-  .lead .copy p{break-inside:avoid-column}
-  .grid{grid-template-columns:repeat(6,1fr)}
-  .grid>.top{grid-column:span 6;display:grid;grid-template-columns:1fr 1.25fr;gap:0 30px}
+  .grid>.top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);grid-template-rows:auto auto 1fr;gap:0 28px}
   .grid>.top .kicker,.grid>.top h3{grid-column:1}
   .grid>.top .txt{grid-column:2;grid-row:1 / span 3}
-  .grid>article:not(.top){grid-column:span 2}
-  .grid>.briefs{grid-column:span 2}
-  .grid.two>article:not(.top){grid-column:span 3}
-  .grid.two>.briefs{grid-column:span 3}
-  .dates ol{grid-template-columns:1fr 1fr}
+}
+@media (min-width:860px){
+  .leadrow{grid-template-columns:minmax(0,2fr) minmax(260px,1fr);align-items:start}
 }
 </style>
 </head>
 <body>
 <div class="sheet">
 
-<header>
-  <div class="ears"><span>Ausgabe Nr. 4</span><span>Deutsche Ausgabe</span></div>
-  <div class="mast">
-    <h1>Daily News</h1>
-    <p>Tageszeitung für KI, Games und Krypto</p>
+<header class="masthead">
+  <div class="brandrow">
+    <div>
+      <h1>Daily News</h1>
+      <p class="claim">Tageszeitung für KI, Games und Krypto</p>
+    </div>
+    <p class="issue"><span>Ausgabe Nr. 4</span><span>Deutsche Ausgabe</span></p>
   </div>
-  <div class="dateline">
-    <span>Montag, 16. November 2026</span>
-    <span>Redaktionsschluss 06:50 Uhr MEZ</span>
-  </div>
-  <nav class="res" aria-label="Ressorts">
-    <a href="#ki">KI</a><a href="#games">Games</a><a href="#krypto">Krypto</a><a href="#termine">Termine</a>
-  </nav>
-  <div class="designs" role="group" aria-label="Design wählen">
-    <button type="button" id="design-toggle" aria-expanded="false">Design ▾</button>
-    <button type="button" id="design-klassik" data-design-pick="klassik" aria-pressed="true">Klassik</button>
-    <button type="button" id="design-boulevard" data-design-pick="boulevard" aria-pressed="false">Boulevard</button>
-    <button type="button" id="design-terminal" data-design-pick="terminal" aria-pressed="false">Terminal</button>
-    <button type="button" id="design-magazin" data-design-pick="magazin" aria-pressed="false">Magazin</button>
+  <div class="navrow">
+    <span class="pill">Montag, 16. November 2026</span>
+    <nav class="res" aria-label="Ressorts">
+      <a href="#ki">KI</a><a href="#games">Games</a><a href="#krypto">Krypto</a><a href="#termine">Termine</a>
+    </nav>
+    <p class="closing">Redaktionsschluss 06:50 Uhr MEZ</p>
   </div>
 </header>
 
 <main>
 
+<!-- Kurstafel -->
+<section class="ticker" aria-labelledby="board-h">
+  <h2 id="board-h">Kurstafel</h2>
+  <table>
+    <thead><tr><th>Wert</th><th>Kurs (USD)</th><th>24 Std.</th></tr></thead>
+    <tbody>
+      <tr><td>Bitcoin</td><td>ca. 65.030</td><td><span class="up">1,2 %</span></td></tr>
+      <tr><td>Ether</td><td>ca. 1.818</td><td><span class="up">0,7 %</span></td></tr>
+      <tr><td>BNB</td><td>ca. 594</td><td><span class="up">0,4 %</span></td></tr>
+      <tr><td>XRP</td><td>ca. 0,969</td><td><span class="up">7,5 %</span></td></tr>
+    </tbody>
+  </table>
+  <p class="note">Momentaufnahme vom Montag, 16.11., ca. 06:45 Uhr MEZ (CoinGecko, Kopfzeile der jeweiligen Kursseite). Die Tabellen derselben Seiten nennen teils kleinere Zuwächse, bei Bitcoin 0,3 Prozent und bei XRP 4,1 Prozent. Die Veränderung bezieht sich auf den Stand nach dem Einbruch vom Wochenende. Keine Anlageberatung.</p>
+</section>
+
+<div class="leadrow">
+
 <!-- Aufmacher -->
-<section class="lead" aria-labelledby="lead-h">
+<section class="lead tile" aria-labelledby="lead-h">
   <div>
     <p class="kicker">Aufmacher · KI</p>
     <h2 id="lead-h">Huang erwägt die Rückkehr an die Nvidia-Spitze</h2>
@@ -227,20 +177,22 @@ footer{margin-top:22px;border-top:3px double var(--rule);padding-top:10px;font-s
       <p class="src">Quellen: <a href="https://www.foxbusiness.com/technology/jensen-huang-weighs-nvidia-ceo-comeback-ally-plans-war-room-report">Fox Business</a> und <a href="https://wccftech.com/jensen-huang-considers-returning-to-nvidia-as-his-allies-assemble-a-war-room-to-lobby-on-his-behalf-and-a-petition-in-his-favor-crosses-156000-signatures/">Wccftech</a> nach <a href="https://www.ft.com/content/45383d86-33c4-4d99-86e5-5e058d3567c1">Financial Times</a>; <a href="https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html">CNBC</a> nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a>; <a href="https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873">Nvidia</a></p>
     </div>
   </div>
-  <aside class="board" aria-labelledby="board-h">
-    <h3 id="board-h">Kurstafel</h3>
-    <table>
-      <thead><tr><th>Wert</th><th>Kurs (USD)</th><th>24 Std.</th></tr></thead>
-      <tbody>
-        <tr><td>Bitcoin</td><td>ca. 65.030</td><td><span class="up">1,2 %</span></td></tr>
-        <tr><td>Ether</td><td>ca. 1.818</td><td><span class="up">0,7 %</span></td></tr>
-        <tr><td>BNB</td><td>ca. 594</td><td><span class="up">0,4 %</span></td></tr>
-        <tr><td>XRP</td><td>ca. 0,969</td><td><span class="up">7,5 %</span></td></tr>
-      </tbody>
-    </table>
-    <p class="note">Momentaufnahme vom Montag, 16.11., ca. 06:45 Uhr MEZ (CoinGecko, Kopfzeile der jeweiligen Kursseite). Die Tabellen derselben Seiten nennen teils kleinere Zuwächse, bei Bitcoin 0,3 Prozent und bei XRP 4,1 Prozent. Die Veränderung bezieht sich auf den Stand nach dem Einbruch vom Wochenende. Keine Anlageberatung.</p>
-  </aside>
 </section>
+
+<!-- Termine -->
+<section class="dates tile" id="termine" aria-labelledby="termine-h">
+  <h2 id="termine-h">Was diese Woche ansteht</h2>
+  <ol>
+    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nominierte der Game Awards, 18 Uhr MEZ</span></li>
+    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nvidia-Quartalszahlen, Analystenkonferenz 23 Uhr MEZ</span></li>
+    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Anthropic legt den Ausgabepreis fest (geplant)</span></li>
+    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Apec-Gipfel der Staats- und Regierungschefs, bis Donnerstag</span></li>
+    <li><time datetime="2026-11-19">Do 19.11.</time><span>GTA 6 erscheint für PS5 und Xbox Series</span></li>
+    <li><time datetime="2026-11-19">Do 19.11.</time><span>Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT</span></li>
+  </ol>
+</section>
+
+</div>
 
 <!-- KI -->
 <section class="res" id="ki" aria-labelledby="ki-h">
@@ -383,19 +335,6 @@ footer{margin-top:22px;border-top:3px double var(--rule);padding-top:10px;font-s
   </div>
 </section>
 
-<!-- Termine -->
-<section class="dates" id="termine" aria-labelledby="termine-h">
-  <h2 id="termine-h">Was diese Woche ansteht</h2>
-  <ol>
-    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nominierte der Game Awards, 18 Uhr MEZ</span></li>
-    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nvidia-Quartalszahlen, Analystenkonferenz 23 Uhr MEZ</span></li>
-    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Anthropic legt den Ausgabepreis fest (geplant)</span></li>
-    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Apec-Gipfel der Staats- und Regierungschefs, bis Donnerstag</span></li>
-    <li><time datetime="2026-11-19">Do 19.11.</time><span>GTA 6 erscheint für PS5 und Xbox Series</span></li>
-    <li><time datetime="2026-11-19">Do 19.11.</time><span>Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT</span></li>
-  </ol>
-</section>
-
 </main>
 
 <footer>
@@ -403,30 +342,5 @@ footer{margin-top:22px;border-top:3px double var(--rule);padding-top:10px;font-s
 </footer>
 
 </div>
-<script>
-(function(){
-  var KEY='daily-news-design', root=document.documentElement;
-  var buttons=document.querySelectorAll('[data-design-pick]');
-  function apply(name){
-    if(name==='boulevard'||name==='terminal'||name==='magazin'){root.setAttribute('data-design',name);}
-    else{name='klassik';root.removeAttribute('data-design');}
-    buttons.forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-design-pick')===name?'true':'false');});
-  }
-  var tg=document.getElementById('design-toggle'), box=tg.parentNode;
-  function setOpen(o){box.classList.toggle('open',o);tg.setAttribute('aria-expanded',o?'true':'false');}
-  tg.addEventListener('click',function(){setOpen(!box.classList.contains('open'));});
-  var saved=null;
-  try{saved=localStorage.getItem(KEY);}catch(e){}
-  apply(saved);
-  buttons.forEach(function(b){
-    b.addEventListener('click',function(){
-      var name=b.getAttribute('data-design-pick');
-      apply(name);
-      try{localStorage.setItem(KEY,name);}catch(e){}
-      setOpen(false);
-    });
-  });
-})();
-</script>
 </body>
 </html>
