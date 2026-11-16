@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<title>Daily News Boulevard</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+a{color:#111111}a:hover{color:#d10a1e}
+</style>
+</helmet>
+<div style="width: 1200px; height: 1560px; box-sizing: border-box; background: #ffffff; color: #111111; font-family: Archivo, Arial, sans-serif; display: flex; flex-direction: column">
+
+  <div style="background: {{accent}}; color: #ffffff; padding: 22px 40px 18px; display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+    <div style="font-family: Anton, Impact, sans-serif; font-size: 112px; line-height: 0.95; text-transform: uppercase; letter-spacing: 1px">Daily News</div>
+    <div style="text-align: right; font-size: 17px; font-weight: 600; line-height: 1.35; padding-bottom: 8px">Samstag, 14. November 2026<br>Ausgabe Nr. 1<br>KI · Games · Krypto</div>
+  </div>
+
+  <div style="background: #111111; color: #ffffff; padding: 10px 40px; display: flex; gap: 28px; font-size: 16px; font-weight: 600">
+    <span style="background: #ffd400; color: #111111; padding: 2px 10px; font-weight: 800; text-transform: uppercase">Heute</span>
+    <span>LoL-WM-Finale um 20 Uhr</span>
+    <span>Game Awards: Nominierte am Dienstag</span>
+    <span>Anthropic-Börsengang am Donnerstag</span>
+  </div>
+
+  <div style="padding: 34px 40px 0; display: flex; gap: 36px; align-items: flex-start">
+    <div style="flex: 1; min-width: 0">
+      <div style="display: inline-block; background: #ffd400; color: #111111; font-weight: 800; font-size: 16px; text-transform: uppercase; padding: 4px 12px; letter-spacing: 1px">Krypto-Schock</div>
+      <h1 style="margin: 14px 0 0; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 116px; line-height: 0.98; text-transform: uppercase">Bitcoin fällt unter 70.000 Dollar</h1>
+      <p style="margin: 18px 0 0; font-size: 24px; line-height: 1.35; font-weight: 600">Stärkster Tagesverlust seit Wochen. Ether verliert die 2.000er-Marke, über 1,3 Milliarden Dollar an Terminpositionen werden aufgelöst.</p>
+      <p style="margin: 14px 0 0; font-size: 18px; line-height: 1.5">ETF-Abflüsse, ein starker Dollar und US-Renditen über fünf Prozent drücken gleichzeitig auf die Kurse. Der Fear-and-Greed-Index fällt auf 20 Punkte, die Stufe „extreme Angst“.</p>
+    </div>
+    <div style="width: 330px; flex: none; border: 4px solid #111111; padding: 18px 20px 16px">
+      <div style="font-family: Anton, Impact, sans-serif; font-size: 34px; text-transform: uppercase; line-height: 1">Kurstafel</div>
+      <div style="display: flex; flex-direction: column; margin-top: 12px; font-size: 19px; font-weight: 600">
+        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 2px solid #111111"><span>Bitcoin</span><span>69.000 $</span><span style="color: {{accent}}">▼ 6,2 %</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 2px solid #111111"><span>Ether</span><span>1.942 $</span><span style="color: {{accent}}">▼ 5,2 %</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 2px solid #111111"><span>BNB</span><span>634 $</span><span style="color: {{accent}}">▼ 5,9 %</span></div>
+        <div style="display: flex; justify-content: space-between; padding: 10px 0; border-top: 2px solid #111111"><span>XRP</span><span>1,03 $</span><span style="color: {{accent}}">▼ 1,3 %</span></div>
+      </div>
+      <p style="margin: 8px 0 0; font-size: 13px; line-height: 1.4; color: #555555">Stand Freitag, 07:30 UTC. Keine Anlageberatung.</p>
+    </div>
+  </div>
+
+  <div style="padding: 36px 40px 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px">
+
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <div style="background: #111111; color: #ffffff; font-family: Anton, Impact, sans-serif; font-size: 30px; text-transform: uppercase; padding: 6px 14px">KI</div>
+      <h2 style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 42px; line-height: 1.04; text-transform: uppercase">Anthropic geht am Donnerstag an die Nasdaq</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5">825 Millionen Aktien zu 70 bis 78 Dollar. Bewertung: bis zu 1,45 Billionen Dollar.</p>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">Google bringt Gemini 4 Hydrogen</div>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">OpenAI lässt Agenten Web-Apps angreifen</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <div style="background: #111111; color: #ffffff; font-family: Anton, Impact, sans-serif; font-size: 30px; text-transform: uppercase; padding: 6px 14px">Games</div>
+      <h2 style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 42px; line-height: 1.04; text-transform: uppercase">Game Awards nominieren vor dem GTA-6-Start</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5">Die Liste kommt am 17. November, das Spiel erst am 19. Zugelassen ist es trotzdem.</p>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">Wolfenstein 3 ist offiziell in Arbeit</div>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">LoL-WM: Gen.G gegen BLG im Finale</div>
+    </div>
+
+    <div style="display: flex; flex-direction: column; gap: 14px">
+      <div style="background: #111111; color: #ffffff; font-family: Anton, Impact, sans-serif; font-size: 30px; text-transform: uppercase; padding: 6px 14px">Krypto</div>
+      <h2 style="margin: 0; font-family: Anton, Impact, sans-serif; font-weight: 400; font-size: 42px; line-height: 1.04; text-transform: uppercase">Ether-ETFs verlieren fast 700 Millionen</h2>
+      <p style="margin: 0; font-size: 17px; line-height: 1.5">An sieben von acht Handelstagen im November flossen Gelder ab.</p>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">Anleger tauschen Krypto-ETFs gegen Aktien</div>
+      <div style="border-top: 2px solid #111111; padding-top: 12px; font-size: 20px; font-weight: 800; line-height: 1.25">XRP nur noch knapp über einem Dollar</div>
+    </div>
+
+  </div>
+
+  <div style="margin-top: auto; background: #ffd400; color: #111111; padding: 20px 40px; display: flex; gap: 32px; align-items: center; font-size: 17px; font-weight: 600">
+    <div style="font-family: Anton, Impact, sans-serif; font-size: 30px; text-transform: uppercase; flex: none">Diese Woche</div>
+    <div>Sa: LoL-Finale</div>
+    <div>Di: Nominierte der Game Awards</div>
+    <div>Mi: Anthropic-Preis</div>
+    <div>Do: GTA 6 und erster Handelstag ANT</div>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"accent":{"editor":"color","default":"#d10a1e","options":["#d10a1e","#0a3fd1","#111111"]},"$preview":{"width":1200,"height":1560}}'>
+class Component extends DCLogic {
+renderVals() {
+return { accent: this.props.accent ?? '#d10a1e' };
+}
+}
+</script>
+</body>
+</html>
