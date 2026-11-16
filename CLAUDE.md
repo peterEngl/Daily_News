@@ -31,10 +31,9 @@ Der Name ist „Daily News".
 ## Aufbau der Ausgabe
 
 - Kopf mit Titel, Datum und Ausgabennummer
-- Aufmacher (wichtigste Meldung des Tages)
-- Kurstafel: Bitcoin, Ether, BNB, XRP mit Kurs in USD und Veränderung in 24 Stunden
+- Kurstafel als Streifen unter dem Kopf: Bitcoin, Ether, BNB, XRP mit Kurs in USD und Veränderung in 24 Stunden
+- Aufmacher (wichtigste Meldung des Tages), daneben als Seitenspalte „Was diese Woche ansteht": Termine der kommenden Tage in Wiener Zeit
 - Drei Ressorts: KI, Games, Krypto, je mit einem Hauptartikel, weiteren Artikeln und Kurzmeldungen
-- „Was diese Woche ansteht": Termine der kommenden Tage in Wiener Zeit
 
 ## Regeln für Inhalte
 
