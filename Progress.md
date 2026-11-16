@@ -16,9 +16,11 @@ Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
 | 4 | App-Hülle: `index.html`, `style.css`, `render.js`, `app.js`, `fonts/`, `tests/server.py` | sieht aus wie die alte Seite (hell/dunkel, Handy); CSP, XSS-, Leer-Ressort- und Ladefehler-Probe bestanden |
 | 5 | Live-Kurse: `kurse.js`, `tests/kurse.test.js`, Einbindung in `app.js` | 35 Tests grün; im Browser: Live-Kurse, neue Abfrage nach 60 s, Netzfehler zeigt „derzeit keine Verbindung“ mit stehenden Werten |
 
+| 6 | Installierbar und offline: `manifest.webmanifest`, `sw.js`, `icons/`, Einbindung in `index.html` und `app.js` | Service Worker aktiv, Hülle und Ausgabe im Speicher, Offline-Start zeigt gespeicherte Ausgabe; Abnahme durch Peter steht aus |
+
 ## Als Nächstes
 
-- **Task 6**: Manifest, Symbole, Service Worker. Danach testet Peter die App lokal.
+- **Abnahme Task 6 durch Peter:** App lokal starten, in Chrome/Edge installieren, offline öffnen.
 - Task 7: Aufräumen (alte Tests `tests/pruefe-index.ps1` und `tests/ausgabe-4-links.txt` nur nach Peters OK löschen), `CLAUDE.md` auf Web-App-Stand bringen.
 - Danach, nicht Teil des Plans: tägliche Aufgabe anlegen; Veröffentlichung mit Schritt 0 (Impressum/Datenschutz/CoinGecko) und Sicherheitsschritten.
 
@@ -44,5 +46,7 @@ Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
 - Bei HTTP-Fehler mit vorhandener Kopie lautet der Hinweis ebenfalls „Offline – gespeicherte Ausgabe“.
 - `localStorage` (`daily-news-kurse`) enthält die rohe CoinGecko-Antwort; beim Start läuft sie durch `leseKurse`, also dieselbe Prüfung wie frische Daten.
 - Kursabruf mit `credentials: 'omit'` (keine Cookies an CoinGecko).
+- Symbole: Edge headless rendert nicht unter einer Mindestfenstergröße. Deshalb nur `icon-512.png` mit Edge erzeugen, 192 und 180 daraus mit System.Drawing (bikubisch) verkleinern.
+- Schrift im Symbol 51vmin (Buchstabenhöhe ca. 33 % statt ca. 40 %), damit „DN“ ganz im Sicherheitskreis maskierbarer Symbole (80 % Durchmesser) liegt; per Pixelprüfung bestätigt.
 
 Das ausführliche Protokoll liegt lokal in `.superpowers/sdd/2026-11-16-web-app/progress.md` (nicht im Repository).

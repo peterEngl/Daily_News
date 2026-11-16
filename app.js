@@ -46,3 +46,8 @@ async function start() {
 
 starteKurse(document);
 start();
+
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('./sw.js')
+    .catch((fehler) => console.error('Service Worker nicht registriert:', fehler));
+}
