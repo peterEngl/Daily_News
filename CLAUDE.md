@@ -22,7 +22,7 @@ Der Name ist „Daily News".
 - Der Ordner ist ein Git-Repository, Branch `main`, verbunden mit GitHub: https://github.com/peterEngl/Daily_News (Remote `origin`). Hochladen mit `git push`. Die GitHub-CLI (`gh`) ist installiert (`C:\Program Files\GitHub CLI\gh.exe`); Anmeldung mit `gh auth login`.
 - Die Online-Seite (Artifact) zeigt seit 16.11.2026 das neue Design (Ausgabe Nr. 4, veröffentlicht aus der lokalen `index.html`).
 - Inhaltstest: `powershell -NoProfile -ExecutionPolicy Bypass -File tests\pruefe-index.ps1` (muss „OK" melden).
-- Web-App (Ziel 2) in Arbeit auf Branch `web-app`: Tasks 1–4 von 7 erledigt, weiter mit Task 5. Aktueller Stand, Befehle und offene Punkte stehen in `Progress.md`. Auf diesem Branch gelten die Angaben oben zu `index.html` und `pruefe-index.ps1` nicht mehr.
+- Web-App (Ziel 2) in Arbeit auf Branch `web-app`: Tasks 1–5 von 7 erledigt, weiter mit Task 6. Aktueller Stand, Befehle und offene Punkte stehen in `Progress.md`. Auf diesem Branch gelten die Angaben oben zu `index.html` und `pruefe-index.ps1` nicht mehr.
 
 ## Ziele
 

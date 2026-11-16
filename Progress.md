@@ -14,11 +14,11 @@ Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
 | 2 | `format.js`: Wiener Zeit, Datum, Zahlen, Hinweistexte | 11 Tests grün |
 | 3 | `ausgabe.json` mit Ausgabe Nr. 4 | Prüfung „OK“, alle 73 Texte wortgleich mit der alten Seite |
 | 4 | App-Hülle: `index.html`, `style.css`, `render.js`, `app.js`, `fonts/`, `tests/server.py` | sieht aus wie die alte Seite (hell/dunkel, Handy); CSP, XSS-, Leer-Ressort- und Ladefehler-Probe bestanden |
+| 5 | Live-Kurse: `kurse.js`, `tests/kurse.test.js`, Einbindung in `app.js` | 35 Tests grün; im Browser: Live-Kurse, neue Abfrage nach 60 s, Netzfehler zeigt „derzeit keine Verbindung“ mit stehenden Werten |
 
 ## Als Nächstes
 
-- **Task 5: Live-Kurse** (`kurse.js`, `tests/kurse.test.js`, Einbindung in `app.js`). Details im Plan. Wichtig aus Task 4: Die Zeilen der Kurstafel brauchen `role="row"` und die Zellen `role="cell"`, wie in der alten Seite, weil das CSS die Tabelle als Kacheln darstellt.
-- Task 6: Manifest, Symbole, Service Worker. Danach testet Peter die App lokal.
+- **Task 6**: Manifest, Symbole, Service Worker. Danach testet Peter die App lokal.
 - Task 7: Aufräumen (alte Tests `tests/pruefe-index.ps1` und `tests/ausgabe-4-links.txt` nur nach Peters OK löschen), `CLAUDE.md` auf Web-App-Stand bringen.
 - Danach, nicht Teil des Plans: tägliche Aufgabe anlegen; Veröffentlichung mit Schritt 0 (Impressum/Datenschutz/CoinGecko) und Sicherheitsschritten.
 
@@ -42,5 +42,7 @@ Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
 - `app.js` zeigt die Ausgabe an, ohne auf das Speichern der Offline-Kopie zu warten. Vorher blieb die Seite in einem frischen Browser auf „Wird geladen …“ hängen.
 - „Redaktionsschluss 06:50 Uhr“ ohne „MEZ“, Fußzeile „Wiener Ortszeit“, weil im Sommer MESZ gilt.
 - Bei HTTP-Fehler mit vorhandener Kopie lautet der Hinweis ebenfalls „Offline – gespeicherte Ausgabe“.
+- `localStorage` (`daily-news-kurse`) enthält die rohe CoinGecko-Antwort; beim Start läuft sie durch `leseKurse`, also dieselbe Prüfung wie frische Daten.
+- Kursabruf mit `credentials: 'omit'` (keine Cookies an CoinGecko).
 
 Das ausführliche Protokoll liegt lokal in `.superpowers/sdd/2026-11-16-web-app/progress.md` (nicht im Repository).

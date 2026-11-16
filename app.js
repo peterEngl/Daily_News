@@ -1,6 +1,7 @@
 // Einstieg der App: Ausgabe laden und anzeigen.
 import { baueAusgabe } from './render.js';
 import { ausgabeHinweis } from './format.js';
+import { starteKurse } from './kurse.js';
 
 const AUSGABE_URL = './ausgabe.json';
 const AUSGABE_CACHE = 'daily-news-ausgabe';
@@ -43,4 +44,5 @@ async function start() {
   }
 }
 
+starteKurse(document);
 start();
