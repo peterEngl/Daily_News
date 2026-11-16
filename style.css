@@ -1,0 +1,136 @@
+/* Schriften selbst gehostet (SIL Open Font License, siehe fonts/OFL.txt) */
+@font-face{font-family:"Source Sans 3";src:url("fonts/source-sans-3-latin-wght.woff2") format("woff2");font-weight:200 900;font-style:normal;font-display:swap}
+@font-face{font-family:"Source Serif 4";src:url("fonts/source-serif-4-latin-700.woff2") format("woff2");font-weight:700;font-style:normal;font-display:swap}
+
+/* Layout: Nachrichtenportal-Raster. Kopf mit Titel, Datum als Pille und Ressortzeile;
+   Kurstafel als Laufband mit vier Kacheln; Aufmacher mit schmaler Termin-Spalte;
+   Ressorts als Kachelreihen. Am Handy alles einspaltig, Laufband 2x2. */
+:root{
+  --bg:#f3ece1;
+  --dot:rgba(150,105,55,.13);
+  --tile:#ffffff;
+  --radius:6px;
+  --ink:#212121;
+  --ink-soft:#5c5c5c;
+  --line:#d4d4d4;
+  --accent:#b3122b;
+  --down:#b3122b;
+  --on-accent:#ffffff;
+  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#191613;--dot:rgba(255,220,180,.06);--tile:#24201c;--ink:#ececec;--ink-soft:#ada59c;
+    --line:#3d3731;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#191613;--dot:rgba(255,220,180,.06);--tile:#24201c;--ink:#ececec;--ink-soft:#ada59c;
+  --line:#3d3731;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background-color:var(--bg);background-image:radial-gradient(var(--dot) 1px,transparent 1.5px);background-size:16px 16px;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;hyphens:auto;overflow-wrap:anywhere}
+a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:2px}
+a:hover{color:var(--accent)}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+.sheet{max-width:1120px;margin:0 auto;padding:0 16px 40px}
+h1,h2,h3{margin:0;font-weight:750;line-height:1.15;text-wrap:balance}
+p{margin:0 0 .75em}
+.tile{background:var(--tile);padding:16px 18px;border-radius:var(--radius)}
+.kicker{margin:0 0 4px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
+.src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
+
+/* Kopf */
+.masthead{background:var(--tile);padding:22px 18px 0;border-radius:0 0 var(--radius) var(--radius)}
+.brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
+.masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
+.claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
+.issue{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
+.navrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 0}
+.pill{background:var(--ink);color:var(--tile);border-radius:999px;display:inline-block;padding:10px 16px;line-height:1.2;font-size:14px;font-weight:700;white-space:nowrap}
+nav.res{display:flex;flex-wrap:wrap;gap:0 18px;font-size:16px}
+nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:none}
+.closing{margin:0 0 0 auto;font-size:13.5px;color:var(--ink-soft)}
+
+/* Kurstafel als Laufband */
+.ticker{margin-top:14px}
+.ticker h2{display:inline-block;margin-bottom:8px;padding:4px 8px;background:var(--accent);color:var(--on-accent);border-radius:3px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
+/* Spaltenköpfe nur für Screenreader, die Kacheln sprechen für sich */
+.ticker thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.ticker tbody{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px;border-radius:var(--radius)}
+.ticker td:first-child{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
+.ticker td:nth-child(2){font-size:21px;font-weight:750;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
+.ticker td:nth-child(3){font-size:14.5px;font-variant-numeric:tabular-nums}
+.dn{color:var(--down);font-weight:700;white-space:nowrap}
+.dn::before{content:"▼ ";font-size:.75em}
+.up{font-weight:700;white-space:nowrap}
+.up::before{content:"▲ ";font-size:.75em}
+.ticker .note{margin:8px 0 0;font-size:13px;line-height:1.45;color:var(--ink-soft)}
+
+/* Aufmacher und Termine */
+.leadrow{display:grid;gap:12px;margin-top:16px}
+.lead{padding:20px 22px 22px}
+.lead .kicker{color:var(--accent)}
+.lead h2{font-size:clamp(28px,4.4vw,40px);line-height:1.08;margin-bottom:10px}
+.lead .deck{font-size:19px;line-height:1.45;font-weight:500;margin:0}
+.dates h2{font-size:18px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.dates ol{list-style:none;margin:0;padding:0}
+.dates li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.4;text-wrap:pretty}
+.dates li:last-child{border-bottom:0;padding-bottom:0}
+.dates time{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums}
+
+/* Ressorts */
+section.res{margin-top:30px}
+.reshead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.reshead h2{font-size:20px;letter-spacing:.04em;text-transform:uppercase}
+.reshead::after{content:"";flex:1;min-width:24px;border-top:2px solid var(--ink)}
+/* Flex statt Grid: weitere Artikel teilen sich jede Reihe (1 = volle Breite, 2 = Hälften, 3 = Drittel) */
+.grid{display:flex;flex-wrap:wrap;gap:12px;font-size:16px}
+.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px;border-radius:var(--radius);flex:1 1 280px;min-width:0}
+.grid>.top,.grid>.briefs{flex-basis:100%}
+article h3{font-size:19px;margin-bottom:8px}
+article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
+.briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
+.briefs ul{list-style:none;margin:0;padding:0}
+.briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45;text-wrap:pretty}
+.briefs li:last-child{border-bottom:0;padding-bottom:0}
+.briefs b{font-weight:750}
+
+footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
+
+@media (max-width:639px){
+  .ticker tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tile,.grid>article,.grid>.briefs{padding:14px 16px}
+  .masthead{margin:0 -16px;padding:22px 16px 0;border-radius:0}
+  .closing{margin-left:0}
+}
+@media (min-width:760px){
+  .grid>.top h3{max-width:30ch;margin-bottom:12px}
+  .grid>.top .txt{columns:2;column-gap:32px}
+}
+@media (min-width:860px){
+  .leadrow{grid-template-columns:minmax(0,1.75fr) minmax(260px,1fr);align-items:start}
+  .dates{position:sticky;top:12px}
+  /* Kurzmeldungen nebeneinander statt 150 Zeichen langer Zeilen */
+  .briefs ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
+  .briefs li{border-bottom:0;padding:10px 0 0}
+  /* Trennlinien je nach Position in der Dreierreihe, gilt für beliebig viele Meldungen */
+  .briefs li:not(:nth-child(3n+1)){border-left:1px solid var(--line);margin-left:-14px;padding-left:14px}
+  .briefs li:nth-child(n+4){margin-top:12px;border-top:1px solid var(--line)}
+}
+@media (min-width:1000px){
+  .lead .copy{columns:2;column-gap:32px}
+}
+
+/* Web-App: Ersatz für das frühere style-Attribut und Zustände der App */
+.lead .copy{margin-top:16px}
+.hinweis{margin:0;font-size:13.5px;font-weight:700;color:var(--accent)}
+.ladefehler{margin-top:16px;font-weight:700}
+.leer{margin:0;color:var(--ink-soft)}
+[hidden]{display:none !important}

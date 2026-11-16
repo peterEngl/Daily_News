@@ -2,138 +2,12 @@
 <html lang="de">
 <head>
 <meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self'; connect-src 'self' https://api.coingecko.com; manifest-src 'self'; worker-src 'self'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Daily News</title>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400..800&family=Source+Serif+4:opsz,wght@8..60,700&display=swap" rel="stylesheet">
-<style>
-/* Layout: Nachrichtenportal-Raster. Kopf mit Titel, Datum als Pille und Ressortzeile;
-   Kurstafel als Laufband mit vier Kacheln; Aufmacher mit schmaler Termin-Spalte;
-   Ressorts als Kachelreihen. Am Handy alles einspaltig, Laufband 2x2. */
-:root{
-  --bg:#f3ece1;
-  --dot:rgba(150,105,55,.13);
-  --tile:#ffffff;
-  --radius:6px;
-  --ink:#212121;
-  --ink-soft:#5c5c5c;
-  --line:#d4d4d4;
-  --accent:#b3122b;
-  --down:#b3122b;
-  --on-accent:#ffffff;
-  --sans:"Source Sans 3","Segoe UI",Arial,sans-serif;
-  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
-}
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
-    color-scheme:dark;
-    --bg:#191613;--dot:rgba(255,220,180,.06);--tile:#24201c;--ink:#ececec;--ink-soft:#ada59c;
-    --line:#3d3731;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
-  }
-}
-:root[data-theme="dark"]{
-  color-scheme:dark;
-  --bg:#191613;--dot:rgba(255,220,180,.06);--tile:#24201c;--ink:#ececec;--ink-soft:#ada59c;
-  --line:#3d3731;--accent:#ff6b7f;--down:#ff8493;--on-accent:#1a0a0d;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background-color:var(--bg);background-image:radial-gradient(var(--dot) 1px,transparent 1.5px);background-size:16px 16px;color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.5;hyphens:auto;overflow-wrap:anywhere}
-a{color:inherit;text-decoration-color:var(--accent);text-underline-offset:2px}
-a:hover{color:var(--accent)}
-a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
-.sheet{max-width:1120px;margin:0 auto;padding:0 16px 40px}
-h1,h2,h3{margin:0;font-weight:750;line-height:1.15;text-wrap:balance}
-p{margin:0 0 .75em}
-.tile{background:var(--tile);padding:16px 18px;border-radius:var(--radius)}
-.kicker{margin:0 0 4px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
-.src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
-
-/* Kopf */
-.masthead{background:var(--tile);padding:22px 18px 0;border-radius:0 0 var(--radius) var(--radius)}
-.brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
-.masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
-.claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
-.issue{margin:0;display:flex;flex-wrap:wrap;gap:2px 12px;font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-soft)}
-.navrow{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;padding:8px 0}
-.pill{background:var(--ink);color:var(--tile);border-radius:999px;display:inline-block;padding:10px 16px;line-height:1.2;font-size:14px;font-weight:700;white-space:nowrap}
-nav.res{display:flex;flex-wrap:wrap;gap:0 18px;font-size:16px}
-nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:none}
-.closing{margin:0 0 0 auto;font-size:13.5px;color:var(--ink-soft)}
-
-/* Kurstafel als Laufband */
-.ticker{margin-top:14px}
-.ticker h2{display:inline-block;margin-bottom:8px;padding:4px 8px;background:var(--accent);color:var(--on-accent);border-radius:3px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
-.ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
-/* Spaltenköpfe nur für Screenreader, die Kacheln sprechen für sich */
-.ticker thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.ticker tbody{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px;border-radius:var(--radius)}
-.ticker td:first-child{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
-.ticker td:nth-child(2){font-size:21px;font-weight:750;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
-.ticker td:nth-child(3){font-size:14.5px;font-variant-numeric:tabular-nums}
-.dn{color:var(--down);font-weight:700;white-space:nowrap}
-.dn::before{content:"▼ ";font-size:.75em}
-.up{font-weight:700;white-space:nowrap}
-.up::before{content:"▲ ";font-size:.75em}
-.ticker .note{margin:8px 0 0;font-size:13px;line-height:1.45;color:var(--ink-soft)}
-
-/* Aufmacher und Termine */
-.leadrow{display:grid;gap:12px;margin-top:16px}
-.lead{padding:20px 22px 22px}
-.lead .kicker{color:var(--accent)}
-.lead h2{font-size:clamp(28px,4.4vw,40px);line-height:1.08;margin-bottom:10px}
-.lead .deck{font-size:19px;line-height:1.45;font-weight:500;margin:0}
-.dates h2{font-size:18px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
-.dates ol{list-style:none;margin:0;padding:0}
-.dates li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.4;text-wrap:pretty}
-.dates li:last-child{border-bottom:0;padding-bottom:0}
-.dates time{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums}
-
-/* Ressorts */
-section.res{margin-top:30px}
-.reshead{display:flex;align-items:center;gap:12px;margin-bottom:12px}
-.reshead h2{font-size:20px;letter-spacing:.04em;text-transform:uppercase}
-.reshead::after{content:"";flex:1;min-width:24px;border-top:2px solid var(--ink)}
-/* Flex statt Grid: weitere Artikel teilen sich jede Reihe (1 = volle Breite, 2 = Hälften, 3 = Drittel) */
-.grid{display:flex;flex-wrap:wrap;gap:12px;font-size:16px}
-.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px;border-radius:var(--radius);flex:1 1 280px;min-width:0}
-.grid>.top,.grid>.briefs{flex-basis:100%}
-article h3{font-size:19px;margin-bottom:8px}
-article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
-.briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
-.briefs ul{list-style:none;margin:0;padding:0}
-.briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45;text-wrap:pretty}
-.briefs li:last-child{border-bottom:0;padding-bottom:0}
-.briefs b{font-weight:750}
-
-footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-size:13.5px;line-height:1.5;color:var(--ink-soft)}
-
-@media (max-width:639px){
-  .ticker tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .tile,.grid>article,.grid>.briefs{padding:14px 16px}
-  .masthead{margin:0 -16px;padding:22px 16px 0;border-radius:0}
-  .closing{margin-left:0}
-}
-@media (min-width:760px){
-  .grid>.top h3{max-width:30ch;margin-bottom:12px}
-  .grid>.top .txt{columns:2;column-gap:32px}
-}
-@media (min-width:860px){
-  .leadrow{grid-template-columns:minmax(0,1.75fr) minmax(260px,1fr);align-items:start}
-  .dates{position:sticky;top:12px}
-  /* Kurzmeldungen nebeneinander statt 150 Zeichen langer Zeilen */
-  .briefs ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px}
-  .briefs li{border-bottom:0;padding:10px 0 0}
-  /* Trennlinien je nach Position in der Dreierreihe, gilt für beliebig viele Meldungen */
-  .briefs li:not(:nth-child(3n+1)){border-left:1px solid var(--line);margin-left:-14px;padding-left:14px}
-  .briefs li:nth-child(n+4){margin-top:12px;border-top:1px solid var(--line)}
-}
-@media (min-width:1000px){
-  .lead .copy{columns:2;column-gap:32px}
-}
-</style>
+<link rel="stylesheet" href="./style.css">
+<script type="module" src="./app.js"></script>
 </head>
 <body>
 <div class="sheet">
@@ -144,213 +18,44 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
       <h1>Daily News</h1>
       <p class="claim">Tageszeitung für KI, Games und Krypto</p>
     </div>
-    <p class="issue"><span>Ausgabe Nr. 4</span><span>Deutsche Ausgabe</span></p>
+    <p class="issue"><span id="ausgabe-nr">Ausgabe</span><span>Deutsche Ausgabe</span></p>
   </div>
   <div class="navrow">
-    <span class="pill">Montag, 16. November 2026</span>
-    <nav class="res" aria-label="Ressorts">
-      <a href="#ki">KI</a><a href="#games">Games</a><a href="#krypto">Krypto</a><a href="#termine">Termine</a>
-    </nav>
-    <p class="closing">Redaktionsschluss 06:50 Uhr MEZ</p>
+    <span class="pill" id="ausgabe-datum">Wird geladen …</span>
+    <nav class="res" aria-label="Ressorts" id="nav-ressorts"></nav>
+    <p class="closing" id="redaktionsschluss"></p>
   </div>
+  <p class="hinweis" id="ausgabe-hinweis" hidden></p>
 </header>
+
+<noscript><p class="ladefehler tile">Daily News braucht JavaScript, um die Ausgabe anzuzeigen.</p></noscript>
+<p class="ladefehler tile" id="ladefehler" hidden>Die Ausgabe konnte nicht geladen werden. Bitte später erneut versuchen.</p>
 
 <main>
 
-<!-- Kurstafel -->
+<!-- Kurstafel: Werte kommen live von CoinGecko (kurse.js) -->
 <section class="ticker" aria-labelledby="board-h">
   <h2 id="board-h">Kurstafel</h2>
   <table role="table" aria-labelledby="board-h">
     <thead role="rowgroup"><tr role="row"><th role="columnheader">Wert</th><th role="columnheader">Kurs (USD)</th><th role="columnheader">24 Std.</th></tr></thead>
-    <tbody role="rowgroup">
-      <tr role="row"><td role="cell">Bitcoin</td><td role="cell">ca. 65.030</td><td role="cell"><span class="up">1,2 %</span></td></tr>
-      <tr role="row"><td role="cell">Ether</td><td role="cell">ca. 1.818</td><td role="cell"><span class="up">0,7 %</span></td></tr>
-      <tr role="row"><td role="cell">BNB</td><td role="cell">ca. 594</td><td role="cell"><span class="up">0,4 %</span></td></tr>
-      <tr role="row"><td role="cell">XRP</td><td role="cell">ca. 0,969</td><td role="cell"><span class="up">7,5 %</span></td></tr>
-    </tbody>
+    <tbody role="rowgroup" id="kurstafel-body"></tbody>
   </table>
-  <p class="note">Momentaufnahme vom Montag, 16.11., ca. 06:45 Uhr MEZ (CoinGecko, Kopfzeile der jeweiligen Kursseite). Die Tabellen derselben Seiten nennen teils kleinere Zuwächse, bei Bitcoin 0,3 Prozent und bei XRP 4,1 Prozent. Die Veränderung bezieht sich auf den Stand nach dem Einbruch vom Wochenende. Keine Anlageberatung.</p>
+  <p class="note" id="kurstafel-hinweis">Kurse werden geladen. Keine Anlageberatung.</p>
 </section>
 
 <div class="leadrow">
-
-<!-- Aufmacher -->
-<section class="lead tile" aria-labelledby="lead-h">
-  <div>
-    <p class="kicker">Aufmacher · KI</p>
-    <h2 id="lead-h">Huang erwägt die Rückkehr an die Nvidia-Spitze</h2>
-    <p class="deck">Vier Tage nach seinem Rücktritt spricht der frühere Nvidia-Chef laut Financial Times mit Vertrauten über ein Comeback. Verbündete wollen den Verwaltungsrat bearbeiten, eine Petition zählt mehr als 150.000 Namen. Am Dienstag legt der Konzern Zahlen vor.</p>
-    <div class="copy" style="margin-top:16px">
-      <p>Jensen Huang hat nach einem Bericht der Financial Times im engsten Kreis über eine Rückkehr als Vorstandschef gesprochen. Ein Verbündeter sagte dem Blatt, man stelle eine Art Lagezentrum aus Managern des Silicon Valley zusammen. Die Gruppe will auf den Verwaltungsrat einwirken und sich um Rückhalt im Weißen Haus bemühen.</p>
-      <p>Die Petition für seine Wiedereinsetzung wächst weiter. Fox Business nannte am Sonntagabend mehr als 150.000 Unterschriften, das Fachportal Wccftech zählte 156.850, darunter über 7.500 Personen, die sich als aktuelle Nvidia-Beschäftigte ausweisen. Diese Angaben stammen von den Unterzeichnern selbst und sind nicht geprüft. Unterschrieben haben unter anderem Elon Musk, Epic-Chef Tim Sweeney und der frühere Uber-Chef Travis Kalanick.</p>
-      <p>Zugleich bröckelt ein Teil der Vorwürfe, die zum Rücktritt führten. Der Rechenzentrumsbetreiber Megaspeed erklärte am Sonntag, Alice Huang habe das Unternehmen Ende August 2025 verlassen. Berichte über Verbindungen zu chinesischen Geheimdiensten wies die Firma zurück und beauftragte externe Anwälte mit einer Prüfung. Das US-Justizministerium ist nach Worten von Minister Todd Blanche noch zu keinem Schluss gekommen. Nvidias interne Untersuchung läuft weiter.</p>
-      <p>Der Verwaltungsrat hat sich zu den Forderungen bisher nicht geäußert, Finanzchefin Colette Kress führt den Konzern übergangsweise. Die Aktie schloss am Freitag bei 162,85 Dollar. Am Dienstag um 23 Uhr MEZ erläutert Nvidia die Zahlen des dritten Quartals. Ob und in welcher Rolle Huang zurückkehrt, ist offen.</p>
-      <p class="src">Quellen: <a href="https://www.foxbusiness.com/technology/jensen-huang-weighs-nvidia-ceo-comeback-ally-plans-war-room-report">Fox Business</a> und <a href="https://wccftech.com/jensen-huang-considers-returning-to-nvidia-as-his-allies-assemble-a-war-room-to-lobby-on-his-behalf-and-a-petition-in-his-favor-crosses-156000-signatures/">Wccftech</a> nach <a href="https://www.ft.com/content/45383d86-33c4-4d99-86e5-5e058d3567c1">Financial Times</a>; <a href="https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html">CNBC</a> nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a>; <a href="https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873">Nvidia</a></p>
-    </div>
-  </div>
-</section>
-
-<!-- Termine -->
-<section class="dates tile" id="termine" aria-labelledby="termine-h">
-  <h2 id="termine-h">Was diese Woche ansteht</h2>
-  <ol>
-    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nominierte der Game Awards, 18 Uhr MEZ</span></li>
-    <li><time datetime="2026-11-17">Di 17.11.</time><span>Nvidia-Quartalszahlen, Analystenkonferenz 23 Uhr MEZ</span></li>
-    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Anthropic legt den Ausgabepreis fest (geplant)</span></li>
-    <li><time datetime="2026-11-18">Mi 18.11.</time><span>Apec-Gipfel der Staats- und Regierungschefs, bis Donnerstag</span></li>
-    <li><time datetime="2026-11-19">Do 19.11.</time><span>GTA 6 erscheint für PS5 und Xbox Series</span></li>
-    <li><time datetime="2026-11-19">Do 19.11.</time><span>Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT</span></li>
-  </ol>
-</section>
-
+  <section class="lead tile" id="aufmacher" aria-labelledby="lead-h"></section>
+  <section class="dates tile" id="termine" aria-labelledby="termine-h">
+    <h2 id="termine-h">Was diese Woche ansteht</h2>
+    <ol id="termine-liste"></ol>
+  </section>
 </div>
 
-<!-- KI -->
-<section class="res" id="ki" aria-labelledby="ki-h">
-  <div class="reshead"><h2 id="ki-h">Künstliche Intelligenz</h2></div>
-  <div class="grid">
-
-    <article class="top">
-      <p class="kicker">Gesundheit</p>
-      <h3>Apple testet einen Gesundheits-Chatbot mit bis zu 200.000 Freiwilligen</h3>
-      <div class="txt">
-        <p>Apple hat am Sonntag in den USA eine Studien-App veröffentlicht, in der Teilnehmer einer KI alltägliche Gesundheitsfragen stellen. Partner ist das auf Medizin spezialisierte Unternehmen OpenEvidence. Die Antworten stützen sich auf Fachliteratur aus dem New England Journal of Medicine, JAMA und Nature und werden vereinfacht ausgegeben.</p>
-        <p>Mitmachen können Erwachsene ab 21 Jahren mit einem iPhone 15 oder neuer, iOS 26 und aktivierter Apple Intelligence. Die Studie soll länger als zwölf Monate laufen. Wer will, gibt Daten aus der Health-App frei, etwa Ruhepuls, Schlaf oder Laborwerte. Apple zufolge werden die Daten anonymisiert und nicht zum Training von Modellen genutzt. Ob daraus eine Funktion für Siri oder die Health-App wird, lässt der Konzern offen.</p>
-        <p class="src">Quelle: <a href="https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/">TechCrunch</a></p>
-      </div>
-    </article>
-
-    <article>
-      <p class="kicker">Börsengang</p>
-      <h3>Anthropic: Bewertung von bis zu 1,02 Billionen Dollar</h3>
-      <p>Drei Tage vor der Preisfestsetzung stehen die Eckdaten. Angeboten werden 825 Millionen Aktien zu 70 bis 78 Dollar, was einer Bewertung von 916 Milliarden bis 1,02 Billionen Dollar entspricht. Ein nachgereichter Prospekt weist für die ersten neun Monate 2026 einen Umsatz von 33,2 Milliarden Dollar aus. Bestehende Geldgeber werden bei der Zuteilung bevorzugt.</p>
-      <p class="src">Quelle: <a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262304476-anthropic-ipo-ant-price-above-78-orders-six-times-november-14-2026-tradingkey">TradingKey</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">Geopolitik</p>
-      <h3>Neun Partner unterzeichnen Erklärung zu KI-Lieferketten</h3>
-      <p>Die USA, Indien, Großbritannien, Südkorea, die Emirate, Deutschland, Schweden, die Niederlande und die EU-Kommission haben am Sonntag in San Francisco eine gemeinsame Erklärung unterschrieben. Vorgesehen ist ein Register für KI-Technik und Lieferketten, die als anfällig für chinesische Einflussnahme gelten. Das Papier kommt wenige Tage vor dem Treffen von Trump und Xi beim Apec-Gipfel.</p>
-      <p class="src">Quelle: <a href="https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22">Financial Times</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">Exportkontrolle</p>
-      <h3>Nvidia wandte sich im Schmuggelfall an Taiwans Behörden</h3>
-      <p>Laut Bloomberg hat Nvidia bei taiwanischen Stellen gegen die Anklage eines eigenen Managers protestiert. Ihm wird seit August vorgeworfen, 74 Server mit gesperrten Chips nach China umgeleitet zu haben. Die Küstenwache beschlagnahmte weitere 56 Geräte. TSMC lehnte es ab, sich einzuschalten. US-Handelsminister Lutnick soll Trump diese Woche nach China begleiten, berichtet Semafor.</p>
-      <p class="src">Quellen: <a href="https://www.bloomberg.com/news/articles/2026-11-15/nvidia-sought-taipei-s-help-over-employee-s-chip-smuggling-case">Bloomberg</a> und <a href="https://www.semafor.com/article/11/15/2026/under-pressure-lutnick-joins-trump-in-china">Semafor</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p>
-    </article>
-
-    <div class="briefs">
-      <h3>Kurz gemeldet</h3>
-      <ul>
-        <li><b>Tausende Lovable-Apps mit offenen Datenbanken.</b> Sicherheitsforscher prüften mit dem Handelsblatt 159.041 Projekte des KI-Baukastens und fanden 24.664 Seiten, deren Datenbank öffentlich lesbar war. Betroffen sind unter anderem über 80.000 Nutzerprofile und mehr als 1.000 Passdatensätze. <a href="https://www.crissyfield.de/research/lovable-en/">Crissy Field</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></li>
-        <li><b>SK Hynix stützt seine Zulieferer.</b> Der Speicherchip-Hersteller sagt 1,4 Billionen Won zu, rund 1,05 Milliarden Dollar über fünf Jahre, für heimische Anbieter von Material, Teilen und Anlagen. <a href="https://www.reuters.com/world/asia-pacific/sk-hynix-spend-1-billion-over-five-years-support-chip-suppliers-2026-11-16/">Reuters</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></li>
-        <li><b>Apple-Brille soll 2027 kommen.</b> Laut Bloomberg-Reporter Mark Gurman will Apple seine erste smarte Brille im Juni 2027 zeigen und bis Jahresende ausliefern. Sie braucht ein neueres iPhone. <a href="https://9to5mac.com/2026/11/15/apples-siri-ai-smart-glasses-are-reportedly-launching-next-year-heres-what-to-expect/">9to5Mac</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Games -->
-<section class="res" id="games" aria-labelledby="games-h">
-  <div class="reshead"><h2 id="games-h">Games</h2></div>
-  <div class="grid">
-
-    <article class="top">
-      <p class="kicker">GTA 6</p>
-      <h3>Drei Tage vor dem Start: Käufer melden Schachteln ohne gültigen Code</h3>
-      <div class="txt">
-        <p>Die Handelsversion von GTA 6 enthält keine Disc, sondern nur einen Code für den Download. Einige frühe Käufer berichten nun, ihr Code sei bereits eingelöst gewesen oder habe ganz gefehlt. Ohne ihn lässt sich das Spiel nicht installieren. Die Beschwerden häuften sich laut Kotaku binnen eines Tages in sozialen Netzwerken. Rockstar hat sich bisher nicht geäußert.</p>
-        <p>Die Behauptung, der Code lasse sich mit einer starken Lampe durch die verschweißte Hülle ablesen, konnten weder Kotaku noch GamesRadar+ nachvollziehen. Dass Kopien für Europa anders verpackt seien, bleibt Spekulation. Das Spiel erscheint am Donnerstag. Erste Tests werden Berichten zufolge für Mittwoch erwartet, bestätigt hat Rockstar diesen Termin nicht.</p>
-        <p class="src">Quellen: <a href="https://vgtimes.com/gaming-news/174651-gta-6-physical-copies-reportedly-have-missing-download-codes.html">VGTimes</a> nach Kotaku, <a href="https://vgtimes.com/gaming-news/174578-gta-6-physical-codes-seem-safe-from-flashlight-scans-tests-suggest.html">VGTimes</a> nach GamesRadar+, <a href="https://tbreak.com/gta-6-review-codes-embargo-november-18/">tbreak</a></p>
-      </div>
-    </article>
-
-    <article>
-      <p class="kicker">E-Sport</p>
-      <h3>FURIA verteidigt den Titel in Hongkong</h3>
-      <p>Das brasilianische Counter-Strike-Team hat das Finale der BLAST Premier Rivals in Hongkong mit 3:0 gegen Team Spirit gewonnen und damit den Vorjahressieg wiederholt. Der Veranstalter spricht von 30.000 Besuchern an den Turniertagen.</p>
-      <p class="src">Quellen: <a href="https://egamersworld.com/blog/blast-rivals-fall-2026-grand-final-recap-furia-swe-6j2sAywpxx">EGamersWorld</a>, <a href="https://www.manilatimes.net/2026/11/15/tmt-newswire/pr-newswire/furia-crowned-back-to-back-blast-premier-rivals-hong-kong-champions-as-30000-fans-celebrate-world-class-counter-strike/2470347">BLAST-Mitteilung via Manila Times</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">Abo</p>
-      <h3>13 Spiele verlassen den Xbox Game Pass</h3>
-      <p>Am Sonntag sind 13 Titel aus dem Abo gefallen, darunter GoldenEye 007, Dragon Ball Xenoverse 2, Wreckfest, Moonlighter und 1000xResist. GoldenEye war nur über Cloud und Konsole verfügbar.</p>
-      <p class="src">Quellen: <a href="https://screenrant.com/xbox-game-pass-games-leaving-november-15-2026/">Screen Rant</a>, <a href="https://gamerant.com/xbox-game-pass-games-leaving-november-2026-wave-1-goldeneye-007/">Game Rant</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">Hardware</p>
-      <h3>PS5 knackt 100 Millionen und wurde nie billiger</h3>
-      <p>Sony hat nach eigenen Angaben bis 10. November mehr als 100 Millionen PS5 an den Handel ausgeliefert. Ende September waren es 97,9 Millionen. Anders als ihre Vorgänger hat die Konsole in sechs Jahren keine dauerhafte Preissenkung erlebt. Die Disc-Version kostet heute rund 30 Prozent mehr als zum Start.</p>
-      <p class="src">Quelle: <a href="https://vgtimes.com/tech-and-hardware/174577-ps5-hits-100-million-shipments-without-a-permanent-price-cut.html">VGTimes</a> nach Sony und <a href="https://www.gamesradar.com/games/ps5-is-the-first-sony-console-to-hit-100-million-units-sold-without-a-price-cut/">GamesRadar+</a></p>
-    </article>
-
-    <div class="briefs">
-      <h3>Kurz gemeldet</h3>
-      <ul>
-        <li><b>Roman-Bellic-Darsteller ging leer aus.</b> Jason Zumwalt sagte in einem Interview, er erhalte für kleine Filmproduktionen bis heute Tantiemen, für GTA IV dagegen nicht. <a href="https://vgtimes.com/gaming-news/174649-gta-iv-actor-jason-zumwalt-says-he-received-no-royalties-for-the-game.html">VGTimes</a></li>
-        <li><b>Handheld baut Spiele per Texteingabe.</b> Anbernic zeigt für sein im Dezember erscheinendes Klappgerät RG DDS eine „AI Game Workshop“ genannte Funktion, die aus Beschreibungen HTML5-Spiele erzeugt. <a href="https://www.timeextension.com/features/retro-recap-mario-metroid-and-nex-playround-all-the-classic-gaming-news-from-the-past-week-november-15th-2026">Time Extension</a></li>
-        <li><b>Evercade Nexus mit Displaymängeln.</b> Einige Besitzer melden schlecht sitzende Schutzscheiben und tote Pixel. Hersteller Blaze sagt, die Mehrheit der Käufer müsse sich nicht sorgen. <a href="https://www.timeextension.com/features/retro-recap-mario-metroid-and-nex-playround-all-the-classic-gaming-news-from-the-past-week-november-15th-2026">Time Extension</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- Krypto -->
-<section class="res" id="krypto" aria-labelledby="krypto-h">
-  <div class="reshead"><h2 id="krypto-h">Krypto</h2></div>
-  <div class="grid">
-
-    <article class="top">
-      <p class="kicker">Markt</p>
-      <h3>Bitcoin schließt die Woche mit knapp 14 Prozent Minus</h3>
-      <div class="txt">
-        <p>Zum Wochenwechsel um 1 Uhr MEZ stand Bitcoin bei rund 65.360 Dollar, zwei Stunden später bei etwa 64.570 Dollar. Über sieben Tage ergibt das ein Minus von 13,7 Prozent, über 30 Tage von knapp 21 Prozent. Am Samstag war der Kurs bis etwa 62.000 Dollar gefallen, den tiefsten Stand seit Juli. Ether sank zeitweise auf 1.711 Dollar. Der Fear-and-Greed-Index steht bei 10 Punkten.</p>
-        <p>Analysten verweisen auf abfließendes Geld. Das Angebot an Stablecoins ist laut Glassnode binnen eines Monats um rund 17 Milliarden Dollar geschrumpft, so stark wie seit 2022 nicht. Die US-Spot-ETFs auf Bitcoin gaben in der abgelaufenen Woche 1,07 Milliarden Dollar ab. Dagegen kauften Adressen mit mehr als 1.000 Bitcoin laut CryptoQuant in der Korrektur etwa 47.000 Stück zu. Als Unterstützung gilt der Bereich um 62.000 bis 63.000 Dollar.</p>
-        <p class="src">Quellen: <a href="https://www.kucoin.com/news/articles/crypto-daily-market-report-november-16-2026">KuCoin Marktbericht</a>, <a href="https://www.altcoinbuzz.io/bitcoin-tests-its-65-309-floor-after-a-week-down-14">Altcoin Buzz</a>, <a href="https://thecurrencyanalytics.com/bitcoin/bitcoin-etfs-drain-1-07-billion-second-week-309187">The Currency Analytics</a></p>
-      </div>
-    </article>
-
-    <article>
-      <p class="kicker">Vorfälle</p>
-      <h3>Angreifer kapern rund 64.000 Mining-Geräte</h3>
-      <p>Am Samstagabend US-Zeit lenkten Unbekannte etwa 13 Exahash pro Sekunde auf den Pool OCEAN um, alles zugunsten einer einzigen Auszahlungsadresse. Als Einfallstor wird die Verwaltungssoftware Luxor Commander vermutet, bestätigt ist das nicht. Beute machten die Angreifer keine, da in der Zeit kein Block gefunden wurde. Den Betreibern entgingen ihre Erträge.</p>
-      <p class="src">Quelle: <a href="https://www.tradingview.com/news/cryptobriefing:9f02f8869094b:0-attackers-hijack-about-64-000-bitcoin-miners-and-point-13-eh-s-at-ocean/">Crypto Briefing via TradingView</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">XRP</p>
-      <h3>XRP fällt auf den tiefsten Stand seit zwei Jahren</h3>
-      <p>Der Kurs rutschte am Wochenende bis 0,89 Dollar und damit auf das Niveau vom November 2024. Seit Quartalsbeginn hat XRP 36 Prozent verloren. Aus den US-ETFs flossen vergangene Woche 19,13 Millionen Dollar ab, so viel wie seit März nicht. Am Montagmorgen notierte XRP wieder bei rund 0,97 Dollar.</p>
-      <p class="src">Quelle: <a href="https://coindesk.com/markets/2026/11/15/xrp-crashes-to-its-lowest-since-november-2024-as-money-leaves-crypto">CoinDesk</a></p>
-    </article>
-
-    <article>
-      <p class="kicker">Börsen</p>
-      <h3>Datenleck beim Dienstleister von Coinone</h3>
-      <p>Die südkoreanische Börse meldet, dass ein Angreifer am 12. November auf Kundendienst-Unterlagen beim Auftragnehmer MetaM zugegriffen hat. Je nachdem, was Kunden dem Support mitgeteilt hatten, können Passwörter, Ausweisnummern, Bankdaten und Wallet-Adressen betroffen sein. Handels- und Wallet-Systeme blieben laut Coinone unberührt.</p>
-      <p class="src">Quelle: <a href="https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/">The Crypto Basic</a></p>
-    </article>
-
-    <div class="briefs">
-      <h3>Kurz gemeldet</h3>
-      <ul>
-        <li><b>Saylor deutet weitere Käufe an.</b> Der Strategy-Chairman stellte einen neuen Zukauf in Aussicht, Strive-Chef Matt Cole äußerte sich ähnlich. Einen abgeschlossenen Kauf hat keiner der beiden bestätigt. <a href="https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/">The Crypto Basic</a></li>
-        <li><b>Ether-Bestand bei Binance auf Fünfjahrestief.</b> CryptoQuant schätzt die Reserve auf etwa 2,9 Millionen Ether, fast 42 Prozent weniger als im Juli 2025. Die Kundenguthaben laut Reservenachweis stiegen zuletzt dennoch leicht. <a href="https://cryptoticker.io/en/ethereum-price-prediction-binance-reserve-five-year-low-november-15-2026/">CryptoTicker</a></li>
-        <li><b>Washington klagt auch gegen Arkansas.</b> Justizministerium und CFTC wollen dem Bundesstaat das Vorgehen gegen den Prognosemarkt Kalshi untersagen lassen. Gegen Louisiana läuft bereits eine Klage. <a href="https://www.kucoin.com/news/articles/crypto-daily-market-report-november-16-2026">KuCoin Marktbericht</a></li>
-      </ul>
-    </div>
-  </div>
-</section>
+<div id="ressorts"></div>
 
 </main>
 
-<footer>
-  Daily News fasst öffentlich zugängliche Meldungen in eigenen Worten zusammen; die verlinkten Quellen enthalten die Details. Zeitangaben in MEZ. Kursangaben sind Momentaufnahmen und keine Anlageberatung. Zusammengestellt von Claude am 16. November 2026.
-</footer>
+<footer id="fussnote"></footer>
 
 </div>
 </body>
