@@ -1,0 +1,71 @@
+# Veröffentlicht die App-Dateien aus main plus die geprüfte ausgabe.json vom Branch ausgabe.
+# Design: docs/superpowers/specs/2026-11-16-veroeffentlichung-design.md
+# Neue App-Dateien in DATEIEN eintragen (wie HUELLE in sw.js); tests/veroeffentlichen.test.mjs prüft das.
+name: Veröffentlichen
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+  schedule:
+    - cron: '50 4,5,6 * * *'
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  bauen:
+    runs-on: ubuntu-latest
+    env:
+      DATEIEN: "index.html style.css app.js render.js format.js kurse.js sw.js manifest.webmanifest fonts icons/icon-192.png icons/icon-512.png icons/apple-touch-icon.png"
+    defaults:
+      run:
+        shell: bash
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Tests
+        run: node --test "tests/*.test.*"
+
+      - name: Ausgabe holen
+        run: |
+          set -euo pipefail
+          mkdir -p _site
+          git fetch --depth 1 origin ausgabe
+          git show FETCH_HEAD:ausgabe.json > _site/ausgabe.json
+
+      - name: Ausgabe prüfen
+        run: node tests/pruefe-ausgabe.mjs _site/ausgabe.json
+
+      - name: App-Dateien kopieren
+        run: |
+          set -euo pipefail
+          cp -r --parents $DATEIEN _site/
+          find _site -type f | sort
+
+      - uses: actions/upload-pages-artifact@fc324d3547104276b827a68afc52ff2a11cc49c9 # v5.0.0
+        with:
+          path: _site
+
+  veroeffentlichen:
+    needs: bauen
+    if: vars.VEROEFFENTLICHEN == 'true'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@368f82528645a54fb793d4d04e342629a3f51346 # v5.0.1
