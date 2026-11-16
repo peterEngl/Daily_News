@@ -10,6 +10,7 @@ Der Name ist „Daily News".
 - Lösche nie Dateien oder Ordner ohne ausdrückliche Bestätigung. Nenne vorher genau, welche Dateien betroffen sind, und warte auf das OK. Das gilt auch für Befehle, die Dateien überschreiben oder unwiderruflich verändern.
 - Wähle die einfachste Lösung, die das Problem zuverlässig löst. Keine unnötigen Abstraktionen, Abhängigkeiten oder Zusatzfunktionen. Ist eine komplexere Lösung deutlich besser, schlage sie vor und erkläre kurz den Vorteil, statt sie direkt umzusetzen.
 - Arbeitsumgebung: Windows-Laptop. Befehle also für Windows schreiben (PowerShell), nicht für Linux oder macOS.
+- Commit-Nachrichten: kurzer Kommentar auf Englisch, genau eine Zeile (z. B. `Add live crypto prices`).
 
 ## Stand (16.11.2026)
 
@@ -21,6 +22,7 @@ Der Name ist „Daily News".
 - Der Ordner ist ein Git-Repository, Branch `main`, verbunden mit GitHub: https://github.com/peterEngl/Daily_News (Remote `origin`). Hochladen mit `git push`. Die GitHub-CLI (`gh`) ist installiert (`C:\Program Files\GitHub CLI\gh.exe`); Anmeldung mit `gh auth login`.
 - Die Online-Seite (Artifact) zeigt seit 16.11.2026 das neue Design (Ausgabe Nr. 4, veröffentlicht aus der lokalen `index.html`).
 - Inhaltstest: `powershell -NoProfile -ExecutionPolicy Bypass -File tests\pruefe-index.ps1` (muss „OK" melden).
+- Web-App (Ziel 2) in Arbeit auf Branch `web-app`: Tasks 1–4 von 7 erledigt, weiter mit Task 5. Aktueller Stand, Befehle und offene Punkte stehen in `Progress.md`. Auf diesem Branch gelten die Angaben oben zu `index.html` und `pruefe-index.ps1` nicht mehr.
 
 ## Ziele
 
