@@ -37,8 +37,8 @@ Der Umsetzungsplan ist damit vollständig abgearbeitet.
 
 ## Als Nächstes
 
-- **Nächste Sitzung: Task 1 des Veröffentlichungs-Plans** (Workflow und Listen-Test, nur lokal auf Branch `veroeffentlichung`, nicht pushen).
-- Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“, Kennung des Pushes) – ist zugleich Task 2 Step 1.
+- Task 1 des Veröffentlichungs-Plans erledigt und von Peter abgenommen (16.11.2026): Workflow `.github/workflows/veroeffentlichen.yml` und `tests/veroeffentlichen.test.mjs` als Commit `Add publishing workflow` nur lokal auf Branch `veroeffentlichung` (nicht gepusht), 38 Tests grün, lokale Gegenprobe bestanden. Aktionen gepinnt: checkout v7.0.1, setup-node v7.1.0, upload-pages-artifact v5.0.0, deploy-pages v5.0.1.
+- **Nächste Sitzung (ab 17.11.2026): Task 2.** Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“, Kennung des Pushes) – ist zugleich Task 2 Step 1.
 - Danach Task 2–4 laut Plan.
 - Später: Veröffentlichung (GitHub Pages) mit Schritt 0 (Impressum/Datenschutz/CoinGecko-Entscheidung), Zwei-Faktor-Anmeldung, Zugriff der Claude-GitHub-App auf nur dieses Repository prüfen, „Enforce HTTPS“, dann Handy-Test.
 
