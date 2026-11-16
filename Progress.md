@@ -29,14 +29,22 @@ Stand: 16.11.2026
 
 Der Umsetzungsplan ist damit vollständig abgearbeitet.
 
+## Veröffentlichung (Sicherheits-Audit vom 16.11.2026)
+
+- Audit-Ergebnis: App-Code in Ordnung (kein XSS, CSP, Service Worker, CoinGecko-Prüfung), keine Geheimnisse in der Historie. Funde: (1) Cloud-Aufgabe könnte andere Dateien als `ausgabe.json` live bringen, (2) Links können auf beliebige Seiten zeigen (offen, getrennt zu entscheiden), (3) private iCloud-Adresse in 28 alten Commits, (4) Pages würde das ganze Repository veröffentlichen, (5) `.gitignore` fehlte (erledigt), (6) Einbetten in fremde Seiten nicht verhinderbar (akzeptiert).
+- Repository seit 16.11.2026 **öffentlich** (Peter). Neue Commits in diesem Repository nutzen die GitHub-noreply-Adresse (repo-lokale `git config`); alte Commits unverändert, Umschreiben nur mit Peters OK.
+- Funde 1 und 4: Design `docs/superpowers/specs/2026-11-16-veroeffentlichung-design.md` und Plan `docs/superpowers/plans/2026-11-16-veroeffentlichung.md` (4 Tasks) von Peter freigegeben. Umsetzung durch Claude selbst in der Sitzung, nach jedem Task auf Peters OK warten. Bewusst offen: keine Sperre auf `main` (Peter, 16.11.2026).
+
 ## Als Nächstes
 
-- Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“).
-- Veröffentlichung (GitHub Pages) mit Schritt 0 (Impressum/Datenschutz/CoinGecko-Entscheidung) und den Sicherheitsschritten (Historie auf Geheimnisse prüfen, Zwei-Faktor-Anmeldung, „Enforce HTTPS“), dann Handy-Test.
+- **Nächste Sitzung: Task 1 des Veröffentlichungs-Plans** (Workflow und Listen-Test, nur lokal auf Branch `veroeffentlichung`, nicht pushen).
+- Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“, Kennung des Pushes) – ist zugleich Task 2 Step 1.
+- Danach Task 2–4 laut Plan.
+- Später: Veröffentlichung (GitHub Pages) mit Schritt 0 (Impressum/Datenschutz/CoinGecko-Entscheidung), Zwei-Faktor-Anmeldung, Zugriff der Claude-GitHub-App auf nur dieses Repository prüfen, „Enforce HTTPS“, dann Handy-Test.
 
 ## Offene Punkte
 
-- Keine. (Node-Update auf 26.13.1 am 16.11.2026 erledigt; alle 35 Tests und die Ausgabeprüfung laufen damit.)
+- Fund 2 (Linkziele) und Fund 3 (alte Commits mit iCloud-Adresse) noch zu entscheiden.
 
 ## Entscheidungen während der Umsetzung
 
