@@ -15,6 +15,7 @@
   --bg:#f3ece1;
   --dot:rgba(150,105,55,.13);
   --tile:#ffffff;
+  --radius:6px;
   --ink:#212121;
   --ink-soft:#5c5c5c;
   --line:#d4d4d4;
@@ -45,12 +46,12 @@ a:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius
 .sheet{max-width:1120px;margin:0 auto;padding:0 16px 40px}
 h1,h2,h3{margin:0;font-weight:750;line-height:1.15;text-wrap:balance}
 p{margin:0 0 .75em}
-.tile{background:var(--tile);padding:16px 18px}
+.tile{background:var(--tile);padding:16px 18px;border-radius:var(--radius)}
 .kicker{margin:0 0 4px;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--ink)}
 .src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
 
 /* Kopf */
-.masthead{background:var(--tile);padding:22px 18px 0}
+.masthead{background:var(--tile);padding:22px 18px 0;border-radius:0 0 var(--radius) var(--radius)}
 .brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
 .claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
@@ -63,12 +64,12 @@ nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:non
 
 /* Kurstafel als Laufband */
 .ticker{margin-top:14px}
-.ticker h2{display:inline-block;margin-bottom:8px;padding:4px 8px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.ticker h2{display:inline-block;margin-bottom:8px;padding:4px 8px;background:var(--accent);color:var(--on-accent);border-radius:3px;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
 .ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
 /* Spaltenköpfe nur für Screenreader, die Kacheln sprechen für sich */
 .ticker thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .ticker tbody{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px}
+.ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px;border-radius:var(--radius)}
 .ticker td:first-child{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
 .ticker td:nth-child(2){font-size:21px;font-weight:750;line-height:1.2;white-space:nowrap;font-variant-numeric:tabular-nums}
 .ticker td:nth-child(3){font-size:14.5px;font-variant-numeric:tabular-nums}
@@ -97,7 +98,7 @@ section.res{margin-top:30px}
 .reshead::after{content:"";flex:1;min-width:24px;border-top:2px solid var(--ink)}
 /* Flex statt Grid: weitere Artikel teilen sich jede Reihe (1 = volle Breite, 2 = Hälften, 3 = Drittel) */
 .grid{display:flex;flex-wrap:wrap;gap:12px;font-size:16px}
-.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px;flex:1 1 280px;min-width:0}
+.grid>article,.grid>.briefs{background:var(--tile);padding:16px 18px;border-radius:var(--radius);flex:1 1 280px;min-width:0}
 .grid>.top,.grid>.briefs{flex-basis:100%}
 article h3{font-size:19px;margin-bottom:8px}
 article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
@@ -112,7 +113,7 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
 @media (max-width:639px){
   .ticker tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tile,.grid>article,.grid>.briefs{padding:14px 16px}
-  .masthead{margin:0 -16px;padding:22px 16px 0}
+  .masthead{margin:0 -16px;padding:22px 16px 0;border-radius:0}
   .closing{margin-left:0}
 }
 @media (min-width:760px){
