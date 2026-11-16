@@ -49,7 +49,7 @@ p{margin:0 0 .75em}
 .src{margin:0;font-size:14px;line-height:1.45;color:var(--ink-soft)}
 
 /* Kopf */
-.masthead{background:var(--tile);margin:0 -16px;padding:22px 16px 0}
+.masthead{background:var(--tile);padding:22px 18px 0}
 .brandrow{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:6px 16px;padding-bottom:12px;border-bottom:1px solid var(--line)}
 .masthead h1{font-family:var(--serif);font-weight:700;font-size:clamp(34px,7vw,48px);line-height:1;letter-spacing:-.01em}
 .claim{margin:4px 0 0;font-size:15px;color:var(--ink-soft)}
@@ -62,11 +62,10 @@ nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:non
 
 /* Kurstafel als Laufband */
 .ticker{margin-top:14px}
-.ticker h2{display:inline-block;margin-bottom:6px;padding:10px 12px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
+.ticker h2{display:inline-block;margin-bottom:8px;padding:4px 8px;background:var(--accent);color:var(--on-accent);font-size:12.5px;letter-spacing:.08em;text-transform:uppercase}
 .ticker table,.ticker thead,.ticker tbody,.ticker th,.ticker td{display:block}
-.ticker thead tr{display:flex;flex-wrap:wrap;gap:0 6px;margin-bottom:6px;font-size:12.5px;color:var(--ink-soft)}
-.ticker thead th{font-weight:600;text-align:left}
-.ticker thead th+th::before{content:"· "}
+/* Spaltenköpfe nur für Screenreader, die Kacheln sprechen für sich */
+.ticker thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .ticker tbody{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
 .ticker tbody tr{display:grid;gap:2px;background:var(--tile);padding:10px 14px}
 .ticker td:first-child{font-size:13px;font-weight:700;letter-spacing:.05em;text-transform:uppercase}
@@ -83,11 +82,10 @@ nav.res a{display:inline-block;padding:6px 0;font-weight:700;text-decoration:non
 .lead{padding:20px 22px 22px}
 .lead .kicker{color:var(--accent)}
 .lead h2{font-size:clamp(28px,4.4vw,40px);line-height:1.08;margin-bottom:10px}
-.lead .deck{font-size:19px;line-height:1.45;font-weight:600;margin:0}
-.lead .copy{max-width:70ch}
+.lead .deck{font-size:19px;line-height:1.45;font-weight:500;margin:0}
 .dates h2{font-size:18px;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .dates ol{list-style:none;margin:0;padding:0}
-.dates li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.4}
+.dates li{padding:9px 0;border-bottom:1px solid var(--line);font-size:15.5px;line-height:1.4;text-wrap:pretty}
 .dates li:last-child{border-bottom:0;padding-bottom:0}
 .dates time{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);font-variant-numeric:tabular-nums}
 
@@ -104,7 +102,7 @@ article h3{font-size:19px;margin-bottom:8px}
 article.top h3{font-size:clamp(22px,3vw,28px);line-height:1.12}
 .briefs h3{font-size:13px;letter-spacing:.08em;text-transform:uppercase;padding-bottom:8px;border-bottom:2px solid var(--ink)}
 .briefs ul{list-style:none;margin:0;padding:0}
-.briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45}
+.briefs li{padding:9px 0;border-bottom:1px solid var(--line);line-height:1.45;text-wrap:pretty}
 .briefs li:last-child{border-bottom:0;padding-bottom:0}
 .briefs b{font-weight:750}
 
@@ -113,15 +111,24 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
 @media (max-width:639px){
   .ticker tbody{grid-template-columns:repeat(2,minmax(0,1fr))}
   .tile,.grid>article,.grid>.briefs{padding:14px 16px}
+  .masthead{margin:0 -16px;padding:22px 16px 0}
   .closing{margin-left:0}
 }
 @media (min-width:760px){
-  .grid>.top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.3fr);grid-template-rows:auto auto 1fr;gap:0 28px}
-  .grid>.top .kicker,.grid>.top h3{grid-column:1}
-  .grid>.top .txt{grid-column:2;grid-row:1 / span 3}
+  .grid>.top h3{max-width:30ch;margin-bottom:12px}
+  .grid>.top .txt{columns:2;column-gap:32px}
+  .grid>.top .txt p{break-inside:avoid-column}
 }
 @media (min-width:860px){
   .leadrow{grid-template-columns:minmax(0,2fr) minmax(260px,1fr);align-items:start}
+  .dates{position:sticky;top:12px}
+  /* Kurzmeldungen nebeneinander statt 150 Zeichen langer Zeilen */
+  .briefs ul{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:0 28px}
+  .briefs li{border-bottom:0;padding:10px 0 0}
+  .briefs li+li{border-left:1px solid var(--line);margin-left:-14px;padding-left:14px}
+}
+@media (min-width:1000px){
+  .lead .copy{columns:2;column-gap:32px}
 }
 </style>
 </head>
@@ -150,13 +157,13 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
 <!-- Kurstafel -->
 <section class="ticker" aria-labelledby="board-h">
   <h2 id="board-h">Kurstafel</h2>
-  <table>
-    <thead><tr><th>Wert</th><th>Kurs (USD)</th><th>24 Std.</th></tr></thead>
-    <tbody>
-      <tr><td>Bitcoin</td><td>ca. 65.030</td><td><span class="up">1,2 %</span></td></tr>
-      <tr><td>Ether</td><td>ca. 1.818</td><td><span class="up">0,7 %</span></td></tr>
-      <tr><td>BNB</td><td>ca. 594</td><td><span class="up">0,4 %</span></td></tr>
-      <tr><td>XRP</td><td>ca. 0,969</td><td><span class="up">7,5 %</span></td></tr>
+  <table role="table" aria-labelledby="board-h">
+    <thead role="rowgroup"><tr role="row"><th role="columnheader">Wert</th><th role="columnheader">Kurs (USD)</th><th role="columnheader">24 Std.</th></tr></thead>
+    <tbody role="rowgroup">
+      <tr role="row"><td role="cell">Bitcoin</td><td role="cell">ca. 65.030</td><td role="cell"><span class="up">1,2 %</span></td></tr>
+      <tr role="row"><td role="cell">Ether</td><td role="cell">ca. 1.818</td><td role="cell"><span class="up">0,7 %</span></td></tr>
+      <tr role="row"><td role="cell">BNB</td><td role="cell">ca. 594</td><td role="cell"><span class="up">0,4 %</span></td></tr>
+      <tr role="row"><td role="cell">XRP</td><td role="cell">ca. 0,969</td><td role="cell"><span class="up">7,5 %</span></td></tr>
     </tbody>
   </table>
   <p class="note">Momentaufnahme vom Montag, 16.11., ca. 06:45 Uhr MEZ (CoinGecko, Kopfzeile der jeweiligen Kursseite). Die Tabellen derselben Seiten nennen teils kleinere Zuwächse, bei Bitcoin 0,3 Prozent und bei XRP 4,1 Prozent. Die Veränderung bezieht sich auf den Stand nach dem Einbruch vom Wochenende. Keine Anlageberatung.</p>
@@ -231,7 +238,7 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
       <p class="src">Quellen: <a href="https://www.bloomberg.com/news/articles/2026-11-15/nvidia-sought-taipei-s-help-over-employee-s-chip-smuggling-case">Bloomberg</a> und <a href="https://www.semafor.com/article/11/15/2026/under-pressure-lutnick-joins-trump-in-china">Semafor</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></p>
     </article>
 
-    <div class="briefs" style="grid-column:1/-1">
+    <div class="briefs">
       <h3>Kurz gemeldet</h3>
       <ul>
         <li><b>Tausende Lovable-Apps mit offenen Datenbanken.</b> Sicherheitsforscher prüften mit dem Handelsblatt 159.041 Projekte des KI-Baukastens und fanden 24.664 Seiten, deren Datenbank öffentlich lesbar war. Betroffen sind unter anderem über 80.000 Nutzerprofile und mehr als 1.000 Passdatensätze. <a href="https://www.crissyfield.de/research/lovable-en/">Crissy Field</a>, nach <a href="https://aiweekly.co/ai-news-today">AI Weekly</a></li>
@@ -278,7 +285,7 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
       <p class="src">Quelle: <a href="https://vgtimes.com/tech-and-hardware/174577-ps5-hits-100-million-shipments-without-a-permanent-price-cut.html">VGTimes</a> nach Sony und <a href="https://www.gamesradar.com/games/ps5-is-the-first-sony-console-to-hit-100-million-units-sold-without-a-price-cut/">GamesRadar+</a></p>
     </article>
 
-    <div class="briefs" style="grid-column:1/-1">
+    <div class="briefs">
       <h3>Kurz gemeldet</h3>
       <ul>
         <li><b>Roman-Bellic-Darsteller ging leer aus.</b> Jason Zumwalt sagte in einem Interview, er erhalte für kleine Filmproduktionen bis heute Tantiemen, für GTA IV dagegen nicht. <a href="https://vgtimes.com/gaming-news/174649-gta-iv-actor-jason-zumwalt-says-he-received-no-royalties-for-the-game.html">VGTimes</a></li>
@@ -325,7 +332,7 @@ footer{margin-top:30px;padding-top:12px;border-top:1px solid var(--line);font-si
       <p class="src">Quelle: <a href="https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/">The Crypto Basic</a></p>
     </article>
 
-    <div class="briefs" style="grid-column:1/-1">
+    <div class="briefs">
       <h3>Kurz gemeldet</h3>
       <ul>
         <li><b>Saylor deutet weitere Käufe an.</b> Der Strategy-Chairman stellte einen neuen Zukauf in Aussicht, Strive-Chef Matt Cole äußerte sich ähnlich. Einen abgeschlossenen Kauf hat keiner der beiden bestätigt. <a href="https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/">The Crypto Basic</a></li>
