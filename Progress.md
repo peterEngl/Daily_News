@@ -9,7 +9,7 @@ Stand: 16.11.2026
 - Die Zeitung ist als Web-App (installierbar, offline lesbar) fertig und am 16.11.2026 in `main` zusammengeführt (Fast-Forward von `web-app`) und auf GitHub hochgeladen, aber noch nicht veröffentlicht.
 - Die bisherige Einzelseite (Ausgabe Nr. 4 vom 16.11.2026) ist weiterhin als Claude-Artifact online: https://claude.ai/artifact/38Kd4T6QJQ9Ns1QDh3rjF4
 - Die alten Designentwürfe (Klassik, Boulevard, Terminal, Magazin) liegen als Referenz in `entwuerfe/` und unter https://claude.ai/artifact/QWtjUKo1EQibNzCEWkQbfh. Die Design-Umschaltung ist seit 16.11.2026 entfernt.
-- Die geplante Aufgabe „Daily News täglich" (claude.ai, täglich 6:40 Uhr Wiener Zeit) wurde am 16.11.2026 gelöscht und ist noch nicht neu angelegt.
+- Die geplante Cloud-Aufgabe „Daily News täglich“ ist am 16.11.2026 neu angelegt: https://claude.ai/code/routines/trig_012ZGJAkBG178t8AK6sC7PLs – täglich 6:40 Uhr Wiener Zeit (`CRON_TZ=Europe/Vienna 40 6 * * *`, gilt auch in der Sommerzeit), Modell Sonnet 5.5, keine Konnektoren, schreibt nur `ausgabe.json` und pusht auf `main` nur bei „OK“. Erster Lauf am 17.11.2026 steht aus (prüfen, ob der Push auf `main` durchgeht).
 
 ## Web-App (Ziel 2)
 
@@ -31,7 +31,7 @@ Der Umsetzungsplan ist damit vollständig abgearbeitet.
 
 ## Als Nächstes
 
-- Tägliche Aufgabe neu anlegen (ändert nur `ausgabe.json` auf `main`).
+- Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“).
 - Veröffentlichung (GitHub Pages) mit Schritt 0 (Impressum/Datenschutz/CoinGecko-Entscheidung) und den Sicherheitsschritten (Historie auf Geheimnisse prüfen, Zwei-Faktor-Anmeldung, „Enforce HTTPS“), dann Handy-Test.
 
 ## Offene Punkte
