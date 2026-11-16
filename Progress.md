@@ -1,12 +1,21 @@
-# Fortschritt: Daily News als Web-App
+# Fortschritt und aktueller Stand
 
-Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
+Wechselnde Angaben zum Projekt. Dauerhafte Regeln stehen in `CLAUDE.md`; diese Datei wird dort mit `@Progress.md` automatisch mitgeladen.
+
+Stand: 16.11.2026
+
+## Überblick
+
+- Die Zeitung ist als Web-App (installierbar, offline lesbar) auf Branch `web-app` gebaut und auf GitHub hochgeladen, aber noch nicht in `main` zusammengeführt und noch nicht veröffentlicht.
+- Die bisherige Einzelseite (Ausgabe Nr. 4 vom 16.11.2026) ist weiterhin als Claude-Artifact online: https://claude.ai/artifact/38Kd4T6QJQ9Ns1QDh3rjF4
+- Die alten Designentwürfe (Klassik, Boulevard, Terminal, Magazin) liegen als Referenz in `entwuerfe/` und unter https://claude.ai/artifact/QWtjUKo1EQibNzCEWkQbfh. Die Design-Umschaltung ist seit 16.11.2026 entfernt.
+- Die geplante Aufgabe „Daily News täglich" (claude.ai, täglich 6:40 Uhr Wiener Zeit) wurde am 16.11.2026 gelöscht und ist noch nicht neu angelegt.
+
+## Web-App (Ziel 2)
 
 - Design-Dokument: `docs/superpowers/specs/2026-11-16-web-app-design.md` (von Peter freigegeben, inkl. Abschnitt „Sicherheit“)
 - Umsetzungsplan: `docs/superpowers/plans/2026-11-16-web-app.md` (7 Tasks, wird von Claude selbst in der Sitzung umgesetzt, nicht mit Subagenten)
-- Arbeitsweise: Nach jedem Task kurz zusammenfassen und auf Peters OK warten (`CLAUDE.md`). Commit-Nachrichten auf Englisch, eine Zeile.
-
-## Erledigt
+- Nach jedem Task kurz zusammenfassen und auf Peters OK warten.
 
 | Task | Inhalt | Ergebnis |
 |---|---|---|
@@ -15,28 +24,22 @@ Stand: 16.11.2026 · Branch `web-app` (auf GitHub hochgeladen)
 | 3 | `ausgabe.json` mit Ausgabe Nr. 4 | Prüfung „OK“, alle 73 Texte wortgleich mit der alten Seite |
 | 4 | App-Hülle: `index.html`, `style.css`, `render.js`, `app.js`, `fonts/`, `tests/server.py` | sieht aus wie die alte Seite (hell/dunkel, Handy); CSP, XSS-, Leer-Ressort- und Ladefehler-Probe bestanden |
 | 5 | Live-Kurse: `kurse.js`, `tests/kurse.test.js`, Einbindung in `app.js` | 35 Tests grün; im Browser: Live-Kurse, neue Abfrage nach 60 s, Netzfehler zeigt „derzeit keine Verbindung“ mit stehenden Werten |
+| 6 | Installierbar und offline: `manifest.webmanifest`, `sw.js`, `icons/`, Einbindung in `index.html` und `app.js` | Service Worker aktiv, Hülle und Ausgabe im Speicher, Offline-Start zeigt gespeicherte Ausgabe; am 16.11.2026 von Peter abgenommen (App installiert, Offline-Hinweis erscheint) |
+| 7 | Aufräumen und Doku | erledigt: alte Tests `tests/pruefe-index.ps1` und `tests/ausgabe-4-links.txt` entfernt, `CLAUDE.md` neu gegliedert, committet und gepusht |
 
-| 6 | Installierbar und offline: `manifest.webmanifest`, `sw.js`, `icons/`, Einbindung in `index.html` und `app.js` | Service Worker aktiv, Hülle und Ausgabe im Speicher, Offline-Start zeigt gespeicherte Ausgabe; Abnahme durch Peter steht aus |
+Der Umsetzungsplan ist damit vollständig abgearbeitet.
 
 ## Als Nächstes
 
-- **Abnahme Task 6 durch Peter:** App lokal starten, in Chrome/Edge installieren, offline öffnen.
-- Task 7: Aufräumen (alte Tests `tests/pruefe-index.ps1` und `tests/ausgabe-4-links.txt` nur nach Peters OK löschen), `CLAUDE.md` auf Web-App-Stand bringen.
-- Danach, nicht Teil des Plans: tägliche Aufgabe anlegen; Veröffentlichung mit Schritt 0 (Impressum/Datenschutz/CoinGecko) und Sicherheitsschritten.
-
-## Befehle (PowerShell, im Projektordner)
-
-- Alle Tests: `node --test "tests/*.test.*"` (nicht `node --test tests/`, das geht seit Node 21 nicht)
-- Ausgabe prüfen: `node tests\pruefe-ausgabe.mjs` (muss „OK“ melden)
-- App lokal starten: `python tests\server.py`, dann `http://localhost:8000/`
+- Nicht Teil des Plans: Branch `web-app` in `main` zusammenführen; tägliche Aufgabe neu anlegen; Veröffentlichung (GitHub Pages) mit Schritt 0 (Impressum/Datenschutz/CoinGecko-Entscheidung) und den Sicherheitsschritten (Historie auf Geheimnisse prüfen, Zwei-Faktor-Anmeldung, „Enforce HTTPS“), dann Handy-Test.
 
 ## Offene Punkte
 
-- **Node-Update** von 24.19.0 auf 26.13.1 (winget, `OpenJS.NodeJS.LTS`) wurde gestartet und wartet auf Peters Bestätigung der Windows-Administratorabfrage. Danach `node --version` prüfen und die Tests erneut laufen lassen.
+- Keine. (Node-Update auf 26.13.1 am 16.11.2026 erledigt; alle 35 Tests und die Ausgabeprüfung laufen damit.)
 
 ## Entscheidungen während der Umsetzung
 
-- Testbefehl mit Dateimuster statt Ordner (siehe oben).
+- Testbefehl mit Dateimuster statt Ordner (`node --test tests/` geht seit Node 21 nicht).
 - Zusätzliche Prüfungen im Prüfprogramm: `javascript:`-Links, leere Texte, Liste statt Objekt.
 - Wochentage und Monate als feste deutsche Listen (einheitlich „Di“ statt „Di.“).
 - Weitergaben wie „Bloomberg, nach AI Weekly“ stehen im Quellennamen. Dadurch entfallen in Ausgabe 4 zwei Zweitlinks (FT-Original, AI Weekly).
