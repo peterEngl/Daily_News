@@ -49,6 +49,7 @@ Der Umsetzungsplan ist damit vollständig abgearbeitet.
 
 ## Entscheidungen während der Umsetzung
 
+- Keine Bilder zu den Meldungen (Peter, 16.11.2026): Fotos aus Quellen sind urheberrechtlich geschützt, eigene Grafiken bewusst verworfen.
 - Testbefehl mit Dateimuster statt Ordner (`node --test tests/` geht seit Node 21 nicht).
 - Zusätzliche Prüfungen im Prüfprogramm: `javascript:`-Links, leere Texte, Liste statt Objekt.
 - Wochentage und Monate als feste deutsche Listen (einheitlich „Di“ statt „Di.“).
