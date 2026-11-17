@@ -38,8 +38,9 @@ Der Umsetzungsplan ist damit vollständig abgearbeitet.
 ## Als Nächstes
 
 - Task 1 des Veröffentlichungs-Plans erledigt und von Peter abgenommen (16.11.2026): Workflow `.github/workflows/veroeffentlichen.yml` und `tests/veroeffentlichen.test.mjs` als Commit `Add publishing workflow` nur lokal auf Branch `veroeffentlichung` (nicht gepusht), 38 Tests grün, lokale Gegenprobe bestanden. Aktionen gepinnt: checkout v7.0.1, setup-node v7.1.0, upload-pages-artifact v5.0.0, deploy-pages v5.0.1.
-- **Nächste Sitzung (ab 17.11.2026): Task 2.** Ersten Lauf der täglichen Aufgabe am 17.11.2026 prüfen (Ausgabe Nr. 5 auf `main`, Prüfung „OK“, Kennung des Pushes) – ist zugleich Task 2 Step 1.
-- Danach Task 2–4 laut Plan.
+- Erster Lauf am 17.11.2026 geprüft (Task 2, Step 1–2): Ausgabe Nr. 5 als `5315bb6` auf `main`, nur `ausgabe.json`, Kennung `Claude noreply@anthropic.com`, Prüfung „OK“. Aber: Die Cloud-Umgebung `env_01CkuaEBf7cMRh5pM32o6aGY` sperrte das Öffnen von Artikeln (WebFetch), Inhalte stützen sich nur auf Suchergebnisse; Ausgabe Nr. 5 inhaltlich ungeprüft.
+- Peter (17.11.2026): voller Netzzugang für die Umgebung vorerst zurückgestellt, Netzzugang bleibt eingeschränkt. Verschärfung des Auftrags (jede Quelle mit WebFetch öffnen, sonst weglassen; gesperrte Adressen nennen) am selben Tag wieder zurückgenommen, weil sie bei gesperrtem Netz fast leere Ausgaben ergäbe. Auftrag ist wieder wie am 16.11.2026; Ausgaben bleiben bis zur Netzfreigabe inhaltlich ungeprüft (nur Suchergebnisse).
+- **Als Nächstes:** Lauf am 18.11.2026 prüfen, dann Task 2 ab Step 3, danach Task 3–4 (Task 4 verschiebt sich um den Tag nach der Umstellung).
 - Später: Veröffentlichung (GitHub Pages) mit Schritt 0 (entschieden von Peter am 16.11.2026: Impressum vorerst nicht nötig, private Nutzung in der Familie – Seite ist über Pages trotzdem öffentlich erreichbar; Kurse weiter live direkt von CoinGecko; kurzer Datenschutzhinweis in der Fußzeile, eingebaut am 16.11.2026, Cache `daily-news-v2`), Zwei-Faktor-Anmeldung, Zugriff der Claude-GitHub-App auf nur dieses Repository prüfen, „Enforce HTTPS“, dann Handy-Test auf iOS (Safari, „Zum Home-Bildschirm“) und Android (Chrome, „App installieren“), jeweils auch offline.
 - Bis zur Veröffentlichung keine Handy-Installation (ohne HTTPS kein Service Worker); Peter wartet bewusst (16.11.2026).
 
