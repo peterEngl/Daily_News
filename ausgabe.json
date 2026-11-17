@@ -1,29 +1,28 @@
 {
-  "nummer": 4,
-  "datum": "2026-11-16",
-  "redaktionsschluss": "06:50",
+  "nummer": 5,
+  "datum": "2026-11-17",
+  "redaktionsschluss": "06:42",
   "aufmacher": {
     "ressort": "KI",
-    "titel": "Huang erwägt die Rückkehr an die Nvidia-Spitze",
-    "vorspann": "Vier Tage nach seinem Rücktritt spricht der frühere Nvidia-Chef laut Financial Times mit Vertrauten über ein Comeback. Verbündete wollen den Verwaltungsrat bearbeiten, eine Petition zählt mehr als 150.000 Namen. Am Dienstag legt der Konzern Zahlen vor.",
+    "titel": "Nvidia-Verwaltungsrat schließt Huangs Rückkehr aus",
+    "vorspann": "Während eine Petition für Jensen Huang auf bis zu 187.000 Unterschriften wächst, lehnt der Verwaltungsrat laut Berichten eine Rückkehr ab. Heute Abend legt Nvidia Quartalszahlen vor.",
     "absaetze": [
-      "Jensen Huang hat nach einem Bericht der Financial Times im engsten Kreis über eine Rückkehr als Vorstandschef gesprochen. Ein Verbündeter sagte dem Blatt, man stelle eine Art Lagezentrum aus Managern des Silicon Valley zusammen. Die Gruppe will auf den Verwaltungsrat einwirken und sich um Rückhalt im Weißen Haus bemühen.",
-      "Die Petition für seine Wiedereinsetzung wächst weiter. Fox Business nannte am Sonntagabend mehr als 150.000 Unterschriften, das Fachportal Wccftech zählte 156.850, darunter über 7.500 Personen, die sich als aktuelle Nvidia-Beschäftigte ausweisen. Diese Angaben stammen von den Unterzeichnern selbst und sind nicht geprüft. Unterschrieben haben unter anderem Elon Musk, Epic-Chef Tim Sweeney und der frühere Uber-Chef Travis Kalanick.",
-      "Zugleich bröckelt ein Teil der Vorwürfe, die zum Rücktritt führten. Der Rechenzentrumsbetreiber Megaspeed erklärte am Sonntag, Alice Huang habe das Unternehmen Ende August 2025 verlassen. Berichte über Verbindungen zu chinesischen Geheimdiensten wies die Firma zurück und beauftragte externe Anwälte mit einer Prüfung. Das US-Justizministerium ist nach Worten von Minister Todd Blanche noch zu keinem Schluss gekommen. Nvidias interne Untersuchung läuft weiter.",
-      "Der Verwaltungsrat hat sich zu den Forderungen bisher nicht geäußert, Finanzchefin Colette Kress führt den Konzern übergangsweise. Die Aktie schloss am Freitag bei 162,85 Dollar. Am Dienstag um 23 Uhr MEZ erläutert Nvidia die Zahlen des dritten Quartals. Ob und in welcher Rolle Huang zurückkehrt, ist offen."
+      "Der Verwaltungsrat von Nvidia zieht nach übereinstimmenden Medienberichten eine Wiedereinsetzung von Jensen Huang als Vorstandschef nicht in Betracht. Eine Quelle aus dem Umfeld des Gremiums sagte, man erwäge keine Rückholung. Eine formelle öffentliche Antwort auf die Petition gibt es bisher nicht.",
+      "Die Petition für Huangs Rückkehr zählt je nach Medium mehr als 160.000 bis über 187.000 Unterschriften, so die Organisatoren. Zwei große Investoren, Altimeter Capital und Atreides Management, baten den Verwaltungsrat in einem Brief, alle Optionen offenzuhalten, auch eine mögliche Rückkehr. Sie forderten aber nicht ausdrücklich die sofortige Wiedereinsetzung.",
+      "Huang war am 12. November zurückgetreten. Finanzchefin Colette Kress führt den Konzern übergangsweise. Laut Financial Times sucht der Verwaltungsrat intern und extern nach einem dauerhaften Nachfolger und hat Arm-Chef Rene Haas angesprochen. Analysten halten eine Rückkehr für unwahrscheinlich; auf der Plattform Kalshi lag die Wahrscheinlichkeit bei rund 10 Prozent. Nvidia erläutert am Dienstag um 23 Uhr MEZ die Zahlen des dritten Quartals."
     ],
     "quellen": [
-      { "name": "Fox Business nach Financial Times", "url": "https://www.foxbusiness.com/technology/jensen-huang-weighs-nvidia-ceo-comeback-ally-plans-war-room-report" },
-      { "name": "Wccftech nach Financial Times", "url": "https://wccftech.com/jensen-huang-considers-returning-to-nvidia-as-his-allies-assemble-a-war-room-to-lobby-on-his-behalf-and-a-petition-in-his-favor-crosses-156000-signatures/" },
-      { "name": "CNBC nach AI Weekly", "url": "https://www.cnbc.com/2026/11/15/megaspeed-alice-huang-probe-nvidia-scandal.html" },
-      { "name": "Nvidia", "url": "https://nvidianews.nvidia.com/news/nvidia-sets-conference-call-for-third-quarter-financial-results-6928873" }
+      { "name": "CBS News", "url": "https://www.cbsnews.com/news/jensen-huang-nvidia-ceo-reinstatement-petition/" },
+      { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-directors-rule-huang-return-003700900.html" },
+      { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/16/nvidia-jensen-huang-return-tech.html" },
+      { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html" }
     ]
   },
   "termine": [
     { "datum": "2026-11-17", "text": "Nominierte der Game Awards, 18 Uhr MEZ" },
     { "datum": "2026-11-17", "text": "Nvidia-Quartalszahlen, Analystenkonferenz 23 Uhr MEZ" },
-    { "datum": "2026-11-18", "text": "Anthropic legt den Ausgabepreis fest (geplant)" },
-    { "datum": "2026-11-18", "text": "Apec-Gipfel der Staats- und Regierungschefs, bis Donnerstag" },
+    { "datum": "2026-11-18", "text": "Anthropic legt den Ausgabepreis fest (erwartet)" },
+    { "datum": "2026-11-18", "text": "Erste GTA-6-Tests erwartet (laut Insider, von Rockstar nicht bestätigt)" },
     { "datum": "2026-11-19", "text": "GTA 6 erscheint für PS5 und Xbox Series" },
     { "datum": "2026-11-19", "text": "Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT" }
   ],
@@ -33,69 +32,52 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Gesundheit",
-        "titel": "Apple testet einen Gesundheits-Chatbot mit bis zu 200.000 Freiwilligen",
+        "dachzeile": "Börsengang",
+        "titel": "Anthropic: Preisspanne steht, Preisfestsetzung am Mittwoch erwartet",
         "absaetze": [
-          "Apple hat am Sonntag in den USA eine Studien-App veröffentlicht, in der Teilnehmer einer KI alltägliche Gesundheitsfragen stellen. Partner ist das auf Medizin spezialisierte Unternehmen OpenEvidence. Die Antworten stützen sich auf Fachliteratur aus dem New England Journal of Medicine, JAMA und Nature und werden vereinfacht ausgegeben.",
-          "Mitmachen können Erwachsene ab 21 Jahren mit einem iPhone 15 oder neuer, iOS 26 und aktivierter Apple Intelligence. Die Studie soll länger als zwölf Monate laufen. Wer will, gibt Daten aus der Health-App frei, etwa Ruhepuls, Schlaf oder Laborwerte. Apple zufolge werden die Daten anonymisiert und nicht zum Training von Modellen genutzt. Ob daraus eine Funktion für Siri oder die Health-App wird, lässt der Konzern offen."
+          "Anthropic bietet 825 Millionen Aktien in einer Spanne von 70 bis 78 Dollar an und hat sich dafür das Nasdaq-Kürzel ANT gesichert. Laut Berichten sollen der Ausgabepreis am 18. November festgelegt und der Handel am 19. November aufgenommen werden. Beide Termine stehen nicht im Antrag selbst und gelten daher als unbestätigt.",
+          "Bloomberg meldete am 12. November, die Orders lägen etwa beim Sechsfachen der verfügbaren Aktien. Einen endgültigen Preis gibt es noch nicht. Bewertungsangaben der Berichte weichen stark voneinander ab."
         ],
         "quellen": [
-          { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/15/apple-launches-new-app-to-study-how-people-use-ai-for-health/" }
+          { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" },
+          { "name": "TradingKey", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262304476-anthropic-ipo-ant-price-above-78-orders-six-times-november-14-2026-tradingkey" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "Börsengang",
-          "titel": "Anthropic: Bewertung von bis zu 1,02 Billionen Dollar",
+          "dachzeile": "Zahlungen",
+          "titel": "OpenAI startet ChatGPT Wallet",
           "absaetze": [
-            "Drei Tage vor der Preisfestsetzung stehen die Eckdaten. Angeboten werden 825 Millionen Aktien zu 70 bis 78 Dollar, was einer Bewertung von 916 Milliarden bis 1,02 Billionen Dollar entspricht. Ein nachgereichter Prospekt weist für die ersten neun Monate 2026 einen Umsatz von 33,2 Milliarden Dollar aus. Bestehende Geldgeber werden bei der Zuteilung bevorzugt."
+            "Seit dem 13. November können KI-Agenten von OpenAI mit einer einmal hinterlegten Karte Einkäufe tätigen, jede Zahlung muss einzeln bestätigt werden. OpenAI verlangt laut der Übersicht zum Start keine Provision, weil es erst Händlerbeziehungen aufbaut."
           ],
           "quellen": [
-            { "name": "TradingKey", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262304476-anthropic-ipo-ant-price-above-78-orders-six-times-november-14-2026-tradingkey" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
           ]
         },
         {
-          "dachzeile": "Geopolitik",
-          "titel": "Neun Partner unterzeichnen Erklärung zu KI-Lieferketten",
+          "dachzeile": "Finanzierung",
+          "titel": "Microsoft begibt Anleihe über 25 Milliarden Dollar",
           "absaetze": [
-            "Die USA, Indien, Großbritannien, Südkorea, die Emirate, Deutschland, Schweden, die Niederlande und die EU-Kommission haben am Sonntag in San Francisco eine gemeinsame Erklärung unterschrieben. Vorgesehen ist ein Register für KI-Technik und Lieferketten, die als anfällig für chinesische Einflussnahme gelten. Das Papier kommt wenige Tage vor dem Treffen von Trump und Xi beim Apec-Gipfel."
+            "Der Konzern verkauft erstmals seit 2017 wieder Anleihen in den USA, um den Ausbau seiner KI-Infrastruktur zu finanzieren. Der Umsatz der Microsoft-Cloud lag im September-Quartal bei 63,9 Milliarden Dollar."
           ],
           "quellen": [
-            { "name": "Financial Times, nach AI Weekly", "url": "https://www.ft.com/content/3c2197fc-9618-4838-91e6-522ce1a96a22" }
-          ]
-        },
-        {
-          "dachzeile": "Exportkontrolle",
-          "titel": "Nvidia wandte sich im Schmuggelfall an Taiwans Behörden",
-          "absaetze": [
-            "Laut Bloomberg hat Nvidia bei taiwanischen Stellen gegen die Anklage eines eigenen Managers protestiert. Ihm wird seit August vorgeworfen, 74 Server mit gesperrten Chips nach China umgeleitet zu haben. Die Küstenwache beschlagnahmte weitere 56 Geräte. TSMC lehnte es ab, sich einzuschalten. US-Handelsminister Lutnick soll Trump diese Woche nach China begleiten, berichtet Semafor."
-          ],
-          "quellen": [
-            { "name": "Bloomberg, nach AI Weekly", "url": "https://www.bloomberg.com/news/articles/2026-11-15/nvidia-sought-taipei-s-help-over-employee-s-chip-smuggling-case" },
-            { "name": "Semafor, nach AI Weekly", "url": "https://www.semafor.com/article/11/15/2026/under-pressure-lutnick-joins-trump-in-china" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
           ]
         }
       ],
       "kurzmeldungen": [
         {
-          "titel": "Tausende Lovable-Apps mit offenen Datenbanken.",
-          "text": "Sicherheitsforscher prüften mit dem Handelsblatt 159.041 Projekte des KI-Baukastens und fanden 24.664 Seiten, deren Datenbank öffentlich lesbar war. Betroffen sind unter anderem über 80.000 Nutzerprofile und mehr als 1.000 Passdatensätze.",
+          "titel": "OpenAI veröffentlicht Erkennungswerkzeug gegen KI-Missbrauchsbilder.",
+          "text": "Der Klassifizierer steht über die API geprüften Organisationen kostenlos zur Verfügung. Zudem führt OpenAI 24-Stunden-Sperren für ChatGPT-Konten ein.",
           "quellen": [
-            { "name": "Crissy Field, nach AI Weekly", "url": "https://www.crissyfield.de/research/lovable-en/" }
+            { "name": "Windows Report", "url": "https://windowsreport.com/openai-launches-new-ai-tool-to-detect-ai-generated-csam-adds-24-hour-chatgpt-suspensions" }
           ]
         },
         {
-          "titel": "SK Hynix stützt seine Zulieferer.",
-          "text": "Der Speicherchip-Hersteller sagt 1,4 Billionen Won zu, rund 1,05 Milliarden Dollar über fünf Jahre, für heimische Anbieter von Material, Teilen und Anlagen.",
+          "titel": "Google zahlt über 400 Verlagen für KI im Nachrichtenangebot.",
+          "text": "Laut Google nehmen mehr als 400 Publikationen an einem Pilotprogramm für KI-Funktionen in Google News teil.",
           "quellen": [
-            { "name": "Reuters, nach AI Weekly", "url": "https://www.reuters.com/world/asia-pacific/sk-hynix-spend-1-billion-over-five-years-support-chip-suppliers-2026-11-16/" }
-          ]
-        },
-        {
-          "titel": "Apple-Brille soll 2027 kommen.",
-          "text": "Laut Bloomberg-Reporter Mark Gurman will Apple seine erste smarte Brille im Juni 2027 zeigen und bis Jahresende ausliefern. Sie braucht ein neueres iPhone.",
-          "quellen": [
-            { "name": "9to5Mac, nach AI Weekly", "url": "https://9to5mac.com/2026/11/15/apples-siri-ai-smart-glasses-are-reportedly-launching-next-year-heres-what-to-expect/" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
           ]
         }
       ]
@@ -106,72 +88,45 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "GTA 6",
-        "titel": "Drei Tage vor dem Start: Käufer melden Schachteln ohne gültigen Code",
+        "titel": "Zwei Tage vor dem Start: PS5-Besitzer brauchen ein Update",
         "absaetze": [
-          "Die Handelsversion von GTA 6 enthält keine Disc, sondern nur einen Code für den Download. Einige frühe Käufer berichten nun, ihr Code sei bereits eingelöst gewesen oder habe ganz gefehlt. Ohne ihn lässt sich das Spiel nicht installieren. Die Beschwerden häuften sich laut Kotaku binnen eines Tages in sozialen Netzwerken. Rockstar hat sich bisher nicht geäußert.",
-          "Die Behauptung, der Code lasse sich mit einer starken Lampe durch die verschweißte Hülle ablesen, konnten weder Kotaku noch GamesRadar+ nachvollziehen. Dass Kopien für Europa anders verpackt seien, bleibt Spekulation. Das Spiel erscheint am Donnerstag. Erste Tests werden Berichten zufolge für Mittwoch erwartet, bestätigt hat Rockstar diesen Termin nicht."
+          "Wer GTA 6 am Donnerstag auf der PlayStation 5 spielen will, sollte vorher ein 602,5 Megabyte großes Update installieren, berichtet Gamingbible. Es steht für die meisten PS5-Besitzer bereit. Das Spiel erscheint am 19. November für PS5 und Xbox Series X und S, einen neuen Verschiebungstermin hat Rockstar nicht genannt.",
+          "Reviews sind nach Angaben des Insiders NateTheHate für den 18. November zu erwarten, Rockstar hat weder Sperrfrist noch Testexemplare offiziell bestätigt."
         ],
         "quellen": [
-          { "name": "VGTimes nach Kotaku", "url": "https://vgtimes.com/gaming-news/174651-gta-6-physical-copies-reportedly-have-missing-download-codes.html" },
-          { "name": "VGTimes nach GamesRadar+", "url": "https://vgtimes.com/gaming-news/174578-gta-6-physical-codes-seem-safe-from-flashlight-scans-tests-suggest.html" },
-          { "name": "tbreak", "url": "https://tbreak.com/gta-6-review-codes-embargo-november-18/" }
+          { "name": "Gamingbible", "url": "https://gamingbible.com/news/gta-6-crucial-ps5-update-059387-20261116" },
+          { "name": "Beebom", "url": "https://beebom.com/gta-6-review-embargo-date-revealed/" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "E-Sport",
-          "titel": "FURIA verteidigt den Titel in Hongkong",
+          "dachzeile": "Auszeichnungen",
+          "titel": "Game Awards nennen heute ihre Nominierten",
           "absaetze": [
-            "Das brasilianische Counter-Strike-Team hat das Finale der BLAST Premier Rivals in Hongkong mit 3:0 gegen Team Spirit gewonnen und damit den Vorjahressieg wiederholt. Der Veranstalter spricht von 30.000 Besuchern an den Turniertagen."
+            "Die Nominierungen für die Game Awards 2026 sollen heute um 12 Uhr US-Ostküstenzeit, also 18 Uhr MEZ, bekanntgegeben werden. GTA 6 ist knapp für das Spiel des Jahres zugelassen. Welche Titel nominiert werden, steht noch nicht fest; Listen mit Favoriten sind Spekulation."
           ],
           "quellen": [
-            { "name": "EGamersWorld", "url": "https://egamersworld.com/blog/blast-rivals-fall-2026-grand-final-recap-furia-swe-6j2sAywpxx" },
-            { "name": "BLAST-Mitteilung via Manila Times", "url": "https://www.manilatimes.net/2026/11/15/tmt-newswire/pr-newswire/furia-crowned-back-to-back-blast-premier-rivals-hong-kong-champions-as-30000-fans-celebrate-world-class-counter-strike/2470347" }
-          ]
-        },
-        {
-          "dachzeile": "Abo",
-          "titel": "13 Spiele verlassen den Xbox Game Pass",
-          "absaetze": [
-            "Am Sonntag sind 13 Titel aus dem Abo gefallen, darunter GoldenEye 007, Dragon Ball Xenoverse 2, Wreckfest, Moonlighter und 1000xResist. GoldenEye war nur über Cloud und Konsole verfügbar."
-          ],
-          "quellen": [
-            { "name": "Screen Rant", "url": "https://screenrant.com/xbox-game-pass-games-leaving-november-15-2026/" },
-            { "name": "Game Rant", "url": "https://gamerant.com/xbox-game-pass-games-leaving-november-2026-wave-1-goldeneye-007/" }
+            { "name": "TechRadar", "url": "https://www.techradar.com/gaming/geoff-keighley-confirms-the-game-awards-will-announce-its-nominees-live-early-next-week" },
+            { "name": "FandomWire", "url": "https://fandomwire.com/gta-6-eligible-game-of-the-year-2026-nominees-november-17/" }
           ]
         },
         {
           "dachzeile": "Hardware",
-          "titel": "PS5 knackt 100 Millionen und wurde nie billiger",
+          "titel": "Intel wirbt mit schnellerem Rechenbeschleuniger als Nvidia",
           "absaetze": [
-            "Sony hat nach eigenen Angaben bis 10. November mehr als 100 Millionen PS5 an den Handel ausgeliefert. Ende September waren es 97,9 Millionen. Anders als ihre Vorgänger hat die Konsole in sechs Jahren keine dauerhafte Preissenkung erlebt. Die Disc-Version kostet heute rund 30 Prozent mehr als zum Start."
+            "Intel behauptet, die 350 Watt starke GPU D270 sei bis zu 5,9-mal schneller als Nvidias 600 Watt starke RTX Pro 6000 Blackwell. Es handelt sich um Herstellerangaben, unabhängige Tests liegen nicht vor."
           ],
           "quellen": [
-            { "name": "VGTimes nach Sony", "url": "https://vgtimes.com/tech-and-hardware/174577-ps5-hits-100-million-shipments-without-a-permanent-price-cut.html" },
-            { "name": "GamesRadar+", "url": "https://www.gamesradar.com/games/ps5-is-the-first-sony-console-to-hit-100-million-units-sold-without-a-price-cut/" }
+            { "name": "VideoCardz", "url": "https://videocardz.com/newz/intel-claims-its-350w-d270-gpu-is-up-to-5-9x-faster-than-nvidias-600w-rtx-pro-6000-blackwell" }
           ]
         }
       ],
       "kurzmeldungen": [
         {
-          "titel": "Roman-Bellic-Darsteller ging leer aus.",
-          "text": "Jason Zumwalt sagte in einem Interview, er erhalte für kleine Filmproduktionen bis heute Tantiemen, für GTA IV dagegen nicht.",
+          "titel": "PS5-Hacker will Spielprogramm ausgelesen haben.",
+          "text": "Der Forscher Gezine gibt an, auf der für GTA 6 nötigen Firmware 14.22 eine Spieldatei gesichert zu haben. Eine öffentliche Anleitung zum Aufbrechen der Konsole gibt es nicht.",
           "quellen": [
-            { "name": "VGTimes", "url": "https://vgtimes.com/gaming-news/174649-gta-iv-actor-jason-zumwalt-says-he-received-no-royalties-for-the-game.html" }
-          ]
-        },
-        {
-          "titel": "Handheld baut Spiele per Texteingabe.",
-          "text": "Anbernic zeigt für sein im Dezember erscheinendes Klappgerät RG DDS eine „AI Game Workshop“ genannte Funktion, die aus Beschreibungen HTML5-Spiele erzeugt.",
-          "quellen": [
-            { "name": "Time Extension", "url": "https://www.timeextension.com/features/retro-recap-mario-metroid-and-nex-playround-all-the-classic-gaming-news-from-the-past-week-november-15th-2026" }
-          ]
-        },
-        {
-          "titel": "Evercade Nexus mit Displaymängeln.",
-          "text": "Einige Besitzer melden schlecht sitzende Schutzscheiben und tote Pixel. Hersteller Blaze sagt, die Mehrheit der Käufer müsse sich nicht sorgen.",
-          "quellen": [
-            { "name": "Time Extension", "url": "https://www.timeextension.com/features/retro-recap-mario-metroid-and-nex-playround-all-the-classic-gaming-news-from-the-past-week-november-15th-2026" }
+            { "name": "VideoCardz", "url": "https://videocardz.com/newz/ps5-hacker-gezine-claims-to-have-dumped-game-executable-on-gta-vi-compatible-firmware-14-22" }
           ]
         }
       ]
@@ -182,69 +137,52 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "Markt",
-        "titel": "Bitcoin schließt die Woche mit knapp 14 Prozent Minus",
+        "titel": "Bitcoin stabilisiert sich nach Ausverkauf bei rund 65.000 Dollar",
         "absaetze": [
-          "Zum Wochenwechsel um 1 Uhr MEZ stand Bitcoin bei rund 65.360 Dollar, zwei Stunden später bei etwa 64.570 Dollar. Über sieben Tage ergibt das ein Minus von 13,7 Prozent, über 30 Tage von knapp 21 Prozent. Am Samstag war der Kurs bis etwa 62.000 Dollar gefallen, den tiefsten Stand seit Juli. Ether sank zeitweise auf 1.711 Dollar. Der Fear-and-Greed-Index steht bei 10 Punkten.",
-          "Analysten verweisen auf abfließendes Geld. Das Angebot an Stablecoins ist laut Glassnode binnen eines Monats um rund 17 Milliarden Dollar geschrumpft, so stark wie seit 2022 nicht. Die US-Spot-ETFs auf Bitcoin gaben in der abgelaufenen Woche 1,07 Milliarden Dollar ab. Dagegen kauften Adressen mit mehr als 1.000 Bitcoin laut CryptoQuant in der Korrektur etwa 47.000 Stück zu. Als Unterstützung gilt der Bereich um 62.000 bis 63.000 Dollar."
+          "Nach dem Wochenendabsturz bis etwa 62.000 Dollar, dem tiefsten Stand seit Juli, notierte Bitcoin am Montagabend laut Yahoo Finance bei rund 64.950 Dollar, Ether bei etwa 1.818 Dollar. Die Quellen nennen je nach Uhrzeit leicht abweichende Werte. Der gesamte Kryptomarkt lag bei etwa 2,18 Billionen Dollar.",
+          "Die US-Spot-ETFs auf Bitcoin gaben in der Vorwoche 1,07 Milliarden Dollar ab, die zweite Woche in Folge mit Abflüssen über einer Milliarde. Ether-ETFs verloren 398,9 Millionen Dollar, die siebte Woche in Folge. Analysten sehen bei Bitcoin die Zone um 62.000 Dollar und bei Ether etwa 1.800 Dollar als wichtige Unterstützung."
         ],
         "quellen": [
-          { "name": "KuCoin Marktbericht", "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-16-2026" },
-          { "name": "Altcoin Buzz", "url": "https://www.altcoinbuzz.io/bitcoin-tests-its-65-309-floor-after-a-week-down-14" },
-          { "name": "The Currency Analytics", "url": "https://thecurrencyanalytics.com/bitcoin/bitcoin-etfs-drain-1-07-billion-second-week-309187" }
+          { "name": "Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/16/crypto-market-today-nov-16-bitcoin-searches-for-stability-after-usd230-billion-crypto-sell-off/" },
+          { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "Vorfälle",
-          "titel": "Angreifer kapern rund 64.000 Mining-Geräte",
+          "dachzeile": "Unternehmen",
+          "titel": "Strategy kauft 485 Bitcoin und verliert bald einen Index-Platz",
           "absaetze": [
-            "Am Samstagabend US-Zeit lenkten Unbekannte etwa 13 Exahash pro Sekunde auf den Pool OCEAN um, alles zugunsten einer einzigen Auszahlungsadresse. Als Einfallstor wird die Verwaltungssoftware Luxor Commander vermutet, bestätigt ist das nicht. Beute machten die Angreifer keine, da in der Zeit kein Block gefunden wurde. Den Betreibern entgingen ihre Erträge."
+            "Strategy meldete am Montag den Kauf von 485 Bitcoin für rund 33,4 Millionen Dollar in der Woche bis 15. November, im Schnitt 68.887 Dollar je Coin. Zugleich bestätigte der Indexanbieter MSCI, dass Strategy und Metaplanet nach dem 30. November aus seinen Indizes entfernt werden. JPMorgan schätzt den dadurch ausgelösten passiven Verkauf von Strategy-Aktien auf 2,8 Milliarden Dollar."
           ],
           "quellen": [
-            { "name": "Crypto Briefing via TradingView", "url": "https://www.tradingview.com/news/cryptobriefing:9f02f8869094b:0-attackers-hijack-about-64-000-bitcoin-miners-and-point-13-eh-s-at-ocean/" }
+            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" },
+            { "name": "TCB Daily Edition (Cryptorank)", "url": "https://cryptorank.io/news/feed/aa35d-tcb-daily-edition-what-happened-in-crypto-on-november-16-2026" }
           ]
         },
         {
-          "dachzeile": "XRP",
-          "titel": "XRP fällt auf den tiefsten Stand seit zwei Jahren",
+          "dachzeile": "Stablecoins",
+          "titel": "Stablecoin-Umlauf schrumpft binnen einer Woche um 1,43 Prozent",
           "absaetze": [
-            "Der Kurs rutschte am Wochenende bis 0,89 Dollar und damit auf das Niveau vom November 2024. Seit Quartalsbeginn hat XRP 36 Prozent verloren. Aus den US-ETFs flossen vergangene Woche 19,13 Millionen Dollar ab, so viel wie seit März nicht. Am Montagmorgen notierte XRP wieder bei rund 0,97 Dollar."
+            "Der gesamte Umlauf fiel laut DefiLlama bis 16. November auf 284,91 Milliarden Dollar. Parallel hat Invesco einen Stablecoin-Reservefonds auf Ethereum gestartet, dessen tokenisierte Anteile über die Infrastruktur von Superstate ausgegeben werden."
           ],
           "quellen": [
-            { "name": "CoinDesk", "url": "https://coindesk.com/markets/2026/11/15/xrp-crashes-to-its-lowest-since-november-2024-as-money-leaves-crypto" }
-          ]
-        },
-        {
-          "dachzeile": "Börsen",
-          "titel": "Datenleck beim Dienstleister von Coinone",
-          "absaetze": [
-            "Die südkoreanische Börse meldet, dass ein Angreifer am 12. November auf Kundendienst-Unterlagen beim Auftragnehmer MetaM zugegriffen hat. Je nachdem, was Kunden dem Support mitgeteilt hatten, können Passwörter, Ausweisnummern, Bankdaten und Wallet-Adressen betroffen sein. Handels- und Wallet-Systeme blieben laut Coinone unberührt."
-          ],
-          "quellen": [
-            { "name": "The Crypto Basic", "url": "https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/" }
+            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
           ]
         }
       ],
       "kurzmeldungen": [
         {
-          "titel": "Saylor deutet weitere Käufe an.",
-          "text": "Der Strategy-Chairman stellte einen neuen Zukauf in Aussicht, Strive-Chef Matt Cole äußerte sich ähnlich. Einen abgeschlossenen Kauf hat keiner der beiden bestätigt.",
+          "titel": "Bitmine stockt Ether-Bestand auf.",
+          "text": "Das Unternehmen kaufte in der Woche 7.653 Ether zu und hält nun 6.077.745 Ether (Stand 15. November).",
           "quellen": [
-            { "name": "The Crypto Basic", "url": "https://thecryptobasic.com/2026/11/15/tcb-daily-edition-what-happened-in-crypto-on-november-15-2026/" }
+            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
           ]
         },
         {
-          "titel": "Ether-Bestand bei Binance auf Fünfjahrestief.",
-          "text": "CryptoQuant schätzt die Reserve auf etwa 2,9 Millionen Ether, fast 42 Prozent weniger als im Juli 2025. Die Kundenguthaben laut Reservenachweis stiegen zuletzt dennoch leicht.",
+          "titel": "BTCS verkauft Ether unter Einstandspreis.",
+          "text": "Das Nasdaq-Unternehmen musste Ether veräußern, um Liquidationsrisiken eines 64,1-Millionen-Dollar-Kredits bei der Plattform Aave zu begrenzen.",
           "quellen": [
-            { "name": "CryptoTicker", "url": "https://cryptoticker.io/en/ethereum-price-prediction-binance-reserve-five-year-low-november-15-2026/" }
-          ]
-        },
-        {
-          "titel": "Washington klagt auch gegen Arkansas.",
-          "text": "Justizministerium und CFTC wollen dem Bundesstaat das Vorgehen gegen den Prognosemarkt Kalshi untersagen lassen. Gegen Louisiana läuft bereits eine Klage.",
-          "quellen": [
-            { "name": "KuCoin Marktbericht", "url": "https://www.kucoin.com/news/articles/crypto-daily-market-report-november-16-2026" }
+            { "name": "TCB Daily Edition (Cryptorank)", "url": "https://cryptorank.io/news/feed/aa35d-tcb-daily-edition-what-happened-in-crypto-on-november-16-2026" }
           ]
         }
       ]
