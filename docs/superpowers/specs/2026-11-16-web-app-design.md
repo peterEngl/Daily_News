@@ -180,6 +180,8 @@ Die App läuft lokal mit `python -m http.server 8000` im Projektordner, Aufruf �
 
 Die gelöschte Aufgabe „Daily News täglich“ wird als geplante Claude-Code-Aufgabe in der Cloud neu angelegt: täglich 6:40 Uhr Wiener Zeit, mit Zugriff auf das Repository. Ablauf: recherchieren, `ausgabe.json` mit erhöhter Nummer schreiben, `node tests/pruefe-ausgabe.mjs` ausführen, nur bei „OK“ committen und auf `main` pushen. Schlägt der Test fehl, wird nichts hochgeladen, und die Aufgabe meldet den Fehler. Die Aufgabe wird erst angelegt, wenn Peter die App lokal abgenommen hat.
 
+Seit 17.11.2026 überholt: Die Aufgabe pusht nur noch auf den Branch `ausgabe`, veröffentlicht wird über einen GitHub-Actions-Workflow statt Pages aus `main` (auch die Schritte unten). Siehe `2026-11-16-veroeffentlichung-design.md`.
+
 ### Veröffentlichung (Schritte für Peter, nach dem lokalen Test)
 
 0. Vorher entscheiden, ob die App ein Impressum (Offenlegung nach Mediengesetz) und einen Datenschutzhinweis bekommt, und ob die Kurse weiterhin direkt bei CoinGecko abgerufen werden (dabei geht die IP-Adresse des Lesers an CoinGecko). Peter hat das am 16.11.2026 bewusst auf die Zeit vor der Veröffentlichung verschoben. Für den lokalen Test wird nichts davon gebaut.
