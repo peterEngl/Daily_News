@@ -1,30 +1,29 @@
 {
-  "nummer": 5,
-  "datum": "2026-11-17",
+  "nummer": 6,
+  "datum": "2026-11-18",
   "redaktionsschluss": "06:42",
   "aufmacher": {
     "ressort": "KI",
-    "titel": "Nvidia-Verwaltungsrat schließt Huangs Rückkehr aus",
-    "vorspann": "Während eine Petition für Jensen Huang auf bis zu 187.000 Unterschriften wächst, lehnt der Verwaltungsrat laut Berichten eine Rückkehr ab. Heute Abend legt Nvidia Quartalszahlen vor.",
+    "titel": "Nvidia übertrifft Erwartungen: 115,8 Milliarden Dollar Umsatz im Quartal",
+    "vorspann": "Nvidia meldet für das dritte Quartal einen Umsatz von 115,8 Milliarden Dollar, ein Plus von 103 Prozent. Für das laufende Quartal stellt der Konzern 130 Milliarden Dollar in Aussicht.",
     "absaetze": [
-      "Der Verwaltungsrat von Nvidia zieht nach übereinstimmenden Medienberichten eine Wiedereinsetzung von Jensen Huang als Vorstandschef nicht in Betracht. Eine Quelle aus dem Umfeld des Gremiums sagte, man erwäge keine Rückholung. Eine formelle öffentliche Antwort auf die Petition gibt es bisher nicht.",
-      "Die Petition für Huangs Rückkehr zählt je nach Medium mehr als 160.000 bis über 187.000 Unterschriften, so die Organisatoren. Zwei große Investoren, Altimeter Capital und Atreides Management, baten den Verwaltungsrat in einem Brief, alle Optionen offenzuhalten, auch eine mögliche Rückkehr. Sie forderten aber nicht ausdrücklich die sofortige Wiedereinsetzung.",
-      "Huang war am 12. November zurückgetreten. Finanzchefin Colette Kress führt den Konzern übergangsweise. Laut Financial Times sucht der Verwaltungsrat intern und extern nach einem dauerhaften Nachfolger und hat Arm-Chef Rene Haas angesprochen. Analysten halten eine Rückkehr für unwahrscheinlich; auf der Plattform Kalshi lag die Wahrscheinlichkeit bei rund 10 Prozent. Nvidia erläutert am Dienstag um 23 Uhr MEZ die Zahlen des dritten Quartals."
+      "Nvidia hat am Dienstagabend die Zahlen für das Quartal bis 25. Oktober vorgelegt: Der Umsatz lag bei 115,8 Milliarden Dollar und damit 103 Prozent über dem Vorjahreswert. Das Rechenzentrumsgeschäft trug 107,6 Milliarden Dollar bei, ein Plus von 110 Prozent zum Vorjahr und von rund 21 Prozent zum Vorquartal. Laut CNBC lag das über der Analystenschätzung von 101,87 Milliarden Dollar.",
+      "Für das vierte Quartal peilt Nvidia einen Umsatz von 130 Milliarden Dollar an, mit einer Schwankungsbreite von drei Prozent. Umsätze mit Rechenzentrumschips für China sind darin nicht eingerechnet. Das System Vera Rubin NVL72, Nachfolger der Blackwell-Systeme, wird nach Konzernangaben bereits ausgeliefert.",
+      "Es waren die ersten Zahlen nach dem Rücktritt von Jensen Huang am 12. November. Finanzchefin Colette Kress führt das Unternehmen übergangsweise und sagte laut Berichten, es laufe wie gewohnt weiter. Aktien legten nach Börsenschluss zeitweise um mehr als vier Prozent zu."
     ],
     "quellen": [
-      { "name": "CBS News", "url": "https://www.cbsnews.com/news/jensen-huang-nvidia-ceo-reinstatement-petition/" },
-      { "name": "Yahoo Finance", "url": "https://finance.yahoo.com/markets/stocks/articles/nvidia-directors-rule-huang-return-003700900.html" },
-      { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/16/nvidia-jensen-huang-return-tech.html" },
-      { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/14/nvidia-investors-jensen-huang-return-board-letter.html" }
+      { "name": "NVIDIA (Pressemitteilung)", "url": "https://nvidianews.nvidia.com/news/nvidia-announces-financial-results-for-third-quarter-fiscal-2027" },
+      { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/17/nvidia-nvda-earnings-report-q3-2027.html" },
+      { "name": "TradingKey", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262309793-nvidia-earnings-report-q3-rubin-ramp-data-center-growth-revenue-guidance-gross-margin-tradingkey" }
     ]
   },
   "termine": [
-    { "datum": "2026-11-17", "text": "Nominierte der Game Awards, 18 Uhr MEZ" },
-    { "datum": "2026-11-17", "text": "Nvidia-Quartalszahlen, Analystenkonferenz 23 Uhr MEZ" },
     { "datum": "2026-11-18", "text": "Anthropic legt den Ausgabepreis fest (erwartet)" },
-    { "datum": "2026-11-18", "text": "Erste GTA-6-Tests erwartet (laut Insider, von Rockstar nicht bestätigt)" },
+    { "datum": "2026-11-18", "text": "US-Notenbank Fed veröffentlicht Protokoll der Oktober-Sitzung, 20 Uhr MEZ" },
+    { "datum": "2026-11-18", "text": "Erste GTA-6-Tests erwartet (laut Insidern, von Rockstar nicht bestätigt)" },
     { "datum": "2026-11-19", "text": "GTA 6 erscheint für PS5 und Xbox Series" },
-    { "datum": "2026-11-19", "text": "Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT" }
+    { "datum": "2026-11-19", "text": "Geplanter erster Handelstag der Anthropic-Aktie an der Nasdaq, Kürzel ANT" },
+    { "datum": "2026-11-19", "text": "Quartalszahlen von Walmart" }
   ],
   "ressorts": [
     {
@@ -33,51 +32,44 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "Börsengang",
-        "titel": "Anthropic: Preisspanne steht, Preisfestsetzung am Mittwoch erwartet",
+        "titel": "Anthropic vor der Preisfestsetzung: Amazon und Google halten große Anteile",
         "absaetze": [
-          "Anthropic bietet 825 Millionen Aktien in einer Spanne von 70 bis 78 Dollar an und hat sich dafür das Nasdaq-Kürzel ANT gesichert. Laut Berichten sollen der Ausgabepreis am 18. November festgelegt und der Handel am 19. November aufgenommen werden. Beide Termine stehen nicht im Antrag selbst und gelten daher als unbestätigt.",
-          "Bloomberg meldete am 12. November, die Orders lägen etwa beim Sechsfachen der verfügbaren Aktien. Einen endgültigen Preis gibt es noch nicht. Bewertungsangaben der Berichte weichen stark voneinander ab."
+          "Anthropic will heute den Ausgabepreis seiner Aktien festlegen, der Handel unter dem Kürzel ANT soll am 19. November starten. Angeboten werden 825 Millionen Aktien in einer Spanne von 70 bis 78 Dollar. Beide Termine hängen laut Unternehmen von behördlicher Freigabe, Nachfrage und Marktlage ab.",
+          "Dem Bericht von TechCrunch zufolge legte Anthropic am Dienstag Details zu den Verträgen mit Amazon und Google offen: Amazon soll nach dem Börsengang rund 14,7 Prozent halten, Google knapp 14 Prozent. Eine unabhängige Analyse kommt auf ähnliche Werte; diese Anteile sind demnach ohne Stimmrecht."
         ],
         "quellen": [
-          { "name": "CNBC", "url": "https://www.cnbc.com/2026/11/10/anthropic-sets-price-range-of-70-to-78-in-upcoming-ipo.html" },
-          { "name": "TradingKey", "url": "https://www.tradingkey.com/analysis/stocks/us-stocks/262304476-anthropic-ipo-ant-price-above-78-orders-six-times-november-14-2026-tradingkey" }
+          { "name": "TechCrunch", "url": "https://techcrunch.com/2026/11/17/amazon-and-google-will-together-own-nearly-30-of-anthropic-after-its-ipo" },
+          { "name": "FourWeekMBA", "url": "https://fourweekmba.com/ai-anthropics-ipo-day-by-day-pricing-18-nov-trading-19-nov/" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "Zahlungen",
-          "titel": "OpenAI startet ChatGPT Wallet",
+          "dachzeile": "Recht",
+          "titel": "Kalifornien verklagt OpenAI wegen KI-Agenten",
           "absaetze": [
-            "Seit dem 13. November können KI-Agenten von OpenAI mit einer einmal hinterlegten Karte Einkäufe tätigen, jede Zahlung muss einzeln bestätigt werden. OpenAI verlangt laut der Übersicht zum Start keine Provision, weil es erst Händlerbeziehungen aufbaut."
+            "Der kalifornische Generalstaatsanwalt Rob Bonta hat am Montag vor einem Gericht in San Francisco Klage gegen OpenAI eingereicht. Der Vorwurf lautet, das Unternehmen habe KI-Agenten ohne ausreichende Schutzvorkehrungen betrieben. Details der Klage und der Zusammenhang mit einem Datenvorfall bei Hugging Face sind in den Berichten nicht eindeutig."
           ],
           "quellen": [
-            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today/edition/2026-11-17" }
           ]
         },
         {
-          "dachzeile": "Finanzierung",
-          "titel": "Microsoft begibt Anleihe über 25 Milliarden Dollar",
+          "dachzeile": "Produkte",
+          "titel": "Google: Maps plant und bucht künftig selbst, KI-Brille vorbestellbar",
           "absaetze": [
-            "Der Konzern verkauft erstmals seit 2017 wieder Anleihen in den USA, um den Ausbau seiner KI-Infrastruktur zu finanzieren. Der Umsatz der Microsoft-Cloud lag im September-Quartal bei 63,9 Milliarden Dollar."
+            "Google hat Google Maps um Funktionen erweitert, mit denen KI-Agenten Ausflüge planen und Buchungen vornehmen. Zudem sind Vorbestellungen für Googles Brille mit Gemini-Unterstützung möglich."
           ],
           "quellen": [
-            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today/edition/2026-11-17" }
           ]
         }
       ],
       "kurzmeldungen": [
         {
-          "titel": "OpenAI veröffentlicht Erkennungswerkzeug gegen KI-Missbrauchsbilder.",
-          "text": "Der Klassifizierer steht über die API geprüften Organisationen kostenlos zur Verfügung. Zudem führt OpenAI 24-Stunden-Sperren für ChatGPT-Konten ein.",
+          "titel": "Anthropic verkürzt Frist für die Offenlegung von Sicherheitslücken.",
+          "text": "Laut einer Nachrichtenübersicht begründet das Unternehmen dies damit, dass KI Schwachstellen schneller findet, als sie üblicherweise behoben werden.",
           "quellen": [
-            { "name": "Windows Report", "url": "https://windowsreport.com/openai-launches-new-ai-tool-to-detect-ai-generated-csam-adds-24-hour-chatgpt-suspensions" }
-          ]
-        },
-        {
-          "titel": "Google zahlt über 400 Verlagen für KI im Nachrichtenangebot.",
-          "text": "Laut Google nehmen mehr als 400 Publikationen an einem Pilotprogramm für KI-Funktionen in Google News teil.",
-          "quellen": [
-            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today" }
+            { "name": "AI Weekly (Nachrichtenübersicht)", "url": "https://aiweekly.co/ai-news-today/edition/2026-11-17" }
           ]
         }
       ]
@@ -87,49 +79,31 @@
       "titel": "Games",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "GTA 6",
-        "titel": "Zwei Tage vor dem Start: PS5-Besitzer brauchen ein Update",
+        "dachzeile": "Auszeichnungen",
+        "titel": "Game Awards: GTA 6 unter den sechs Anwärtern auf das Spiel des Jahres",
         "absaetze": [
-          "Wer GTA 6 am Donnerstag auf der PlayStation 5 spielen will, sollte vorher ein 602,5 Megabyte großes Update installieren, berichtet Gamingbible. Es steht für die meisten PS5-Besitzer bereit. Das Spiel erscheint am 19. November für PS5 und Xbox Series X und S, einen neuen Verschiebungstermin hat Rockstar nicht genannt.",
-          "Reviews sind nach Angaben des Insiders NateTheHate für den 18. November zu erwarten, Rockstar hat weder Sperrfrist noch Testexemplare offiziell bestätigt."
+          "Die Game Awards haben am Dienstag ihre Nominierten bekanntgegeben. Für das Spiel des Jahres stehen 007 First Light, Control Resonant, Grand Theft Auto VI, Phantom Blade Zero, Resident Evil Requiem und The Legend of Zelda: Ocarina of Time zur Wahl. GTA VI ist nominiert, obwohl es noch nicht erschienen ist; laut Purexbox hat es mit acht die meisten Nominierungen insgesamt.",
+          "Die Verleihung findet am 10. Dezember statt."
         ],
         "quellen": [
-          { "name": "Gamingbible", "url": "https://gamingbible.com/news/gta-6-crucial-ps5-update-059387-20261116" },
-          { "name": "Beebom", "url": "https://beebom.com/gta-6-review-embargo-date-revealed/" }
+          { "name": "Purexbox", "url": "https://www.purexbox.com/news/2026/11/the-game-awards-reveals-its-six-nominees-for-game-of-the-year-including-gta-6" },
+          { "name": "KeenGamer", "url": "https://www.keengamer.com/articles/news/the-game-awards-2026-all-game-of-the-year-nominees-revealed/" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "Auszeichnungen",
-          "titel": "Game Awards nennen heute ihre Nominierten",
+          "dachzeile": "GTA 6",
+          "titel": "Vor dem Start: Tests könnten heute erscheinen",
           "absaetze": [
-            "Die Nominierungen für die Game Awards 2026 sollen heute um 12 Uhr US-Ostküstenzeit, also 18 Uhr MEZ, bekanntgegeben werden. GTA 6 ist knapp für das Spiel des Jahres zugelassen. Welche Titel nominiert werden, steht noch nicht fest; Listen mit Favoriten sind Spekulation."
+            "GTA 6 erscheint am 19. November für PS5 und Xbox Series X und S; Take-Two-Chef Strauss Zelnick hat den Termin laut Berichten bestätigt. Die ersten Tests werden für heute erwartet, die Quellen sind sich über die Sperrfrist aber nicht einig, und Rockstar hat sie nicht offiziell bestätigt. Bewertungen in den Konsolen-Stores stammen nicht zwingend von Spielern, die das Spiel gespielt haben."
           ],
           "quellen": [
-            { "name": "TechRadar", "url": "https://www.techradar.com/gaming/geoff-keighley-confirms-the-game-awards-will-announce-its-nominees-live-early-next-week" },
-            { "name": "FandomWire", "url": "https://fandomwire.com/gta-6-eligible-game-of-the-year-2026-nominees-november-17/" }
-          ]
-        },
-        {
-          "dachzeile": "Hardware",
-          "titel": "Intel wirbt mit schnellerem Rechenbeschleuniger als Nvidia",
-          "absaetze": [
-            "Intel behauptet, die 350 Watt starke GPU D270 sei bis zu 5,9-mal schneller als Nvidias 600 Watt starke RTX Pro 6000 Blackwell. Es handelt sich um Herstellerangaben, unabhängige Tests liegen nicht vor."
-          ],
-          "quellen": [
-            { "name": "VideoCardz", "url": "https://videocardz.com/newz/intel-claims-its-350w-d270-gpu-is-up-to-5-9x-faster-than-nvidias-600w-rtx-pro-6000-blackwell" }
+            { "name": "Insider Gaming", "url": "https://insider-gaming.com/grand-theft-auto-6-review-embargo/" },
+            { "name": "NoPing", "url": "https://noping.com/blog/gta-6-reviews-embargo-date-rumor" }
           ]
         }
       ],
-      "kurzmeldungen": [
-        {
-          "titel": "PS5-Hacker will Spielprogramm ausgelesen haben.",
-          "text": "Der Forscher Gezine gibt an, auf der für GTA 6 nötigen Firmware 14.22 eine Spieldatei gesichert zu haben. Eine öffentliche Anleitung zum Aufbrechen der Konsole gibt es nicht.",
-          "quellen": [
-            { "name": "VideoCardz", "url": "https://videocardz.com/newz/ps5-hacker-gezine-claims-to-have-dumped-game-executable-on-gta-vi-compatible-firmware-14-22" }
-          ]
-        }
-      ]
+      "kurzmeldungen": []
     },
     {
       "id": "krypto",
@@ -137,52 +111,35 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "Markt",
-        "titel": "Bitcoin stabilisiert sich nach Ausverkauf bei rund 65.000 Dollar",
+        "titel": "Bitcoin bleibt unter 65.000 Dollar, ETF-Abflüsse enden vorerst",
         "absaetze": [
-          "Nach dem Wochenendabsturz bis etwa 62.000 Dollar, dem tiefsten Stand seit Juli, notierte Bitcoin am Montagabend laut Yahoo Finance bei rund 64.950 Dollar, Ether bei etwa 1.818 Dollar. Die Quellen nennen je nach Uhrzeit leicht abweichende Werte. Der gesamte Kryptomarkt lag bei etwa 2,18 Billionen Dollar.",
-          "Die US-Spot-ETFs auf Bitcoin gaben in der Vorwoche 1,07 Milliarden Dollar ab, die zweite Woche in Folge mit Abflüssen über einer Milliarde. Ether-ETFs verloren 398,9 Millionen Dollar, die siebte Woche in Folge. Analysten sehen bei Bitcoin die Zone um 62.000 Dollar und bei Ether etwa 1.800 Dollar als wichtige Unterstützung."
+          "Bitcoin notierte am Dienstag laut Berichten bei rund 64.000 bis 64.800 Dollar und damit unter dem 200-Wochen-Durchschnitt von etwa 68.000 Dollar. Ether lag bei etwa 1.800 Dollar. Die Quellen nennen je nach Uhrzeit leicht abweichende Werte.",
+          "Die US-Spot-Bitcoin-ETFs verzeichneten am Montag nach Daten von Farside Investors Zuflüsse von 7,9 Millionen Dollar und beendeten damit eine siebentägige Abflussserie. Ether-ETFs verloren dagegen weitere 8,31 Millionen Dollar. Marktbeobachter weisen darauf hin, dass über die Hälfte aller Bitcoin derzeit unter dem Einstandspreis ihrer Halter liegt. Der Marktmacher Wintermute warnte vor einem möglichen Rutsch in den Bereich der 50.000er; das ist eine Einschätzung, keine Gewissheit."
         ],
         "quellen": [
-          { "name": "Motley Fool", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/16/crypto-market-today-nov-16-bitcoin-searches-for-stability-after-usd230-billion-crypto-sell-off/" },
-          { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
+          { "name": "CoinDesk", "url": "https://www.coindesk.com/markets/2026/11/17/bitcoin-remains-penned-in-near-usd64-000-even-as-etf-outflow-streak-ends" },
+          { "name": "FXStreet", "url": "https://www.fxstreet.com/cryptocurrencies/news/crypto-today-bitcoin-drops-ethereum-and-xrp-pare-losses-amid-capital-outflows-202611171016" }
         ]
       },
       "artikel": [
         {
-          "dachzeile": "Unternehmen",
-          "titel": "Strategy kauft 485 Bitcoin und verliert bald einen Index-Platz",
+          "dachzeile": "Wochenvorschau",
+          "titel": "Fed-Protokoll und Nvidia-Zahlen bestimmen die Krypto-Woche",
           "absaetze": [
-            "Strategy meldete am Montag den Kauf von 485 Bitcoin für rund 33,4 Millionen Dollar in der Woche bis 15. November, im Schnitt 68.887 Dollar je Coin. Zugleich bestätigte der Indexanbieter MSCI, dass Strategy und Metaplanet nach dem 30. November aus seinen Indizes entfernt werden. JPMorgan schätzt den dadurch ausgelösten passiven Verkauf von Strategy-Aktien auf 2,8 Milliarden Dollar."
+            "Laut CoinDesk stehen diese Woche das Protokoll der Fed-Sitzung, die Nvidia-Zahlen und neue russische Regeln für den privaten Kryptohandel im Fokus. Das Protokoll der Sitzung vom 27. und 28. Oktober wird am Mittwoch um 14 Uhr US-Ostküstenzeit erwartet; es soll zeigen, wie viele Notenbanker für eine Zinserhöhung offen waren, nachdem zwei dafür gestimmt hatten."
           ],
           "quellen": [
-            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" },
-            { "name": "TCB Daily Edition (Cryptorank)", "url": "https://cryptorank.io/news/feed/aa35d-tcb-daily-edition-what-happened-in-crypto-on-november-16-2026" }
-          ]
-        },
-        {
-          "dachzeile": "Stablecoins",
-          "titel": "Stablecoin-Umlauf schrumpft binnen einer Woche um 1,43 Prozent",
-          "absaetze": [
-            "Der gesamte Umlauf fiel laut DefiLlama bis 16. November auf 284,91 Milliarden Dollar. Parallel hat Invesco einen Stablecoin-Reservefonds auf Ethereum gestartet, dessen tokenisierte Anteile über die Infrastruktur von Superstate ausgegeben werden."
-          ],
-          "quellen": [
-            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
+            { "name": "CoinDesk", "url": "https://www.coindesk.com/markets/2026/11/16/fomc-minutes-nvidia-earnings-russia-s-retail-crypto-rules-crypto-week-ahead" },
+            { "name": "Schaeffer's Investment Research", "url": "https://www.schaeffersresearch.com/content/news/2026/11/12/the-week-ahead-dow-earnings-fomc-meeting-minutes" }
           ]
         }
       ],
       "kurzmeldungen": [
         {
-          "titel": "Bitmine stockt Ether-Bestand auf.",
-          "text": "Das Unternehmen kaufte in der Woche 7.653 Ether zu und hält nun 6.077.745 Ether (Stand 15. November).",
+          "titel": "Bitcoin-Kurs fiel in sieben Tagen um 14 Prozent.",
+          "text": "Laut FXStreet liegt Bitcoin rund 8,5 Prozent unter seinem 200-Wochen-Durchschnitt.",
           "quellen": [
-            { "name": "Zerocap", "url": "https://zerocap.com/insights/weekly-crypto-market-wrap/weekly-crypto-market-wrap-16-november-2026/" }
-          ]
-        },
-        {
-          "titel": "BTCS verkauft Ether unter Einstandspreis.",
-          "text": "Das Nasdaq-Unternehmen musste Ether veräußern, um Liquidationsrisiken eines 64,1-Millionen-Dollar-Kredits bei der Plattform Aave zu begrenzen.",
-          "quellen": [
-            { "name": "TCB Daily Edition (Cryptorank)", "url": "https://cryptorank.io/news/feed/aa35d-tcb-daily-edition-what-happened-in-crypto-on-november-16-2026" }
+            { "name": "FXStreet", "url": "https://fxstreet.com/cryptocurrencies/news/bitcoin-sell-off-deepens-as-51-of-supply-falls-underwater-202611172143" }
           ]
         }
       ]
