@@ -1,36 +1,32 @@
 {
-  "nummer": 8,
-  "datum": "2026-11-20",
+  "nummer": 9,
+  "datum": "2026-11-21",
   "redaktionsschluss": "06:41",
   "aufmacher": {
     "ressort": "KI",
-    "titel": "Anthropic-Aktie startet mit Kurssprung und schließt 17 Prozent über dem Ausgabepreis",
-    "vorspann": "Am ersten Handelstag an der Nasdaq eröffnete die Anthropic-Aktie bei 111,50 Dollar und ging bei 97,17 Dollar aus dem Handel – nach 83 Dollar Ausgabepreis.",
+    "titel": "Anthropic-Börsengang: Ausgabepreis über der Spanne, Nachfrage weit über dem Angebot",
+    "vorspann": "Anthropic hat seine Aktie mit 83 Dollar bepreist, oberhalb der angepeilten Spanne von 70 bis 78 Dollar.",
     "absaetze": [
-      "Die Aktie von Anthropic (Kürzel ANT) hat ihren ersten Handelstag am Donnerstag mit einem deutlichen Aufschlag beendet. Laut Berichten eröffnete sie bei 111,50 Dollar, also rund 34 Prozent über dem Ausgabepreis von 83 Dollar, und erreichte zeitweise etwa 115 Dollar. Bis zum Handelsschluss gab sie einen Großteil der Gewinne wieder ab und schloss bei 97,17 Dollar, ein Plus von 17,07 Prozent.",
-      "CNN beziffert den Börsenwert zum Schlusskurs auf 1,76 Billionen Dollar, Fortune nennt knapp 1,8 Billionen Dollar. Die Angaben hängen davon ab, welche Aktien mitgezählt werden. Zum Emissionsvolumen finden sich je nach Quelle rund 81,3 Milliarden Dollar für den Börsengang selbst und etwa 107 Milliarden Dollar inklusive der Privatplatzierung.",
-      "Der Börsengang fiel in ein schwaches Marktumfeld: Der Nasdaq 100 schloss laut Berichten 2,2 Prozent im Minus und liegt damit rund 15 Prozent unter seinem Rekord von Oktober. Das ist eine Momentaufnahme, keine Anlageberatung."
+      "Wie mehrere Medien berichten, lag der Ausgabepreis bei 83 Dollar je Aktie und damit über der zuvor genannten Spanne von 70 bis 78 Dollar. Die Aufträge sollen das Angebot etwa um das Sechsfache übertroffen haben. Gehandelt wird das Papier an der Nasdaq unter dem Kürzel ANT.",
+      "Zur Bewertung nennen die Berichte rund 1,5 Billionen Dollar. Amazon und Google sollen nach dem Börsengang zusammen etwa 28 Prozent der Anteile halten. Analysten rechnen laut einem Bericht mit hoher Nachfrage von Indexfonds, die rund 28 Prozent der angebotenen Aktien ausmachen könnte.",
+      "Zur Kursentwicklung nach dem ersten Handelstag am Donnerstag liegt uns für Freitag nichts Belegbares vor. Die Angaben in den Quellen weichen teils voneinander ab; dies ist keine Anlageberatung."
     ],
     "quellen": [
       {
-        "name": "Forbes",
-        "url": "https://www.forbes.com/sites/fionariley/2026/11/19/anthropic-ipo-live-stock-closes-day-at-97-up-more-than-17/"
-      },
-      {
-        "name": "CNN",
-        "url": "https://www.cnn.com/2026/11/19/business/live-news/anthropic-ipo"
-      },
-      {
         "name": "Fortune",
-        "url": "https://fortune.com/2026/11/19/anthropic-ipo-first-day-trading-nasdaq-record-valuation/"
+        "url": "https://fortune.com/2026/11/18/anthropic-prices-ipo-83-per-share-1-5-trillion/"
+      },
+      {
+        "name": "The Next Web",
+        "url": "https://thenextweb.com/news/anthropic-ipo-prices-83-share-1-5-trillion-record-raise"
+      },
+      {
+        "name": "AI Weekly",
+        "url": "https://aiweekly.co/alerts/anthropic-prices-ipo-at-83-above-range-trades-thursday-as-ant"
       }
     ]
   },
   "termine": [
-    {
-      "datum": "2026-11-24",
-      "text": "Quartalszahlen von Dell und Xiaomi (laut einer Wochenvorschau)"
-    },
     {
       "datum": "2026-11-26",
       "text": "US-Feiertag Thanksgiving, am 27.11. verkürzter Börsenhandel in den USA"
@@ -42,34 +38,24 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Modelle",
-        "titel": "OpenAI bringt GPT-6.2 Astra und Sol",
+        "dachzeile": "Chips",
+        "titel": "Nvidia legt Quartalszahlen ohne Gründer Jensen Huang vor",
         "absaetze": [
-          "OpenAI hat laut einem Wochenrückblick am 17. November die Modelle GPT-6.2 Astra und Sol vorgestellt. Der Schwerpunkt liegt demnach auf Aufgaben im Berufsalltag und auf niedrigeren Kosten.",
-          "Die Angaben stammen aus einer Zusammenfassung und nicht aus einer Mitteilung des Unternehmens; Details und Messwerte sind noch nicht unabhängig geprüft."
+          "Nvidia hat laut einer Wochenvorschau von investinglive am 17. November nach Börsenschluss seine Zahlen zum dritten Quartal vorgelegt, erstmals ohne Gründer Jensen Huang. Huang soll am 12. November als Präsident, Chef und Verwaltungsrat zurückgetreten sein; Colette Kress führt das Unternehmen demnach kommissarisch.",
+          "Zu den Quartalszahlen selbst liegen uns keine belegten Angaben vor. Die Informationen stammen aus einer Vorschau, nicht aus einer Mitteilung des Unternehmens."
         ],
         "quellen": [
           {
-            "name": "Emergent (Wochenrückblick)",
-            "url": "https://emergent.sh/news/week-s-top-5-ai-stories-november-2026-roundup"
+            "name": "investinglive",
+            "url": "https://investinglive.com/news/earnings-week-ahead-nvidia-without-jensen-anthropic-s-ipo-and-the-consumer-meets-a-hiking-fed/"
           }
         ]
       },
       "artikel": [],
       "kurzmeldungen": [
         {
-          "titel": "Google erweitert die Gemini-4-Reihe.",
-          "text": "Laut Wochenrückblick steht seit 10. November Gemini 4 Carbon als bisher leistungsfähigstes Modell bereit, dazu kommt das schnellere Gemini 4 Neon für Softwareentwicklung und Wissensarbeit.",
-          "quellen": [
-            {
-              "name": "Emergent (Wochenrückblick)",
-              "url": "https://emergent.sh/news/week-s-top-5-ai-stories-november-2026-roundup"
-            }
-          ]
-        },
-        {
-          "titel": "Meta veröffentlicht das kleine Modell Muse Ember.",
-          "text": "Das Modell soll besonders effizient sein und 0,10 Dollar je einer Million Eingabe-Tokens kosten, so ein Wochenrückblick.",
+          "titel": "OpenAI bringt GPT-6.2 Astra und Sol.",
+          "text": "Laut einem Wochenrückblick wurden die Modelle am 17. November vorgestellt, mit Schwerpunkt auf Berufsalltag und niedrigeren Kosten. Die Angaben sind nicht unabhängig geprüft.",
           "quellen": [
             {
               "name": "Emergent (Wochenrückblick)",
@@ -85,24 +71,35 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "GTA 6",
-        "titel": "GTA 6 startet mit geschätzten 2,36 Milliarden Dollar Umsatz am ersten Tag",
+        "titel": "GTA 6 ist erschienen, offizielle Verkaufszahlen fehlen noch",
         "absaetze": [
-          "Grand Theft Auto VI ist am Donnerstag für PS5 und Xbox Series erschienen. Die Marktforscher von Sensor Tower schätzen den Umsatz bis zum Ende des Starttags auf rund 2,36 Milliarden Dollar bei etwa 24,6 Millionen verkauften Exemplaren, etwa drei von vier davon auf der PS5. Darin sind Vorbestellungen enthalten.",
-          "Zum Vergleich: GTA V kam 2013 laut Guinness auf rund 816 Millionen Dollar in den ersten 24 Stunden. Offizielle Zahlen von Rockstar oder Take-Two liegen bislang nicht vor; die Schätzung von Sensor Tower schwankte laut einem Bericht im Tagesverlauf um etwa 520 Millionen Dollar."
+          "Grand Theft Auto VI ist am 19. November für PS5 und Xbox Series erschienen. Offizielle Verkaufszahlen von Rockstar oder Take-Two haben wir in den Quellen nicht gefunden; Take-Two hatte angekündigt, nach dem Start mehr zur Entwicklung zu sagen.",
+          "Vor dem Start erklärte Take-Two-Chef Strauss Zelnick laut Berichten, die Vorbestellungen lägen weit über den Erwartungen. Die Umsatzprognose von 8 bis 8,2 Milliarden Dollar für das Geschäftsjahr 2027 blieb unverändert. Das sind Aussagen vor dem Verkaufsstart, keine Ergebnisse."
         ],
         "quellen": [
           {
-            "name": "The Statesman",
-            "url": "https://www.thestatesman.com/entertainment/biggest-entertainment-launch-ever-gta-6-pulls-in-over-2-billion-on-day-one-industry-estimate-says-1503664665.html"
+            "name": "Video Games Chronicle",
+            "url": "https://www.videogameschronicle.com/news/gta-6-pre-orders-are-far-above-initial-expectations-but-nba-2k27-was-below-our-forecast-take-two-says/"
           },
           {
-            "name": "Make Tech Easier",
-            "url": "https://maketecheasier.com/gta-6-first-day-sales-estimate/"
+            "name": "Game Developer",
+            "url": "https://www.gamedeveloper.com/business/take-two-financials-are-steady-while-the-ceo-claims-that-grand-theft-auto-vi-pre-orders-are-exceeding-expectations"
           }
         ]
       },
       "artikel": [],
-      "kurzmeldungen": []
+      "kurzmeldungen": [
+        {
+          "titel": "NBA 2K27 bleibt hinter der Prognose.",
+          "text": "Laut Video Games Chronicle blieb das Spiel unter den eigenen Erwartungen von Take-Two. Der Konzern führt das zum Teil auf die zeitliche Nähe zu GTA 6 zurück.",
+          "quellen": [
+            {
+              "name": "Video Games Chronicle",
+              "url": "https://www.videogameschronicle.com/news/gta-6-pre-orders-are-far-above-initial-expectations-but-nba-2k27-was-below-our-forecast-take-two-says/"
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "krypto",
@@ -110,12 +107,16 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "Markt",
-        "titel": "Bitcoin fällt auf den tiefsten Stand seit über vier Monaten",
+        "titel": "Bitcoin bleibt unter Druck, ETF-Abflüsse halten an",
         "absaetze": [
-          "Bitcoin ist am Donnerstag zeitweise unter 61.500 Dollar gefallen, als US-Technologiewerte nach dem Börsendebüt von Anthropic ihre frühen Gewinne abgaben. Ein Bericht nennt ein Tagestief von rund 61.449 Dollar, den schwächsten Kurs seit mehr als vier Monaten. Je nach Zeitpunkt der Abfrage schwanken die Kursangaben stark zwischen etwa 61.600 und 63.800 Dollar.",
-          "Spot-Bitcoin-ETFs in den USA verzeichneten laut Motley Fool Nettoabflüsse von 306,5 Millionen Dollar, nach 239,9 Millionen am Dienstag. Der Fear-and-Greed-Index stand bei 10, also „extremer Angst“. Bitcoin hat im vergangenen Monat rund 24 Prozent verloren. Kurse sind Momentaufnahmen, keine Anlageberatung."
+          "Bitcoin kostete laut Fortune am 17. November rund 65.017 Dollar, ein Minus von 1,33 Prozent zum Vortag und etwa 21 Prozent weniger als einen Monat zuvor. Am Donnerstag fiel der Kurs laut Cryptonews zeitweise auf rund 61.449 Dollar, den tiefsten Stand seit mehr als vier Monaten.",
+          "Spot-Bitcoin-ETFs in den USA verzeichneten laut Motley Fool Nettoabflüsse von 306,5 Millionen Dollar. Für Freitag haben wir keine belegten Kursangaben gefunden. Kurse sind Momentaufnahmen, keine Anlageberatung."
         ],
         "quellen": [
+          {
+            "name": "Fortune",
+            "url": "https://fortune.com/article/price-of-bitcoin-11-18-2026/"
+          },
           {
             "name": "Cryptonews",
             "url": "https://cryptonews.net/news/bitcoin/33780892/"
@@ -127,18 +128,7 @@
         ]
       },
       "artikel": [],
-      "kurzmeldungen": [
-        {
-          "titel": "Ether fällt unter 1.750 Dollar.",
-          "text": "Laut einer Momentaufnahme von Motley Fool kostete Ether am frühen Abend rund 1.746 Dollar; am Vormittag waren es noch etwa 1.800 Dollar.",
-          "quellen": [
-            {
-              "name": "The Motley Fool",
-              "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026/"
-            }
-          ]
-        }
-      ]
+      "kurzmeldungen": []
     }
   ]
 }
