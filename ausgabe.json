@@ -1,28 +1,28 @@
 {
-  "nummer": 9,
-  "datum": "2026-11-21",
-  "redaktionsschluss": "06:41",
+  "nummer": 10,
+  "datum": "2026-11-22",
+  "redaktionsschluss": "06:42",
   "aufmacher": {
     "ressort": "KI",
-    "titel": "Anthropic-Börsengang: Ausgabepreis über der Spanne, Nachfrage weit über dem Angebot",
-    "vorspann": "Anthropic hat seine Aktie mit 83 Dollar bepreist, oberhalb der angepeilten Spanne von 70 bis 78 Dollar.",
+    "titel": "Anthropic-Aktie schließt am ersten Handelstag klar über dem Ausgabepreis",
+    "vorspann": "Nach dem Börsengang am Donnerstag sprang die Aktie zur Eröffnung auf 111,50 Dollar und gab bis zum Handelsschluss einen Teil wieder ab.",
     "absaetze": [
-      "Wie mehrere Medien berichten, lag der Ausgabepreis bei 83 Dollar je Aktie und damit über der zuvor genannten Spanne von 70 bis 78 Dollar. Die Aufträge sollen das Angebot etwa um das Sechsfache übertroffen haben. Gehandelt wird das Papier an der Nasdaq unter dem Kürzel ANT.",
-      "Zur Bewertung nennen die Berichte rund 1,5 Billionen Dollar. Amazon und Google sollen nach dem Börsengang zusammen etwa 28 Prozent der Anteile halten. Analysten rechnen laut einem Bericht mit hoher Nachfrage von Indexfonds, die rund 28 Prozent der angebotenen Aktien ausmachen könnte.",
-      "Zur Kursentwicklung nach dem ersten Handelstag am Donnerstag liegt uns für Freitag nichts Belegbares vor. Die Angaben in den Quellen weichen teils voneinander ab; dies ist keine Anlageberatung."
+      "Anthropic ist am Donnerstag, 19. November, unter dem Kürzel ANT an der Nasdaq gestartet. Laut Motley Fool und TechRepublic eröffnete die Aktie bei 111,50 Dollar und lag damit rund 34 Prozent über dem Ausgabepreis von 83 Dollar.",
+      "Im Tagesverlauf schwankte der Kurs stark. Ein Bericht nennt eine Spanne von 92,72 bis 114,99 Dollar und einen Schlusskurs von 97,17 Dollar, also etwa 17 Prozent über dem Ausgabepreis. Diese Zahlen stammen aus einer einzelnen Quelle und sind nicht bestätigt. Zudem soll das Papier laut Berichten zum meistgehandelten der Nasdaq geworden sein.",
+      "Zu den Handelstagen am 20. und 21. November liegen uns keine belegten Kurse vor. Dies ist keine Anlageberatung."
     ],
     "quellen": [
       {
-        "name": "Fortune",
-        "url": "https://fortune.com/2026/11/18/anthropic-prices-ipo-83-per-share-1-5-trillion/"
+        "name": "The Motley Fool",
+        "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/"
       },
       {
-        "name": "The Next Web",
-        "url": "https://thenextweb.com/news/anthropic-ipo-prices-83-share-1-5-trillion-record-raise"
+        "name": "TechRepublic",
+        "url": "https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/"
       },
       {
-        "name": "AI Weekly",
-        "url": "https://aiweekly.co/alerts/anthropic-prices-ipo-at-83-above-range-trades-thursday-as-ant"
+        "name": "FourWeekMBA",
+        "url": "https://fourweekmba.com/ai-anthropic-closes-day-one-at-97-17-up-17-from-83-ipo/"
       }
     ]
   },
@@ -38,32 +38,21 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Chips",
-        "titel": "Nvidia legt Quartalszahlen ohne Gründer Jensen Huang vor",
+        "dachzeile": "Modelle",
+        "titel": "Anthropic nennt Schwelle für schnellere KI-Forschung erreicht",
         "absaetze": [
-          "Nvidia hat laut einer Wochenvorschau von investinglive am 17. November nach Börsenschluss seine Zahlen zum dritten Quartal vorgelegt, erstmals ohne Gründer Jensen Huang. Huang soll am 12. November als Präsident, Chef und Verwaltungsrat zurückgetreten sein; Colette Kress führt das Unternehmen demnach kommissarisch.",
-          "Zu den Quartalszahlen selbst liegen uns keine belegten Angaben vor. Die Informationen stammen aus einer Vorschau, nicht aus einer Mitteilung des Unternehmens."
+          "Laut einem Newsletter von Towards AI hat Anthropic am 9. November sein Modell Claude Fable 5.2 veröffentlicht. In einer Meldung an die Börsenaufsicht vom 10. November habe das Unternehmen erklärt, die Schwelle seiner Richtlinie zur verantwortungsvollen Skalierung für ein schnelleres Tempo der KI-Forschung sei erreicht.",
+          "Die Angaben stammen aus einem Newsletter und wurden von uns nicht an der Primärquelle geprüft."
         ],
         "quellen": [
           {
-            "name": "investinglive",
-            "url": "https://investinglive.com/news/earnings-week-ahead-nvidia-without-jensen-anthropic-s-ipo-and-the-consumer-meets-a-hiking-fed/"
+            "name": "Towards AI (Newsletter)",
+            "url": "https://pub.towardsai.net/tai-229-fable-5-2-and-the-case-for-a-2027-ai-takeoff-cdd4613ca007"
           }
         ]
       },
       "artikel": [],
-      "kurzmeldungen": [
-        {
-          "titel": "OpenAI bringt GPT-6.2 Astra und Sol.",
-          "text": "Laut einem Wochenrückblick wurden die Modelle am 17. November vorgestellt, mit Schwerpunkt auf Berufsalltag und niedrigeren Kosten. Die Angaben sind nicht unabhängig geprüft.",
-          "quellen": [
-            {
-              "name": "Emergent (Wochenrückblick)",
-              "url": "https://emergent.sh/news/week-s-top-5-ai-stories-november-2026-roundup"
-            }
-          ]
-        }
-      ]
+      "kurzmeldungen": []
     },
     {
       "id": "games",
@@ -71,62 +60,30 @@
       "keineMeldungen": null,
       "hauptartikel": {
         "dachzeile": "GTA 6",
-        "titel": "GTA 6 ist erschienen, offizielle Verkaufszahlen fehlen noch",
+        "titel": "GTA 6: Schätzungen sehen Rekordstart, offizielle Zahlen fehlen",
         "absaetze": [
-          "Grand Theft Auto VI ist am 19. November für PS5 und Xbox Series erschienen. Offizielle Verkaufszahlen von Rockstar oder Take-Two haben wir in den Quellen nicht gefunden; Take-Two hatte angekündigt, nach dem Start mehr zur Entwicklung zu sagen.",
-          "Vor dem Start erklärte Take-Two-Chef Strauss Zelnick laut Berichten, die Vorbestellungen lägen weit über den Erwartungen. Die Umsatzprognose von 8 bis 8,2 Milliarden Dollar für das Geschäftsjahr 2027 blieb unverändert. Das sind Aussagen vor dem Verkaufsstart, keine Ergebnisse."
+          "Grand Theft Auto VI ist am 19. November erschienen. Laut Sensor Tower, zitiert von GGRecon, wurden bis dahin rund 17 Millionen Exemplare für mehr als 1,65 Milliarden Dollar verkauft. Ein anderer Bericht nennt geschätzte 1,84 Milliarden Dollar bis zum Erscheinungstag, mehr als das Doppelte des Startrekords von GTA V.",
+          "Offizielle Zahlen von Rockstar oder Take-Two haben wir nicht gefunden. Alle Werte sind Schätzungen Dritter und weichen voneinander ab."
         ],
         "quellen": [
           {
-            "name": "Video Games Chronicle",
-            "url": "https://www.videogameschronicle.com/news/gta-6-pre-orders-are-far-above-initial-expectations-but-nba-2k27-was-below-our-forecast-take-two-says/"
+            "name": "GGRecon",
+            "url": "https://www.ggrecon.com/articles/gta-6-17-million-sales-sensor-tower/"
           },
           {
-            "name": "Game Developer",
-            "url": "https://www.gamedeveloper.com/business/take-two-financials-are-steady-while-the-ceo-claims-that-grand-theft-auto-vi-pre-orders-are-exceeding-expectations"
+            "name": "FOX 5 DC",
+            "url": "https://www.fox5dc.com/news/gta-vi-pulls-estimated-1-84-billion-release-day-more-than-double-gta-vs-launch-record"
           }
         ]
       },
       "artikel": [],
-      "kurzmeldungen": [
-        {
-          "titel": "NBA 2K27 bleibt hinter der Prognose.",
-          "text": "Laut Video Games Chronicle blieb das Spiel unter den eigenen Erwartungen von Take-Two. Der Konzern führt das zum Teil auf die zeitliche Nähe zu GTA 6 zurück.",
-          "quellen": [
-            {
-              "name": "Video Games Chronicle",
-              "url": "https://www.videogameschronicle.com/news/gta-6-pre-orders-are-far-above-initial-expectations-but-nba-2k27-was-below-our-forecast-take-two-says/"
-            }
-          ]
-        }
-      ]
+      "kurzmeldungen": []
     },
     {
       "id": "krypto",
       "titel": "Krypto",
-      "keineMeldungen": null,
-      "hauptartikel": {
-        "dachzeile": "Markt",
-        "titel": "Bitcoin bleibt unter Druck, ETF-Abflüsse halten an",
-        "absaetze": [
-          "Bitcoin kostete laut Fortune am 17. November rund 65.017 Dollar, ein Minus von 1,33 Prozent zum Vortag und etwa 21 Prozent weniger als einen Monat zuvor. Am Donnerstag fiel der Kurs laut Cryptonews zeitweise auf rund 61.449 Dollar, den tiefsten Stand seit mehr als vier Monaten.",
-          "Spot-Bitcoin-ETFs in den USA verzeichneten laut Motley Fool Nettoabflüsse von 306,5 Millionen Dollar. Für Freitag haben wir keine belegten Kursangaben gefunden. Kurse sind Momentaufnahmen, keine Anlageberatung."
-        ],
-        "quellen": [
-          {
-            "name": "Fortune",
-            "url": "https://fortune.com/article/price-of-bitcoin-11-18-2026/"
-          },
-          {
-            "name": "Cryptonews",
-            "url": "https://cryptonews.net/news/bitcoin/33780892/"
-          },
-          {
-            "name": "The Motley Fool",
-            "url": "https://www.fool.com/coverage/stock-market-today/2026/11/19/crypto-market-today-nov-19-bitcoin-approaches-usd60-000-as-etf-outflows-surpass-usd2-5-billion-in-2026/"
-          }
-        ]
-      },
+      "keineMeldungen": "Zu Krypto liegen uns für die letzten 24 Stunden keine belegten Meldungen vor. Die zuletzt belegten Kurse stehen in Ausgabe Nr. 9; aktuelle Kurse zeigt die Kurstafel oben.",
+      "hauptartikel": null,
       "artikel": [],
       "kurzmeldungen": []
     }
