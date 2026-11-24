@@ -1,24 +1,24 @@
 {
-  "nummer": 11,
-  "datum": "2026-11-23",
-  "redaktionsschluss": "06:42",
+  "nummer": 12,
+  "datum": "2026-11-24",
+  "redaktionsschluss": "06:55",
   "aufmacher": {
-    "ressort": "KI",
-    "titel": "Anthropic-Börsengang: Rekordvolumen und Ausgabepreis über der Spanne",
-    "vorspann": "Der Ausgabepreis lag mit 83 Dollar über der zuvor genannten Spanne von 70 bis 78 Dollar; das Volumen gilt als größter Börsengang der Geschichte.",
+    "ressort": "Krypto",
+    "titel": "Bitcoin fällt unter 70.000 Dollar: Hohe Liquidationen und Abflüsse",
+    "vorspann": "Nach Berichten aus der Vorwoche verlor Bitcoin binnen sieben Tagen mehr als 10.000 Dollar; zuletzt genannt wurden rund 65.000 Dollar.",
     "absaetze": [
-      "Laut Suchergebnissen zu Berichten über den Nasdaq-Start von Anthropic (Kürzel ANT) wurden 980 Millionen Klasse-A-Aktien verkauft, mehr als die zuvor geschätzten 825 Millionen. Der Ausgabepreis von 83 Dollar übertraf die Spanne von 70 bis 78 Dollar.",
-      "Das Angebot soll den bisherigen Rekord von SpaceX übertroffen haben und damit der größte Börsengang aller Zeiten sein. Am ersten Handelstag eröffnete die Aktie bei 111,50 Dollar und fiel im Tagesverlauf deutlich zurück. Aktuelle Kurse nach dem 19. November liegen uns nicht belegt vor.",
-      "Die Angaben stützen sich auf Suchergebnisse; die Artikel selbst konnten wir nicht öffnen. Dies ist keine Anlageberatung."
+      "Laut Cointelegraph büßte Bitcoin in einer Woche mehr als 10.000 Dollar ein und notierte bei etwa 65.116 Dollar, ein Minus von 12,4 Prozent. Ein Wochenrückblick nennt den 13. November als Tag, an dem Bitcoin erstmals seit August unter 70.000 Dollar fiel. Binnen 24 Stunden seien mehr als 1,6 Milliarden Dollar an gehebelten Positionen liquidiert worden.",
+      "Ether eröffnete laut demselben Rückblick die Woche bei rund 2.128 Dollar, erreichte am 15. November ein Wochentief von 1.729 Dollar und lag danach bei etwa 1.820 Dollar.",
+      "Die Angaben stammen aus Suchergebnissen zu Berichten vom 15. bis 18. November; die Artikel selbst konnten wir nicht öffnen. Aktuelle Kurse zeigt die Kurstafel oben. Dies ist keine Anlageberatung."
     ],
     "quellen": [
       {
-        "name": "Stock Titan",
-        "url": "https://www.stocktitan.net/articles/anthropic-ipo-live-ant-first-trading-day-2026"
+        "name": "Cointelegraph",
+        "url": "https://cointelegraph.com/news/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest"
       },
       {
-        "name": "The Motley Fool",
-        "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/"
+        "name": "Caleb & Brown (Wochenrückblick)",
+        "url": "https://calebandbrown.com/blog/weekly-rollup-november-17-2026/"
       }
     ]
   },
@@ -26,6 +26,10 @@
     {
       "datum": "2026-11-26",
       "text": "US-Feiertag Thanksgiving, am 27.11. verkürzter Börsenhandel in den USA"
+    },
+    {
+      "datum": "2026-11-30",
+      "text": "Laut Wochenrückblick will MSCI Strategy nach dem 30.11. aus seinen globalen Indizes entfernen"
     }
   ],
   "ressorts": [
@@ -34,16 +38,16 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Modelle",
-        "titel": "OpenAI stellt GPT-6.2 Astra und Sol vor",
+        "dachzeile": "Börse",
+        "titel": "Anthropic nach dem Börsengang: Debüt bei 111,50 Dollar, dann Rücksetzer",
         "absaetze": [
-          "Laut dem Newsletter The Neuron hat OpenAI am 18. November die Modelle GPT-6.2 Astra und Sol veröffentlicht. Sie sollen für professionelle Arbeit gedacht sein und den Rechenaufwand komplexer Aufgaben senken.",
-          "Die Angaben stammen aus einer Newsletter-Zusammenfassung, die wir nicht öffnen konnten, und sind nicht an der Primärquelle geprüft."
+          "Laut The Motley Fool eröffnete die Aktie von Anthropic (ANT) am ersten Handelstag, dem 19. November, bei 111,50 Dollar, gut ein Drittel über dem Ausgabepreis von 83 Dollar. Im Tagesverlauf fiel sie um rund 17 Prozent vom Eröffnungskurs auf 93,10 Dollar, blieb damit aber über dem Ausgabepreis.",
+          "Zum Eröffnungskurs wurde das Unternehmen auf etwa 1,5 Billionen Dollar bewertet. Neuere Kurse nach dem 19. November liegen uns nicht belegt vor. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Dies ist keine Anlageberatung."
         ],
         "quellen": [
           {
-            "name": "The Neuron (Newsletter)",
-            "url": "https://www.theneuron.ai/newsletter/openai-unveils-gpt-6-2-astra-and-sol/"
+            "name": "The Motley Fool",
+            "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/"
           }
         ]
       },
@@ -53,33 +57,29 @@
     {
       "id": "games",
       "titel": "Games",
-      "keineMeldungen": null,
-      "hauptartikel": {
-        "dachzeile": "GTA 6",
-        "titel": "GTA 6: Wells Fargo hebt Absatzschätzung auf 65 Millionen Stück",
-        "absaetze": [
-          "Laut einem Bericht von IBTimes hat Wells Fargo seine Schätzung für die GTA-6-Verkäufe im Take-Two-Geschäftsjahr bis März 2027 von 35 auf 65 Millionen Exemplare angehoben. Take-Two selbst hat nach unserer Recherche keine offiziellen Verkaufszahlen genannt.",
-          "Die Werte sind Schätzungen Dritter. Den Artikel selbst konnten wir nicht öffnen."
-        ],
-        "quellen": [
-          {
-            "name": "IBTimes UK",
-            "url": "https://www.ibtimes.co.uk/gta-6-preorders-take-two-investor-concerns-ai-1833396"
-          },
-          {
-            "name": "GGRecon",
-            "url": "https://www.ggrecon.com/articles/gta-6-17-million-sales-sensor-tower/"
-          }
-        ]
-      },
+      "keineMeldungen": "Zu Games liegen uns für die letzten 24 Stunden keine belegten Meldungen vor.",
+      "hauptartikel": null,
       "artikel": [],
       "kurzmeldungen": []
     },
     {
       "id": "krypto",
       "titel": "Krypto",
-      "keineMeldungen": "Zu Krypto liegen uns für die letzten 24 Stunden keine belegten Meldungen vor. Aktuelle Kurse zeigt die Kurstafel oben.",
-      "hauptartikel": null,
+      "keineMeldungen": null,
+      "hauptartikel": {
+        "dachzeile": "Indizes",
+        "titel": "MSCI will Strategy nach dem 30. November aus Indizes entfernen",
+        "absaetze": [
+          "Laut einem Wochenrückblick vom 17. November hat MSCI bestätigt, dass Strategy nach dem 30. November aus den globalen Indizes des Anbieters genommen wird.",
+          "Der Rückblick nennt außerdem, dass BitMine über 6 Millionen Ether hält, rund 4,97 Prozent des Angebots. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
+        ],
+        "quellen": [
+          {
+            "name": "Caleb & Brown (Wochenrückblick)",
+            "url": "https://calebandbrown.com/blog/weekly-rollup-november-17-2026/"
+          }
+        ]
+      },
       "artikel": [],
       "kurzmeldungen": []
     }
