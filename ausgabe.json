@@ -1,24 +1,19 @@
 {
-  "nummer": 12,
-  "datum": "2026-11-24",
-  "redaktionsschluss": "06:55",
+  "nummer": 13,
+  "datum": "2026-11-25",
+  "redaktionsschluss": "06:50",
   "aufmacher": {
     "ressort": "Krypto",
-    "titel": "Bitcoin fällt unter 70.000 Dollar: Hohe Liquidationen und Abflüsse",
-    "vorspann": "Nach Berichten aus der Vorwoche verlor Bitcoin binnen sieben Tagen mehr als 10.000 Dollar; zuletzt genannt wurden rund 65.000 Dollar.",
+    "titel": "Bitcoin schließt die Woche bei 65.300 Dollar, Minus von 12,6 Prozent",
+    "vorspann": "Ein Wochenbericht von Forklog nennt einen Wochenverlust von 12,6 Prozent und ein Sonntagstief nahe 62.000 Dollar.",
     "absaetze": [
-      "Laut Cointelegraph büßte Bitcoin in einer Woche mehr als 10.000 Dollar ein und notierte bei etwa 65.116 Dollar, ein Minus von 12,4 Prozent. Ein Wochenrückblick nennt den 13. November als Tag, an dem Bitcoin erstmals seit August unter 70.000 Dollar fiel. Binnen 24 Stunden seien mehr als 1,6 Milliarden Dollar an gehebelten Positionen liquidiert worden.",
-      "Ether eröffnete laut demselben Rückblick die Woche bei rund 2.128 Dollar, erreichte am 15. November ein Wochentief von 1.729 Dollar und lag danach bei etwa 1.820 Dollar.",
-      "Die Angaben stammen aus Suchergebnissen zu Berichten vom 15. bis 18. November; die Artikel selbst konnten wir nicht öffnen. Aktuelle Kurse zeigt die Kurstafel oben. Dies ist keine Anlageberatung."
+      "Laut dem Forklog-Wochenbericht schloss Bitcoin die Woche bei 65.300 Dollar und verlor damit 12,6 Prozent. Am Sonntag sei der Kurs bis auf 61.960 Dollar gefallen; am Montagmorgen lag er demnach bei etwa 64.500 Dollar.",
+      "Der Bericht nimmt im Titel Bezug auf Thanksgiving. Ein genaues Veröffentlichungsdatum konnten wir nicht bestätigen. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Aktuelle Kurse zeigt die Kurstafel oben. Dies ist keine Anlageberatung."
     ],
     "quellen": [
       {
-        "name": "Cointelegraph",
-        "url": "https://cointelegraph.com/news/us-sellers-drive-bitcoin-crash-jensen-plots-comeback-hodlers-digest"
-      },
-      {
-        "name": "Caleb & Brown (Wochenrückblick)",
-        "url": "https://calebandbrown.com/blog/weekly-rollup-november-17-2026/"
+        "name": "Forklog",
+        "url": "https://forklog.com/en/?p=106937"
       }
     ]
   },
@@ -38,27 +33,58 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Börse",
-        "titel": "Anthropic nach dem Börsengang: Debüt bei 111,50 Dollar, dann Rücksetzer",
+        "dachzeile": "Modelle",
+        "titel": "OpenAI veröffentlicht GPT-6.2 Astra und Sol",
         "absaetze": [
-          "Laut The Motley Fool eröffnete die Aktie von Anthropic (ANT) am ersten Handelstag, dem 19. November, bei 111,50 Dollar, gut ein Drittel über dem Ausgabepreis von 83 Dollar. Im Tagesverlauf fiel sie um rund 17 Prozent vom Eröffnungskurs auf 93,10 Dollar, blieb damit aber über dem Ausgabepreis.",
-          "Zum Eröffnungskurs wurde das Unternehmen auf etwa 1,5 Billionen Dollar bewertet. Neuere Kurse nach dem 19. November liegen uns nicht belegt vor. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Dies ist keine Anlageberatung."
+          "Laut einem Tagesüberblick von The Neuron vom 18. November hat OpenAI zwei neue Modelle namens GPT-6.2 Astra und Sol veröffentlicht. Sie sollen die Arbeit in Berufsalltag und Unternehmen verbessern und zugleich den Rechenaufwand für komplexe Aufgaben senken.",
+          "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
         ],
         "quellen": [
           {
-            "name": "The Motley Fool",
-            "url": "https://www.fool.com/investing/2026/11/19/why-anthropic-stock-is-up-today/"
+            "name": "The Neuron",
+            "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-18-2026/"
           }
         ]
       },
-      "artikel": [],
+      "artikel": [
+        {
+          "dachzeile": "Börse",
+          "titel": "Anthropic startet an der Nasdaq: Ausgabepreis 83 Dollar, Eröffnung bei 111,50 Dollar",
+          "absaetze": [
+            "Anthropic ist am 19. November unter dem Kürzel ANT an der Nasdaq gestartet. Laut TechRepublic eröffnete die Aktie bei 111,50 Dollar und damit deutlich über dem Ausgabepreis von 83 Dollar. Spätere Kurse liegen uns nicht belegt vor. Dies ist keine Anlageberatung."
+          ],
+          "quellen": [
+            {
+              "name": "TechRepublic",
+              "url": "https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/"
+            },
+            {
+              "name": "Al Jazeera",
+              "url": "https://www.aljazeera.com/economy/2026/11/19/anthropic-starts-trading-in-the-us-after-blockbuster-ipo"
+            }
+          ]
+        }
+      ],
       "kurzmeldungen": []
     },
     {
       "id": "games",
       "titel": "Games",
-      "keineMeldungen": "Zu Games liegen uns für die letzten 24 Stunden keine belegten Meldungen vor.",
-      "hauptartikel": null,
+      "keineMeldungen": null,
+      "hauptartikel": {
+        "dachzeile": "Release",
+        "titel": "GTA VI ist seit 19. November erhältlich",
+        "absaetze": [
+          "Laut dem Veröffentlichungsüberblick von DLCompare erschien Grand Theft Auto VI am 19. November. Der Vorab-Download startete am 10. November; Rockstar empfahl bis zu 212 GB freien Speicherplatz.",
+          "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Neuere Meldungen der letzten 24 Stunden liegen uns nicht belegt vor."
+        ],
+        "quellen": [
+          {
+            "name": "DLCompare",
+            "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-november-2026-week-47"
+          }
+        ]
+      },
       "artikel": [],
       "kurzmeldungen": []
     },
@@ -71,7 +97,7 @@
         "titel": "MSCI will Strategy nach dem 30. November aus Indizes entfernen",
         "absaetze": [
           "Laut einem Wochenrückblick vom 17. November hat MSCI bestätigt, dass Strategy nach dem 30. November aus den globalen Indizes des Anbieters genommen wird.",
-          "Der Rückblick nennt außerdem, dass BitMine über 6 Millionen Ether hält, rund 4,97 Prozent des Angebots. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
+          "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
         ],
         "quellen": [
           {
