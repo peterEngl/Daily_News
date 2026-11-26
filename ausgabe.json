@@ -1,19 +1,23 @@
 {
-  "nummer": 13,
-  "datum": "2026-11-25",
+  "nummer": 14,
+  "datum": "2026-11-26",
   "redaktionsschluss": "06:50",
   "aufmacher": {
-    "ressort": "Krypto",
-    "titel": "Bitcoin schließt die Woche bei 65.300 Dollar, Minus von 12,6 Prozent",
-    "vorspann": "Ein Wochenbericht von Forklog nennt einen Wochenverlust von 12,6 Prozent und ein Sonntagstief nahe 62.000 Dollar.",
+    "ressort": "Künstliche Intelligenz",
+    "titel": "Nvidia liefert keine H200-Chips mehr nach China",
+    "vorspann": "Auf der Telefonkonferenz zu den Quartalszahlen sagte Nvidia-Managerin Colette Kress, lizenzierte Hopper-Chips seien nicht mehr in der Prognose enthalten.",
     "absaetze": [
-      "Laut dem Forklog-Wochenbericht schloss Bitcoin die Woche bei 65.300 Dollar und verlor damit 12,6 Prozent. Am Sonntag sei der Kurs bis auf 61.960 Dollar gefallen; am Montagmorgen lag er demnach bei etwa 64.500 Dollar.",
-      "Der Bericht nimmt im Titel Bezug auf Thanksgiving. Ein genaues Veröffentlichungsdatum konnten wir nicht bestätigen. Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Aktuelle Kurse zeigt die Kurstafel oben. Dies ist keine Anlageberatung."
+      "Laut Berichten über die Telefonkonferenz vom 17. November hat Nvidia die Lieferung lizenzierter Hopper-Rechenchips, darunter der H200, nach China eingestellt. Kress nannte für das Quartal bis 25. Oktober Verkäufe solcher Produkte nach China von 2,4 Milliarden Dollar, rund 2 Prozent des Gesamtumsatzes.",
+      "Einen Grund für den Stopp nannte sie laut den Berichten nicht; auch ob er dauerhaft ist, blieb offen. Die Titelbezeichnung von Kress wird in den Quellen unterschiedlich angegeben. Die Angaben stützen sich auf Suchergebnisse; die Artikel selbst konnten wir nicht öffnen."
     ],
     "quellen": [
       {
-        "name": "Forklog",
-        "url": "https://forklog.com/en/?p=106937"
+        "name": "TimesLive (Agenturmeldung)",
+        "url": "https://www.timeslive.co.za/news/sci-tech/2026-11-18-nvidia-stops-shipping-us-approved-ai-chips-to-china/"
+      },
+      {
+        "name": "TweakTown",
+        "url": "https://www.tweaktown.com/news/114771/nvidia-stops-shipping-licensed-hopper-ai-chips-including-h200-to-china/index.html"
       }
     ]
   },
@@ -33,55 +37,16 @@
       "titel": "Künstliche Intelligenz",
       "keineMeldungen": null,
       "hauptartikel": {
-        "dachzeile": "Modelle",
-        "titel": "OpenAI veröffentlicht GPT-6.2 Astra und Sol",
+        "dachzeile": "Chips",
+        "titel": "Nvidia stoppt H200-Lieferungen nach China",
         "absaetze": [
-          "Laut einem Tagesüberblick von The Neuron vom 18. November hat OpenAI zwei neue Modelle namens GPT-6.2 Astra und Sol veröffentlicht. Sie sollen die Arbeit in Berufsalltag und Unternehmen verbessern und zugleich den Rechenaufwand für komplexe Aufgaben senken.",
+          "Nvidia hat laut Berichten über seine Quartalszahlen die Auslieferung lizenzierter Hopper-Chips nach China beendet. Nach Darstellung des Unternehmens enthält die Prognose keine solchen Produkte mehr. Weitere Lieferungen sind demnach derzeit nicht geplant.",
           "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
         ],
         "quellen": [
           {
-            "name": "The Neuron",
-            "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-november-18-2026/"
-          }
-        ]
-      },
-      "artikel": [
-        {
-          "dachzeile": "Börse",
-          "titel": "Anthropic startet an der Nasdaq: Ausgabepreis 83 Dollar, Eröffnung bei 111,50 Dollar",
-          "absaetze": [
-            "Anthropic ist am 19. November unter dem Kürzel ANT an der Nasdaq gestartet. Laut TechRepublic eröffnete die Aktie bei 111,50 Dollar und damit deutlich über dem Ausgabepreis von 83 Dollar. Spätere Kurse liegen uns nicht belegt vor. Dies ist keine Anlageberatung."
-          ],
-          "quellen": [
-            {
-              "name": "TechRepublic",
-              "url": "https://www.techrepublic.com/article/news-anthropic-ipo-nasdaq-trading-debut/"
-            },
-            {
-              "name": "Al Jazeera",
-              "url": "https://www.aljazeera.com/economy/2026/11/19/anthropic-starts-trading-in-the-us-after-blockbuster-ipo"
-            }
-          ]
-        }
-      ],
-      "kurzmeldungen": []
-    },
-    {
-      "id": "games",
-      "titel": "Games",
-      "keineMeldungen": null,
-      "hauptartikel": {
-        "dachzeile": "Release",
-        "titel": "GTA VI ist seit 19. November erhältlich",
-        "absaetze": [
-          "Laut dem Veröffentlichungsüberblick von DLCompare erschien Grand Theft Auto VI am 19. November. Der Vorab-Download startete am 10. November; Rockstar empfahl bis zu 212 GB freien Speicherplatz.",
-          "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen. Neuere Meldungen der letzten 24 Stunden liegen uns nicht belegt vor."
-        ],
-        "quellen": [
-          {
-            "name": "DLCompare",
-            "url": "https://www.dlcompare.com/gaming-news/this-week-s-video-game-releases-november-2026-week-47"
+            "name": "TweakTown",
+            "url": "https://www.tweaktown.com/news/114771/nvidia-stops-shipping-licensed-hopper-ai-chips-including-h200-to-china/index.html"
           }
         ]
       },
@@ -89,23 +54,18 @@
       "kurzmeldungen": []
     },
     {
+      "id": "games",
+      "titel": "Games",
+      "keineMeldungen": "Seit der letzten Ausgabe konnten wir keine neue, belegbare Meldung finden. Zuletzt berichteten wir über den Release von GTA VI am 19. November.",
+      "hauptartikel": null,
+      "artikel": [],
+      "kurzmeldungen": []
+    },
+    {
       "id": "krypto",
       "titel": "Krypto",
-      "keineMeldungen": null,
-      "hauptartikel": {
-        "dachzeile": "Indizes",
-        "titel": "MSCI will Strategy nach dem 30. November aus Indizes entfernen",
-        "absaetze": [
-          "Laut einem Wochenrückblick vom 17. November hat MSCI bestätigt, dass Strategy nach dem 30. November aus den globalen Indizes des Anbieters genommen wird.",
-          "Die Angaben stützen sich auf Suchergebnisse; den Artikel selbst konnten wir nicht öffnen."
-        ],
-        "quellen": [
-          {
-            "name": "Caleb & Brown (Wochenrückblick)",
-            "url": "https://calebandbrown.com/blog/weekly-rollup-november-17-2026/"
-          }
-        ]
-      },
+      "keineMeldungen": "Seit der letzten Ausgabe konnten wir keine neue, belegbare Meldung finden. Aktuelle Kurse zeigt die Kurstafel oben. Keine Anlageberatung.",
+      "hauptartikel": null,
       "artikel": [],
       "kurzmeldungen": []
     }
